@@ -4,7 +4,8 @@
   --black: #000;
   --gray: #f3f3f3;
   --linkhover: #444444;
-  --font: 'Arimo', sans-serif;
+  --arimo: 'Arimo', 'HelveticaNeueCyr', sans-serif;
+  --halvar: 'Halvar Breit Md', 'HelveticaNeueCyr', sans-serif;
 }
 
 button {
@@ -22,8 +23,14 @@ ul {
   list-style-type:  none;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: var(--black);
+  text-decoration: none;
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
@@ -120,6 +127,7 @@ main {
 
 .header__menu_tab {
   padding: 10px 20px;
+  font-family: var(--arimo);
   font-size: 17px;
   font-weight: 600;
   line-height: 20px;
@@ -157,10 +165,75 @@ main {
 }
 
 .header__menu_heading {
-  font-family: Arimo;
-font-size: 16px;
-font-weight: 400;
-line-height: 18px;
+  padding: 20px 0 28px;
+  font-family: var(--arimo);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.header__menu_sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header__menu_head {
+  font-family: var(--arimo);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 34px;
+}
+
+.header__menu_desc {
+  font-family: var(--arimo);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.header__menu_image {
+  display: flex;
+  width: 100%;
+  height: 510px;
+  position: relative;
+}
+
+.header__menu_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header__menu_image_info {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+}
+
+.header__collection {
+  font-family: var(--arimo);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.header__collection_name {
+  font-family: var(--halvar);
+  font-size: 90px;
+  font-weight: 500;
+  line-height: 90px;
+  letter-spacing: -0.055em;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
 }
 
 /* end header menu */
