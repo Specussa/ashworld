@@ -15,47 +15,2514 @@
     <title>Document</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./css/simplebar.css">
     <link rel="stylesheet" href="./css/owl.carousel.css">
     <link rel="stylesheet" href="./css/owl.theme.default.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
+<!--<button data-bs-toggle="modal" data-bs-target="#Modal1">Войти
+</button>-->
 
-<div class="container">
-    <br>
-    <br>
-    <p><a href="home.html">Главная</a> </p>
-    <p><a href="product.html">Карточка</a> </p>
-    <p><a href="product2.html">Карточка товара нет</a> </p>
-    <p><a href="product3.html">Карточка новинка</a> </p>
-    <p><a href="product4.html">Карточка последний товар</a> </p>
-    <p><a href="product5.html">Карточка вариант 2 размеров</a> </p>
-    <p><a href="product7.html">Карточка вариант 2 размеров товара нет</a> </p>
-    <p><a href="product8.html">Карточка вариант 2 размеров товара нет подписка</a> </p>
-    <p><a href="product6.html">Карточка мообил 5 фото</a> </p>
-    <p><a href="catalog.html">Каталог</a> </p>
-    <p><a href="catalog2.html">Каталог с шапкой</a> </p>
-    <p><a href="catalog3.html">Корзина - товар отсутствует</a> </p>
-    <p><a href="catalog4.html">Каталог - квадратные карточки</a> </p>
-    <!--
-    <p><a href="cart-mobil.html">Корзина - мобильная</a> </p>
-    <p><a href="cart-mobil2.html">Корзина - мобильная товар отсутствует</a> </p>-->
-    <p><a href="promo-code.html">Промокод - состояния</a> </p>
-<br>
-<br>
-<br>
-    <p><a href="order.html">Оформление заказа</a> </p>
-    <br>
-    <br>
+<div class="modal modal-tm-1 fade" id="Modal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+        </div>
+    </div>
 </div>
 
+
+<header>
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="header-l">
+                <button class="header__burger menu-button">
+                    <div class="header__burger_button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    меню
+                </button>
+                <a href="" class="a-link-header">ashworld</a>
+            </div>
+            <div class="header-с">
+                <a href="/" class="logo">
+                    <img src="./images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="header-r">
+                <div class="search">
+                    <button class="search-button">
+                        <img src="./images/icon-1.svg" alt="">
+                    </button>
+                </div>
+                <div class="links-header">
+                    <a href="">
+                        <img src="./images/icon-black-2.svg" alt="">
+                    </a>
+                    <a href="">
+                        <img src="./images/icon-black-3.svg" alt="">
+                    </a>
+                    <a href="" class="cart-toggler">
+                        <img src="./images/icon-black-4.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<div class="cart-modal-overlay"></div>
+<div class="cart-modal" data-simplebar="">
+    <div class="cart-modal-title">
+        <h3>корзина</h3>
+
+        <button class="close-cart-modal">
+            <img src="./images/catalog-close.svg" alt="">
+        </button>
+    </div>
+    <div class="personal-discount">Ваша персональная скидка 5%
+        <img src="./images/i-tm.svg" alt="">
+    </div>
+    <div class="cart-list">
+        <a href="" class="cart-block">
+            <div class="cart-block-img">
+                <img src="./images/cart-img-1.png" alt="">
+            </div>
+            <div class="cart-block-text">
+                <div class="cart-block-top">
+                    <div class="cart-block-top-l">
+                        <h4>Addict</h4>
+                        <p class="product-name">Ботинки</p>
+                        <div class="size-color-cart">38
+                            <span class="color-cart color-cart-1"></span>
+                        </div>
+                    </div>
+                    <div class="cart-block-top-r d-block d-md-none">
+                        <button class="cart-menu-button"  onclick="event.preventDefault()">
+                            <img src="./images/ellipsis.svg" alt="">
+                        </button>
+
+                        <div class="cart-menu-block">
+                            <button class="close-tm"  onclick="event.preventDefault()">
+                                <img src="./images/catalog-close.svg" alt="">
+                            </button>
+                            <div class="cart-block-bottom-r">
+                                <div class="number">
+                                    <span class="minus" onclick="event.preventDefault()"><img src="./images/minus.svg" alt=""> </span>
+                                    <input type="text" value="1" size="5">
+                                    <span class="plus" onclick="event.preventDefault()"><img src="./images/plus.svg" alt=""> </span>
+                                </div>
+
+                                <button class="delete"><img src="./images/delete.svg" alt=""> </button>
+                            </div>
+                            <button class="favourites-cart-mobil" onclick="event.preventDefault()">
+                                <i></i>
+                                перенести в избранное
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="cart-block-bottom">
+                    <div class="cart-block-bottom-l">
+                        <p class="price">12 990 ₽
+                            <span class="price-old">20 990 ₽</span>
+                        </p>
+                        <span class="info-click" onclick="event.preventDefault()">
+                            <img src="./images/i-tm-2.svg" alt="" onclick="event.preventDefault()">
+                            <span class="info-modal">
+                                <span class="close-info-mobil d-block d-md-none" onclick="event.preventDefault()">
+                                    <img src="./images/modal-close.svg" alt="">
+                                </span>
+
+                                <span class="info-modal-block">Скидка на товары
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                                <span class="info-modal-block">Последняя пара
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="cart-block-bottom-r">
+                        <div class="number">
+                            <span class="minus" onclick="event.preventDefault()">
+                                <img src="./images/minus.svg" alt="">
+                            </span>
+                            <input type="text" value="1" size="5"/>
+                            <span class="plus" onclick="event.preventDefault()">
+                                <img src="./images/plus.svg" alt="">
+                            </span>
+                        </div>
+
+                        <button class="delete">
+                            <img src="./images/delete.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <button class="favourites" onclick="event.preventDefault()"></button>
+            </div>
+        </a>
+        <a href="" class="cart-block">
+            <div class="cart-block-img">
+                <img src="./images/cart-img-1.png" alt="">
+            </div>
+            <div class="cart-block-text">
+                <div class="cart-block-top">
+                    <div class="cart-block-top-l">
+                        <h4>Addict</h4>
+                        <p class="product-name">Ботинки</p>
+                        <div class="size-color-cart">38
+                            <span class="color-cart color-cart-1"></span>
+                        </div>
+                    </div>
+                    <div class="cart-block-top-r d-block d-md-none">
+                        <button class="cart-menu-button"  onclick="event.preventDefault()">
+                            <img src="./images/ellipsis.svg" alt="">
+                        </button>
+
+                        <div class="cart-menu-block">
+                            <button class="close-tm"  onclick="event.preventDefault()">
+                                <img src="./images/catalog-close.svg" alt="">
+                            </button>
+                            <div class="cart-block-bottom-r">
+                                <div class="number">
+                                    <span class="minus" onclick="event.preventDefault()"><img src="./images/minus.svg" alt=""> </span>
+                                    <input type="text" value="1" size="5">
+                                    <span class="plus" onclick="event.preventDefault()"><img src="./images/plus.svg" alt=""> </span>
+                                </div>
+
+                                <button class="delete"><img src="./images/delete.svg" alt=""> </button>
+                            </div>
+                            <button class="favourites-cart-mobil" onclick="event.preventDefault()">
+                                <i></i>
+                                перенести в избранное
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="cart-block-bottom">
+                    <div class="cart-block-bottom-l">
+                        <p class="price">12 990 ₽
+                            <span class="price-old">20 990 ₽</span>
+                        </p>
+                        <span class="info-click" onclick="event.preventDefault()">
+                            <img src="./images/i-tm-2.svg" alt="" onclick="event.preventDefault()">
+                            <span class="info-modal">
+                                <span class="close-info-mobil d-block d-md-none" onclick="event.preventDefault()">
+                                    <img src="./images/modal-close.svg" alt="">
+                                </span>
+
+                                <span class="info-modal-block">Скидка на товары
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                                <span class="info-modal-block">Последняя пара
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="cart-block-bottom-r">
+                        <div class="number">
+                            <span class="minus" onclick="event.preventDefault()">
+                                <img src="./images/minus.svg" alt="">
+                            </span>
+                            <input type="text" value="1" size="5"/>
+                            <span class="plus" onclick="event.preventDefault()">
+                                <img src="./images/plus.svg" alt="">
+                            </span>
+                        </div>
+
+                        <button class="delete">
+                            <img src="./images/delete.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <button class="favourites" onclick="event.preventDefault()"></button>
+            </div>
+        </a>
+        <a href="" class="cart-block">
+            <div class="cart-block-img">
+                <img src="./images/cart-img-1.png" alt="">
+            </div>
+            <div class="cart-block-text">
+                <div class="cart-block-top">
+                    <div class="cart-block-top-l">
+                        <h4>Addict</h4>
+                        <p class="product-name">Ботинки</p>
+                        <div class="size-color-cart">38
+                            <span class="color-cart color-cart-1"></span>
+                        </div>
+                    </div>
+                    <div class="cart-block-top-r d-block d-md-none">
+                        <button class="cart-menu-button"  onclick="event.preventDefault()">
+                            <img src="./images/ellipsis.svg" alt="">
+                        </button>
+
+                        <div class="cart-menu-block">
+                            <button class="close-tm"  onclick="event.preventDefault()">
+                                <img src="./images/catalog-close.svg" alt="">
+                            </button>
+                            <div class="cart-block-bottom-r">
+                                <div class="number">
+                                    <span class="minus" onclick="event.preventDefault()"><img src="./images/minus.svg" alt=""> </span>
+                                    <input type="text" value="1" size="5">
+                                    <span class="plus" onclick="event.preventDefault()"><img src="./images/plus.svg" alt=""> </span>
+                                </div>
+
+                                <button class="delete"><img src="./images/delete.svg" alt=""> </button>
+                            </div>
+                            <button class="favourites-cart-mobil" onclick="event.preventDefault()">
+                                <i></i>
+                                перенести в избранное
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="cart-block-bottom">
+                    <div class="cart-block-bottom-l">
+                        <p class="price">12 990 ₽
+                            <span class="price-old">20 990 ₽</span>
+                        </p>
+                        <span class="info-click" onclick="event.preventDefault()">
+                            <img src="./images/i-tm-2.svg" alt="" onclick="event.preventDefault()">
+                            <span class="info-modal">
+                                <span class="close-info-mobil d-block d-md-none" onclick="event.preventDefault()">
+                                    <img src="./images/modal-close.svg" alt="">
+                                </span>
+
+                                <span class="info-modal-block">Скидка на товары
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                                <span class="info-modal-block">Последняя пара
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="cart-block-bottom-r">
+                        <div class="number">
+                            <span class="minus" onclick="event.preventDefault()">
+                                <img src="./images/minus.svg" alt="">
+                            </span>
+                            <input type="text" value="1" size="5"/>
+                            <span class="plus" onclick="event.preventDefault()">
+                                <img src="./images/plus.svg" alt="">
+                            </span>
+                        </div>
+
+                        <button class="delete">
+                            <img src="./images/delete.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <button class="favourites" onclick="event.preventDefault()"></button>
+            </div>
+        </a>
+        <a href="" class="cart-block">
+            <div class="cart-block-img">
+                <img src="./images/cart-img-1.png" alt="">
+            </div>
+            <div class="cart-block-text">
+                <div class="cart-block-top">
+                    <div class="cart-block-top-l">
+                        <h4>Addict</h4>
+                        <p class="product-name">Ботинки</p>
+                        <div class="size-color-cart">38
+                            <span class="color-cart color-cart-1"></span>
+                        </div>
+                    </div>
+                    <div class="cart-block-top-r d-block d-md-none">
+                        <button class="cart-menu-button"  onclick="event.preventDefault()">
+                            <img src="./images/ellipsis.svg" alt="">
+                        </button>
+
+                        <div class="cart-menu-block">
+                            <button class="close-tm"  onclick="event.preventDefault()">
+                                <img src="./images/catalog-close.svg" alt="">
+                            </button>
+                            <div class="cart-block-bottom-r">
+                                <div class="number">
+                                    <span class="minus" onclick="event.preventDefault()"><img src="./images/minus.svg" alt=""> </span>
+                                    <input type="text" value="1" size="5">
+                                    <span class="plus" onclick="event.preventDefault()"><img src="./images/plus.svg" alt=""> </span>
+                                </div>
+
+                                <button class="delete"><img src="./images/delete.svg" alt=""> </button>
+                            </div>
+                            <button class="favourites-cart-mobil" onclick="event.preventDefault()">
+                                <i></i>
+                                перенести в избранное
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="cart-block-bottom">
+                    <div class="cart-block-bottom-l">
+                        <p class="price">12 990 ₽
+                            <span class="price-old">20 990 ₽</span>
+                        </p>
+                        <span class="info-click" onclick="event.preventDefault()">
+                            <img src="./images/i-tm-2.svg" alt="" onclick="event.preventDefault()">
+                            <span class="info-modal">
+                                <span class="close-info-mobil d-block d-md-none" onclick="event.preventDefault()">
+                                    <img src="./images/modal-close.svg" alt="">
+                                </span>
+
+                                <span class="info-modal-block">Скидка на товары
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                                <span class="info-modal-block">Последняя пара
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="cart-block-bottom-r">
+                        <div class="number">
+                            <span class="minus" onclick="event.preventDefault()">
+                                <img src="./images/minus.svg" alt="">
+                            </span>
+                            <input type="text" value="1" size="5"/>
+                            <span class="plus" onclick="event.preventDefault()">
+                                <img src="./images/plus.svg" alt="">
+                            </span>
+                        </div>
+
+                        <button class="delete">
+                            <img src="./images/delete.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <button class="favourites" onclick="event.preventDefault()"></button>
+            </div>
+        </a>
+        <a href="" class="cart-block">
+            <div class="cart-block-img">
+                <img src="./images/cart-img-1.png" alt="">
+            </div>
+            <div class="cart-block-text">
+                <div class="cart-block-top">
+                    <div class="cart-block-top-l">
+                        <h4>Addict</h4>
+                        <p class="product-name">Ботинки</p>
+                        <div class="size-color-cart">38
+                            <span class="color-cart color-cart-1"></span>
+                        </div>
+                    </div>
+                    <div class="cart-block-top-r d-block d-md-none">
+                        <button class="cart-menu-button"  onclick="event.preventDefault()">
+                            <img src="./images/ellipsis.svg" alt="">
+                        </button>
+
+                        <div class="cart-menu-block">
+                            <button class="close-tm"  onclick="event.preventDefault()">
+                                <img src="./images/catalog-close.svg" alt="">
+                            </button>
+                            <div class="cart-block-bottom-r">
+                                <div class="number">
+                                    <span class="minus" onclick="event.preventDefault()"><img src="./images/minus.svg" alt=""> </span>
+                                    <input type="text" value="1" size="5">
+                                    <span class="plus" onclick="event.preventDefault()"><img src="./images/plus.svg" alt=""> </span>
+                                </div>
+
+                                <button class="delete"><img src="./images/delete.svg" alt=""> </button>
+                            </div>
+                            <button class="favourites-cart-mobil" onclick="event.preventDefault()">
+                                <i></i>
+                                перенести в избранное
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="cart-block-bottom">
+                    <div class="cart-block-bottom-l">
+                        <p class="price">12 990 ₽
+                            <span class="price-old">20 990 ₽</span>
+                        </p>
+                        <span class="info-click" onclick="event.preventDefault()">
+                            <img src="./images/i-tm-2.svg" alt="" onclick="event.preventDefault()">
+                            <span class="info-modal">
+                                <span class="close-info-mobil d-block d-md-none" onclick="event.preventDefault()">
+                                    <img src="./images/modal-close.svg" alt="">
+                                </span>
+
+                                <span class="info-modal-block">Скидка на товары
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                                <span class="info-modal-block">Последняя пара
+                                    <span>-3 670 ₽ (20%)</span>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="cart-block-bottom-r">
+                        <div class="number">
+                            <span class="minus" onclick="event.preventDefault()">
+                                <img src="./images/minus.svg" alt="">
+                            </span>
+                            <input type="text" value="1" size="5"/>
+                            <span class="plus" onclick="event.preventDefault()">
+                                <img src="./images/plus.svg" alt="">
+                            </span>
+                        </div>
+
+                        <button class="delete">
+                            <img src="./images/delete.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <button class="favourites" onclick="event.preventDefault()"></button>
+            </div>
+        </a>
+    </div>
+
+    <form class="promo-code">
+        <input type="text" placeholder="Введите промокод">
+        <button>Применить</button>
+    </form>
+
+
+
+    <div class="total-wrapper total-fix">
+        <div class="total">
+            <div class="total-l">
+                <div class="total-p">Итого
+                    <div class="info-click">
+                        <img src="./images/i-tm.svg" alt="" onclick="event.preventDefault()">
+                        <div class="info-modal">
+                            <div class="cost-list">
+                                <p>Сумма <span>22 670 ₽</span></p>
+                                <p>Скидка на товары <span class="red-color">-2 584 ₽</span></p>
+                                <p>Скидка по промокоду <span class="red-color">-4 584 ₽</span></p>
+                                <p>Доставка <span>0 ₽</span></p>
+                            </div>
+                            <div class="total">
+                                <div class="total-l">
+                                    <p class="total-p">Итого
+                                    </p>
+                                    <p class="count-product-cart">3 товара</p>
+                                </div>
+                                <div class="total-r">
+                                    <p class="price">18 336 ₽</p>
+                                    <p class="price-economy">Экономия 2839 ₽ </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="count-product-cart">3 товара</p>
+            </div>
+            <div class="total-r">
+                <p class="price">18 336 ₽</p>
+                <p class="price-economy">Экономия 2839 ₽ </p>
+            </div>
+        </div>
+        <button class="black-button">оформить заказ</button>
+    </div>
+
+
+    <div class="delivery-block">
+        <img src="./images/icon-8.svg" alt="">
+        Бесплатная доставка курьером по всей России
+    </div>
+
+    <div class="recommendations">
+        <div class="recommendations-title">
+            <h4>рекомендуем</h4>
+            <div class="button-nav">
+                <button class="button-prev button-prev3">
+                    <img src="./images/arrow-slider2.svg" alt="">
+                </button>
+                <button class="button-next button-next3">
+                    <img src="./images/arrow-slider2.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="recommendations-slider-wrapper">
+            <div class="recommendations-slider owl-carousel owl-theme">
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">
+                                    <span>-30%</span>
+                                </div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-5.png" alt="" style="opacity: 1;">
+
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg" style="opacity: 1;">
+                                <img src="./images/brand-2.svg" style="opacity: 1;">
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">
+                                    <span>-30%</span>
+                                </div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-5.png" alt="" style="opacity: 1;">
+
+
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg" style="opacity: 1;">
+                                <img src="./images/brand-2.svg" style="opacity: 1;">
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">
+                                    <span>-30%</span>
+                                </div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-5.png" alt="" style="opacity: 1;">
+
+
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg" style="opacity: 1;">
+                                <img src="./images/brand-2.svg" style="opacity: 1;">
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">
+                                    <span>-30%</span>
+                                </div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-5.png" alt="" style="opacity: 1;">
+
+
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg" style="opacity: 1;">
+                                <img src="./images/brand-2.svg" style="opacity: 1;">
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<main>
+    <section class="top-section">
+        <div class="top-slider owl-carousel owl-theme">
+            <div class="item">
+                <div class="top-slide top-slide-1">
+                    <div class="container">
+                        <div class="top-slide-wrapper">
+                        <h3>Новая<br> коллекция</h3>
+                        <p>Коллекция обуви, в которой сошлись отличный дизайн и <br> экологичный подход</p>
+                        <button class="black-button">к покупкам
+                            <img src="./images/arrow-button.svg" alt="">
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="top-slide top-slide-1">
+                    <div class="container">
+                        <div class="top-slide-wrapper">
+                        <h3>Новая<br> коллекция</h3>
+                        <p>Коллекция обуви, в которой сошлись отличный дизайн и <br> экологичный подход</p>
+                        <button class="black-button">к покупкам
+                            <img src="./images/arrow-button.svg" alt="">
+                        </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="top-slide top-slide-1">
+                    <div class="container">
+                        <div class="top-slide-wrapper">
+                        <h3>Новая<br> коллекция</h3>
+                        <p>Коллекция обуви, в которой сошлись отличный дизайн и <br> экологичный подход</p>
+                        <button class="black-button">к покупкам
+                            <img src="./images/arrow-button.svg" alt="">
+                        </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hits-section">
+        <div class="container">
+            <div class="hits-wrapper">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="hits-l">
+                            <img src="./images/img-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="hits-r">
+                            <h2>Хиты этого лета</h2>
+                            <div class="group-img">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="group-image">
+
+                                        <img src="./images/product-top-1.png" alt="">
+                                            </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="group-image">
+                                        <img src="./images/product-top-2.png" alt="">
+                                    </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="group-image">
+                                        <img src="./images/product-top-3.png" alt="">
+                                    </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="group-image">
+                                            <img src="./images/product-top-4.png" alt="">
+                                    </div>
+                                    </div>
+                                </div>
+                                <p>Получи скидку 10% по промокоду
+                                    summer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="popular-section">
+        <div class="container">
+            <div class="title-tm">
+                <h2>Популярное</h2>
+                <a href="" class="arrow-link"> <span>смотреть все</span>
+                    <img src="./images/arrow-more.svg" alt="">
+                </a>
+            </div>
+            <div class="products-slider-wrapper">
+            <div class="products-slider owl-carousel owl-theme">
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">-30%</div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-5.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg">
+                                <img src="./images/brand-2.svg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">-30%</div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-6.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg">
+                                <img src="./images/brand-2.svg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">-30%</div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-7.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg">
+                                <img src="./images/brand-2.svg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">-30%</div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-8.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg">
+                                <img src="./images/brand-2.svg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">-30%</div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-5.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg">
+                                <img src="./images/brand-2.svg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">-30%</div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-6.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg">
+                                <img src="./images/brand-2.svg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">-30%</div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-7.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg">
+                                <img src="./images/brand-2.svg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" class="product-card">
+                        <div class="img-card">
+                            <div class="card-img-title">
+                                <div class="discount-card">-30%</div>
+                                <button class="favourites"></button>
+                            </div>
+                            <img src="./images/product-8.png" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>MOBY BE KIND</h3>
+                            <p class="price">18 990 ₽
+                                <span class="price-old">22 990 ₽</span>
+                            </p>
+
+                            <div class="brands">
+                                <img src="./images/brand-1.svg">
+                                <img src="./images/brand-2.svg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="season-section">
+        <div class="container">
+            <div class="season-top">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="season-top-l">
+                            <img src="./images/img-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="season-top-r">
+                            <div class="season-top-r-text">
+                                <h2>MID SEASON SALE</h2>
+                                <a href="" class="arrow-link"><span>смотреть все</span>
+                                    <img src="./images/arrow-more.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="season-top-r-img">
+                                <img src="./images/img-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="season-bottom">
+                <div class="products-slider-wrapper">
+                <div class="products-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-5.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-6.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-7.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-8.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-5.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-6.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-7.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-8.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ashgirls-section">
+        <div class="container">
+            <h2>ashgirls</h2>
+            <div class="ashgirls-slider-wrapper">
+            <div class="ashgirls-slider owl-carousel owl-theme">
+                <div class="item">
+                    <div class="ashgirls-card">
+                        <img src="./images/img-4.png" alt="">
+                        <p>ани Микаберидзе в кедах <a href="">intense</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ashgirls-card">
+                        <img src="./images/img-5.png" alt="">
+                        <p>ани Микаберидзе в кедах <a href="">intense</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ashgirls-card">
+                        <img src="./images/img-6.png" alt="">
+                        <p>ани Микаберидзе в кедах <a href="">intense</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ashgirls-card">
+                        <img src="./images/img-4.png" alt="">
+                        <p>ани Микаберидзе в кедах <a href="">intense</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ashgirls-card">
+                        <img src="./images/img-5.png" alt="">
+                        <p>ани Микаберидзе в кедах <a href="">intense</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ashgirls-card">
+                        <img src="./images/img-6.png" alt="">
+                        <p>ани Микаберидзе в кедах <a href="">intense</a></p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="journal-section">
+        <div class="container">
+            <div class="journal-wrapper">
+                <div class="journal-l">
+                    <h2>журнал</h2>
+                    <a href="" class="arrow-link"><span>смотреть все</span>
+                        <img src="./images/arrow-more.svg" alt="">
+                    </a>
+                </div>
+                <div class="journal-r">
+                    <div class="journal-slider owl-carousel owl-theme">
+                        <div class="item">
+                            <a href="" class="journal-block">
+                                <img src="./images/img-7.png" alt="">
+                                <div class="journal-block-bottom">
+                                <p>Style icon</p>
+                                <h3>10 новых ботфортов на осень</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="" class="journal-block">
+                                <img src="./images/img-8.png" alt="">
+                                <div class="journal-block-bottom">
+                                    <p>Style icon</p>
+                                <h3>10 новых ботфортов на осень</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="" class="journal-block">
+                                <img src="./images/img-9.png" alt="">
+                                <div class="journal-block-bottom">
+                                <p>Style icon</p>
+                                <h3>10 новых ботфортов на осень</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="" class="journal-block">
+                                <img src="./images/img-7.png" alt="">
+                                <div class="journal-block-bottom">
+                                <p>Style icon</p>
+                                <h3>10 новых ботфортов на осень</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="" class="journal-block">
+                                <img src="./images/img-8.png" alt="">
+                                <div class="journal-block-bottom">
+                                <p>Style icon</p>
+                                <h3>10 новых ботфортов на осень</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="" class="journal-block">
+                                <img src="./images/img-9.png" alt="">
+                                <div class="journal-block-bottom">
+                                <p>Style icon</p>
+                                <h3>10 новых ботфортов на осень</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="new-collection-section">
+        <div class="new-collection-banner">
+            <div class="container">
+                <div class="new-collection-wrapper">
+                <div class="new-collection-title">
+
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-6">
+                            <h2 class="mb-0">
+                                <span>Новая</span>
+                            </h2>
+                        </div>
+                        <div class="col-lg-4"></div>
+
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6">
+                            <h2>
+                                коллекция SS23
+                            </h2>
+                            <p class="d-none d-lg-block">Коллекция обуви, в которой сошлись отличный дизайн и экологичный подход, — оба ориентированы на
+                                здоровье человека и всей нашей планеты.</p>
+                            <p class="d-block d-md-none">Коллекция обуви, в которой сошлись отличный дизайн
+                                и экологичный подход</p>
+                            <button class="black-button d-none d-lg-flex">к покупкам
+                                <img src="./images/arrow-button.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="col-lg-3"></div>
+                    </div>
+
+                </div>
+                <div class="slider-new-collection-wrapper">
+
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="new-collection-slider-wrapper">
+                            <div class="new-collection-slider owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="new-collection-img">
+                                        <img src="./images/product-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="new-collection-img">
+                                        <img src="./images/product-2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="new-collection-img">
+                                        <img src="./images/product-4.png" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="new-collection-img">
+                                        <img src="./images/product-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="new-collection-img">
+                                        <img src="./images/product-2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="new-collection-img">
+                                        <img src="./images/product-4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="button-nav">
+                                <button class="button-prev button-prev1">
+                                    <img src="./images/arrow-slider.svg" alt="">
+                                </button>
+                                <button class="button-next button-next1">
+                                    <img src="./images/arrow-slider.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+
+                </div>
+                    <button class="black-button d-flex d-lg-none">к покупкам
+                        <img src="./images/arrow-button.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="collection-tm-section">
+        <div class="container">
+            <div class="collection-tm-top">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="collection-tm-top-l">
+                            <img src="./images/img-10.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="collection-tm-top-r">
+                            <div class="collection-tm-top-r-img">
+                                <img src="./images/img-11.png" alt="">
+                            </div>
+                            <div class="collection-tm-top-r-text">
+                                <h2>re/ash <a href="" class="arrow-link d-flex d-md-none">
+                                    <img src="./images/arrow-more.svg" alt="">
+                                </a></h2>
+                                <p>Коллекция обуви, в которой сошлись отличный дизайн и экологичный подход, — оба
+                                    ориентированы на здоровье человека и всей нашей планеты.</p>
+                                <a href="" class="arrow-link d-none d-md-flex">смотреть все
+                                    <img src="./images/arrow-more.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-tm-center">
+                <div class="slider-product owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-5.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-6.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card product-card-large">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-7.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-8.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-5.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-6.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-7.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-8.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-tm-bottom">
+                <div class="new-collection-title">
+                    <h2>mid season<br> sale<br>
+                        до - 70%</h2>
+                    <p>Коллекция обуви, в которой сошлись отличный дизайн и экологичный подход</p>
+                    <button class="black-button">к покупкам
+                        <img src="./images/arrow-button.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="popular-2-section d-none d-md-block">
+        <div class="container">
+            <div class="title-tm">
+                <h2>Популярное</h2>
+                <a href="" class="arrow-link"><span>смотреть все</span>
+                    <img src="./images/arrow-more.svg" alt="">
+                </a>
+            </div>
+            <div class="slider-wrapper">
+
+
+
+                <div class="products2-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-5.png" alt="">
+                            </div>
+
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-6.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-7.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-8.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-5.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-6.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-7.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-8.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card-nav product-card-hover">
+                    <p class="discount">дополнительная
+                        скидка 10%🔥</p>
+
+                    <div class="button-nav">
+                        <button class="button-prev button-prev2">
+                            <img src="./images/arrow-slider2.svg" alt="">
+                        </button>
+                        <button class="button-next button-next2">
+                            <img src="./images/arrow-slider2.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom-section">
+        <div class="container">
+            <div class="bottom-header">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="discount-block discount-block-1">
+                            <h3>sale
+                                <span>д0 -50%</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="discount-block discount-block-2">
+                            <h3>последняя пара
+                                <span>д0 -70%</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popular-2-m d-block d-md-none">
+            <div class="title-tm">
+                <h2>Популярное</h2>
+                <a href="" class="arrow-link"><span>смотреть все</span>
+                    <img src="./images/arrow-more.svg" alt="">
+                </a>
+            </div>
+            <div class="slider-wrapper">
+
+
+                <div class="products2-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-5.png" alt="">
+                            </div>
+
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-6.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-7.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-8.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-5.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-6.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-7.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="product-card">
+                            <div class="img-card">
+                                <div class="card-img-title">
+                                    <div class="discount-card">-30%</div>
+                                    <button class="favourites"></button>
+                                </div>
+                                <img src="./images/product-8.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <h3>MOBY BE KIND</h3>
+                                <p class="price">18 990 ₽
+                                    <span class="price-old">22 990 ₽</span>
+                                </p>
+
+                                <div class="brands">
+                                    <img src="./images/brand-1.svg">
+                                    <img src="./images/brand-2.svg">
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card-nav product-card-hover">
+                    <p class="discount">дополнительная
+                        скидка 10%🔥</p>
+
+                    <div class="button-nav">
+                        <button class="button-prev button-prev2">
+                            <img src="./images/arrow-slider2.svg" alt="">
+                        </button>
+                        <button class="button-next button-next2">
+                            <img src="./images/arrow-slider2.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+
+            <div class="bottom-footer">
+                <div class="banner-bottom">
+                    <div class="banner-bottom-text">
+                        <h3>ASHGIRLS club</h3>
+                        <p class="p-tm">Модные инспиры и подборки, секретные скидки и ранний доступ к новинкам доступны с подпиской на</p>
+                        <div class="links">
+                            <a href="">TELEGRAM</a>
+                            <a href="">INSTARGRAM*</a>
+                        </div>
+                        <p class="note">Meta - запрещенная в россии организация</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <h3>узнавайте<br>
+            новости первыми</h3>
+        <p>Подписывайтесь на рассылку</p>
+        <form class="form-mailing">
+            <input type="email" placeholder="@email">
+            <button type="submit"><img src="./images/arrow-mail.svg" alt=""> </button>
+        </form>
+    </div>
+</footer>
 
 
 <script src="./js/jquery-3.2.1.min.js"></script>
 
-<script src="./js/bootstrap.min.js"></script>
+<script src="./js/bootstrap.bundle.js"></script>
 
+<script src="./js/owl.carousel.js"></script>
+
+<script src="./js/main.js"></script>
+
+
+<script>
+
+    $(document).ready(function () {
+        $('.top-slider').owlCarousel({
+            loop: true,
+            items: 1,
+            margin: 0,
+            nav: false,
+            dots: true,
+            responsive: {
+                0: {},
+                768: {},
+                1200: {}
+            }
+        });
+
+    });
+
+    $(document).ready(function () {
+        $('.products-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    margin: 2
+                },
+                768: {
+                    margin: 8
+                },
+                1440: {
+                    margin: 10
+                }
+            }
+        });
+
+    });
+
+    $(document).ready(function () {
+        $('.ashgirls-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 0,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+/*
+                    margin: 72
+*/
+                },
+                768: {
+/*
+                    margin: 82
+*/
+                },
+                1024: {
+/*
+                    margin: 130
+*/
+                },
+                1600: {
+/*
+                    margin: 206
+*/
+                },
+                1925: {
+/*
+                    margin: 223
+*/
+                }
+            }
+        });
+
+    });
+
+    $(document).ready(function () {
+        $('.journal-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 0,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+/*
+                    margin: 8
+*/
+                },
+                768: {
+/*
+                    margin: 6
+*/
+                },
+                992: {
+/*
+                    margin: 10
+*/
+                }
+            }
+        });
+
+    });
+
+
+
+
+
+
+
+    $(document).ready(function () {
+        $('.slider-product').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {margin: 2},
+                768: {margin: 8},
+                1200: {            margin: 8
+                },
+                1600: {            margin: 10
+                }
+            }
+        });
+
+    });
+
+
+    $(document).ready(function () {
+        $('.products2-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    margin: 2
+                },
+                768: {
+                    margin: 8
+                },
+                1600: {
+                    margin: 10
+                }
+            }
+        });
+        $(".button-prev2").click(function () {
+            $(".products2-slider .owl-prev").click();
+            $(this).closest('.product-card').click(false);
+        });
+
+        $(".button-next2").click(function () {
+            $(".products2-slider .owl-next").click();
+            $(this).closest('.product-card').click(false);
+        });
+    });
+
+    $(document).ready(function () {
+        $('.new-collection-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 5,
+            margin: 0,
+            nav: false,
+            mouseDrag: false,
+            touchDrag: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    autoWidth: false,
+                    margin: 0
+                },
+                768: {
+                    items: 1,
+                    margin: 0,
+                    autoWidth: false
+                },
+                992: {
+                    margin: 0,
+                    autoWidth: true
+                }
+
+            }
+        });
+        $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
+        $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
+
+        $(".button-prev1").click(function () {
+            $(".new-collection-slider .owl-prev").click();
+            $('.new-collection-slider .owl-item').removeClass('ActiveItem');
+            $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
+            $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
+        });
+
+        $(".button-next1").click(function () {
+            $(".new-collection-slider .owl-next").click();
+            $('.new-collection-slider .owl-item').removeClass('ActiveItem');
+            $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
+            $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
+        });
+
+
+
+
+
+
+
+
+
+
+        /*$('.new-collection-slider').on('translate.owl.carousel', function(){
+            $('.owl-item.big').removeClass('big');
+            $('.owl-item.medium').removeClass('medium');
+            $('.owl-item.active').eq(0).addClass('big');
+            $('.owl-item.active').eq(1).addClass('medium');
+            $('.owl-item.active').eq(2).addClass('medium');
+
+    });*/
+    });
+
+</script>
+<script>
+    $(".cart-toggler").click(function () {
+        $(".cart-modal").addClass('active');
+        $(".cart-modal-overlay").addClass('active');
+        $("body").addClass('active');
+        return false
+    });
+    $(".close-cart-modal").click(function () {
+        $(".cart-modal").removeClass('active');
+        $(".cart-modal-overlay").removeClass('active');
+        $("body").removeClass('active');
+        return false
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $('.recommendations-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    margin: 2
+                },
+                768: {
+                    margin: 8
+                },
+                1600: {
+                    margin: 8
+                }
+            }
+        });
+        $(".button-prev3").click(function () {
+            $(".recommendations-slider .owl-prev").click();
+        });
+
+        $(".button-next3").click(function () {
+            $(".recommendations-slider .owl-next").click();
+        });
+    });
+</script>
+
+<script>
+    $('.minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('.plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+    });
+</script>
+
+
+<script>
+    $(".cart-block-top-r .notification").click(function () {
+        $(this).toggleClass("active");
+        if (!$(this).data('status')) {
+            $(this).html('вы подписаны <i></i>');
+            $(this).data('status', true);
+        }
+        else {
+            $(this).html('подписаться <i></i>');
+            $(this).data('status', false);
+        }
+        return false
+
+    });
+
+</script>
+
+
+<script>
+    $(".cart-menu-button").click(function () {
+        $(this).next(".cart-menu-block").addClass("active");
+        $('body').addClass("active");
+    });
+    $(".close-tm").click(function () {
+        $(this).closest(".cart-menu-block").removeClass("active");
+        $('body').removeClass("active");
+    });
+    $(".favourites-cart-mobil").click(function () {
+        $(this).toggleClass("active");
+    });
+
+
+</script>
+
+
+
+<script>
+    $(".card-img-title .favourites").click(function (e) {
+        $(this).toggleClass("active");
+        (e).preventDefault();
+    });
+</script>
+<script src="./js/simplebar.js"></script>
+
+
+<script>
+
+
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+            $('header').addClass('header-bg');
+        }
+        else {
+            $('header').removeClass('header-bg');
+        }
+    });
+
+
+
+
+
+    $(document).ready(() => { // DOM готов к взаимодейтсвию
+
+        const onScrollHeader = () => { // объявляем основную функцию onScrollHeader
+
+        const header = $('header') // находим header и записываем в константу
+
+        let prevScroll = $(window).scrollTop() // узнаем на сколько была прокручена страница ранее
+        let currentScroll // на сколько прокручена страница сейчас (пока нет значения)
+
+        $(window).scroll(() => { // при прокрутке страницы
+
+        currentScroll = $(window).scrollTop() // узнаем на сколько прокрутили страницу
+
+        const headerHidden = () => header.hasClass('header_hidden') // узнаем скрыт header или нет
+
+    if (currentScroll > prevScroll && !headerHidden()) { // если прокручиваем страницу вниз и header не скрыт
+        header.addClass('header_hidden') // то скрываем header
+    }
+    if (currentScroll < prevScroll && headerHidden()) { // если прокручиваем страницу вверх и header скрыт
+        header.removeClass('header_hidden') // то отображаем header
+    }
+
+    prevScroll = currentScroll // записываем на сколько прокручена страница на данный момент
+
+    })
+
+    }
+
+    onScrollHeader() // вызываем основную функцию onScrollHeader
+
+    })
+</script>
+
+
+<script>
+
+    $('.promo-code input').keyup(function() {
+
+        if( $(this).val().length === 0 ) {
+            $(this).next("button").removeClass('active');
+        }
+        else {
+            $(this).next("button").addClass("active");
+        }
+    });
+</script>
+<script>
+
+    $(".info-click").click(function () {
+        $(this).children(".info-modal").toggleClass("active");
+    });
+</script>
+
+<script>
+
+    $(document).click(function (e) {
+        if ($(e.target).closest('.info-modal.active').length) {
+            return;
+        }
+        if ($(e.target).closest('.info-click').length) {
+        }
+        else {
+            $('.info-modal.active').removeClass("active")
+        }
+    });
+
+</script>
 
 
 
