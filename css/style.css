@@ -132,8 +132,8 @@ main {
   visibility: hidden;
   -webkit-transition: opacity 0.3s linear, visibility 0s linear;
   transition: opacity 0.3s linear, visibility 0s linear;
-  -webkit-transition-delay: 0.3s, 0.6s;
-  transition-delay: 0.3s, 0.6s;
+  -webkit-transition-delay: 0s, 0.3s;
+  transition-delay: 0s, 0.3s;
 }
 
 .header__menu.active {
