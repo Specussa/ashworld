@@ -263,4 +263,20 @@ main {
   text-transform: uppercase;
 }
 
+.header__menu_subitem {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+  -webkit-transition: opacity 0.3s linear, -webkit-transform 0.2s linear;
+  transition: opacity 0.3s linear, transform 0.2s linear;
+}
+
+.header__menu_list.active .header__menu_subitem {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition-delay: calc(var(--inc-step)*0.07s + 1.4s);
+  transition-delay: calc(var(--inc-step)*0.07s + 1.4s);
+}
+
 /* end header menu */

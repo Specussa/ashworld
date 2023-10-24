@@ -43,4 +43,7 @@ for (i = 0; i < headermenutab.length; i++) {
     }
   };
 }
+
+const hlisttop = document.querySelectorAll('.header__menu_sublist'); 
+[...hlisttop].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.style.setProperty('--inc-step', index+1);}});
 // end header tabs
