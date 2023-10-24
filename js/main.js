@@ -13,14 +13,6 @@ burger.addEventListener('click', function() {
 // end header burger
 
 // start header tabs
-// pdescrbutton.addEventListener('click', function() {
-//   if (!this.classList.contains("active")) {
-//     this.classList.add("active");
-//   }
-// })
-// const pcharacter = document.querySelector('.product__character');
-// pcharacter.style.maxHeight = (pcharacter.scrollHeight * 1) + "px";
-
 const headermenutabs = document.querySelectorAll(".header__menu_tabs");
 [...headermenutabs].forEach(function (li) {
   for (let [index, elem] of [...li.children].entries()) {
@@ -35,14 +27,16 @@ const headermenulists = document.querySelectorAll(".header__menu_lists");
   }
 });
 
-let headermenutab = document.querySelectorAll(".header__menu_tab");
+const headermenutab = document.querySelectorAll(".header__menu_tab");
+const headermenulist = document.querySelectorAll(".header__menu_list");
 for (i = 0; i < headermenutab.length; i++) {
   headermenutab[i].onclick = function (e) {
     if (!this.classList.contains("active")) {
       const headermenutabCOUNT = this.getAttribute("data-select-item");
       const headermenulistCOUNT = document.querySelector('.header__menu_list[data-select-item="' + headermenutabCOUNT + '"]');
-      headermenutab.forEach((n) => n.classList.remove("active"));
-      document.querySelectorAll(".header__menu_list").forEach((n) => n.classList.remove("active"));
+      headermenutab.forEach((n) => n.classList.remove("active")); 
+      headermenulist.forEach((n) => n.classList.remove("active"));
+      headermenulist.forEach((n) => n.style.maxHeight = null);
       this.classList.add("active");
       headermenulistCOUNT.classList.add("active");
       headermenulistCOUNT.style.maxHeight = headermenulistCOUNT.scrollHeight + "px";
