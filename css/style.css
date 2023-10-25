@@ -460,7 +460,8 @@ main {
   .header__menu_item:not(:last-child) {
     border-top: 0;
   }
-  .open {
+  .open,
+  .open body {
     height: 100vh;
     overflow: hidden;
   }
