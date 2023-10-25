@@ -459,6 +459,12 @@ main {
   border-bottom: 1px solid var(--border);
 }
 
+.personal__exit {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+}
+
 .personal__button_image {
   display: flex;
   width: 20px;
