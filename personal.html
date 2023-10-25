@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="">
+    <meta name="description" content="">
+    <title>Document</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./css/simplebar.css">
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!--<button data-bs-toggle="modal" data-bs-target="#Modal1">Войти
+</button>-->
+
+<div class="modal modal-tm-1 fade" id="Modal1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+<header class="header__black">
+  <div class="container">
+    <div class="header-wrapper">
+      <div class="header-l">
+        <button class="header__burger menu-button">
+          <div class="header__burger_button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>меню</span>
+        </button>
+        <a href="" class="a-link-header">ashworld</a>
+      </div>
+      <div class="header-с">
+        <a href="/" class="logo">
+          <img src="./images/logo-black.svg" alt="">
+        </a>
+      </div>
+      <div class="header-r">
+        <div class="search">
+          <button class="search-button">
+            <img src="./images/icon-1.svg" alt="">
+          </button>
+        </div>
+        <div class="links-header">
+          <a href="">
+            <img src="./images/icon-black-2.svg" alt="">
+          </a>
+          <a href="">
+            <img src="./images/icon-black-3.svg" alt="">
+          </a>
+          <a href="" class="cart-toggler">
+            <img src="./images/icon-black-4.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header__menu">
+      <div class="header__menu_tabs">
+        <button class="header__menu_tab header__menu_tab_button">Женщинам</button>
+        <button class="header__menu_tab header__menu_tab_button">Мужчинам</button>
+        <button class="header__menu_tab header__menu_tab_button">Покупателю</button>
+      </div>
+      <nav class="header__menu_lists">
+        <ul class="header__menu_list">
+          <li class="header__menu_item">
+            <p class="header__menu_heading">Категории</p>
+            <ul class="header__menu_sublist">
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_1.jpg" alt="">
+                <span class="header__menu_head" style="color: var(--whitecolor)">Новая коллекция FW’23</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_2.jpg" alt="">
+                <span class="header__menu_head" style="color: var(--blackcolor)">Made in italy</span></a>
+              </li>
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_3.jpg" alt="">
+                <span class="header__menu_head" style="color: var(--blackcolor)">AshxSample</span></a>
+              </li>
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_4.jpg" alt="">
+                <span class="header__menu_head" style="color: var(--blackcolor)">Re/Ash</span></a>
+              </li>
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_5.jpg" alt="">
+                <span class="header__menu_head" style="color: var(--blackcolor)">Addict/Air</span></a>
+              </li>
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_6.jpg" alt="">
+                <span class="header__menu_head" style="color: var(--blackcolor)">Moby</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu_item">
+            <p class="header__menu_heading">Категории</p>
+            <ul class="header__menu_sublist">
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Все товары</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Кроссовки</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Кеды</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Казаки</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Босоножки</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Ботинки</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Ботильоны</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Ботфорты</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Лоферы</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Сабо</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Сандалии</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Сапоги</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Слипоны</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Шлепанцы</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Челси</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu_item">
+            <p class="header__menu_heading">Подборки</p>
+            <ul class="header__menu_sublist">
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_8.jpg" alt="">
+                <span class="header__menu_desc" style="color: var(--whitecolor)">Последняя пара</span>
+                <span class="header__menu_discount" style="color: var(--whitecolor)"><span style="border-bottom: 2px solid var(--whitecolor);">До</span><span>70%</span></span></a>
+              </li>
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_4.jpg" alt="">
+                <span class="header__menu_desc" style="color: var(--blackcolor)">Final sale</span></a>
+              </li>
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_4.jpg" alt="">
+                <span class="header__menu_desc" style="color: var(--blackcolor)">Дутые формы</span></a>
+              </li>
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_9.jpg" alt="">
+                <span class="header__menu_desc" style="color: var(--whitecolor)">Анималистичные принты</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu_item">
+            <div class="header__menu_image">
+              <div class="header__menu_image_info">
+                <p class="header__collection">Новая коллекция</p>
+                <p class="header__collection_name">fw’23</p>
+              </div>
+              <span class="header__menu_image_shadow"></span>
+              <img src="img/header/category_woman.webp" alt="">
+            </div>
+          </li>
+        </ul>
+        <ul class="header__menu_list">
+          <li class="header__menu_item">
+            <p class="header__menu_heading">Категории</p>
+            <ul class="header__menu_sublist">
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_1.jpg" alt="">
+                <span class="header__menu_head" style="color: var(--whitecolor)">Новая коллекция FW’23</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_2.jpg" alt="">
+                <span class="header__menu_head" style="color: var(--blackcolor)">Made in italy</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu_item">
+            <p class="header__menu_heading">Категории</p>
+            <ul class="header__menu_sublist">
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Все товары</span></a>
+              </li>
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Кроссовки</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu_item">
+            <p class="header__menu_heading">Подборки</p>
+            <ul class="header__menu_sublist">
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_8.jpg" alt="">
+                <span class="header__menu_desc" style="color: var(--whitecolor)">Последняя пара</span>
+                <span class="header__menu_discount" style="color: var(--whitecolor)"><span style="border-bottom: 2px solid var(--whitecolor);">До</span><span>70%</span></span></a>
+              </li>
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_4.jpg" alt="">
+                <span class="header__menu_desc" style="color: var(--blackcolor)">Final sale</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu_item">
+            <div class="header__menu_image">
+              <div class="header__menu_image_info">
+                <p class="header__collection">Новая коллекция</p>
+                <p class="header__collection_name">fw’23</p>
+              </div>
+              <span class="header__menu_image_shadow"></span>
+              <img src="img/header/category_woman.webp" alt="">
+            </div>
+          </li>
+        </ul>
+        <ul class="header__menu_list">
+          <li class="header__menu_item">
+            <p class="header__menu_heading">Категории</p>
+            <ul class="header__menu_sublist">
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_1.jpg" alt="">
+                <span class="header__menu_head" style="color: var(--whitecolor)">Новая коллекция FW’23</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu_item">
+            <p class="header__menu_heading">Категории</p>
+            <ul class="header__menu_sublist">
+              <li class="header__menu_subitem"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_smallimage" src="img/header/category/category_7.jpg" alt="">
+                <span class="header__menu_desc">Все товары</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu_item">
+            <p class="header__menu_heading">Подборки</p>
+            <ul class="header__menu_sublist">
+              <li class="header__menu_subitem header__menu_subitem_small"><a href="#" class="header__menu_sublink">
+                <img class="header__menu_bigimage" src="img/header/category/category_8.jpg" alt="">
+                <span class="header__menu_desc" style="color: var(--whitecolor)">Последняя пара</span>
+                <span class="header__menu_discount" style="color: var(--whitecolor)"><span style="border-bottom: 2px solid var(--whitecolor);">До</span><span>70%</span></span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu_item">
+            <div class="header__menu_image">
+              <div class="header__menu_image_info">
+                <p class="header__collection">Новая коллекция</p>
+                <p class="header__collection_name">fw’23</p>
+              </div>
+              <span class="header__menu_image_shadow"></span>
+              <img src="img/header/category_woman.webp" alt="">
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="section__top"></section>
+  <section class="section__personal">
+    <div class="container">
+    </div>
+  </section>
+</main>
+
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+
+<script src="./js/bootstrap.bundle.js"></script>
+
+<script src="./js/owl.carousel.js"></script>
+
+<script src="./js/main.js"></script>
+
+
+<script>
+
+    $(document).ready(function () {
+        $('.top-slider').owlCarousel({
+            loop: true,
+            items: 1,
+            margin: 0,
+            nav: false,
+            dots: true,
+            responsive: {
+                0: {},
+                768: {},
+                1200: {}
+            }
+        });
+
+    });
+
+    $(document).ready(function () {
+        $('.products-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    margin: 2
+                },
+                768: {
+                    margin: 8
+                },
+                1440: {
+                    margin: 10
+                }
+            }
+        });
+
+    });
+
+    $(document).ready(function () {
+        $('.ashgirls-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 0,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+/*
+                    margin: 72
+*/
+                },
+                768: {
+/*
+                    margin: 82
+*/
+                },
+                1024: {
+/*
+                    margin: 130
+*/
+                },
+                1600: {
+/*
+                    margin: 206
+*/
+                },
+                1925: {
+/*
+                    margin: 223
+*/
+                }
+            }
+        });
+
+    });
+
+    $(document).ready(function () {
+        $('.journal-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 0,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+/*
+                    margin: 8
+*/
+                },
+                768: {
+/*
+                    margin: 6
+*/
+                },
+                992: {
+/*
+                    margin: 10
+*/
+                }
+            }
+        });
+
+    });
+
+
+
+
+
+
+
+    $(document).ready(function () {
+        $('.slider-product').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {margin: 2},
+                768: {margin: 8},
+                1200: {            margin: 8
+                },
+                1600: {            margin: 10
+                }
+            }
+        });
+
+    });
+
+
+    $(document).ready(function () {
+        $('.products2-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    margin: 2
+                },
+                768: {
+                    margin: 8
+                },
+                1600: {
+                    margin: 10
+                }
+            }
+        });
+        $(".button-prev2").click(function () {
+            $(".products2-slider .owl-prev").click();
+            $(this).closest('.product-card').click(false);
+        });
+
+        $(".button-next2").click(function () {
+            $(".products2-slider .owl-next").click();
+            $(this).closest('.product-card').click(false);
+        });
+    });
+
+    $(document).ready(function () {
+        $('.new-collection-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 5,
+            margin: 0,
+            nav: false,
+            mouseDrag: false,
+            touchDrag: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    autoWidth: false,
+                    margin: 0
+                },
+                768: {
+                    items: 1,
+                    margin: 0,
+                    autoWidth: false
+                },
+                992: {
+                    margin: 0,
+                    autoWidth: true
+                }
+
+            }
+        });
+        $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
+        $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
+
+        $(".button-prev1").click(function () {
+            $(".new-collection-slider .owl-prev").click();
+            $('.new-collection-slider .owl-item').removeClass('ActiveItem');
+            $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
+            $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
+        });
+
+        $(".button-next1").click(function () {
+            $(".new-collection-slider .owl-next").click();
+            $('.new-collection-slider .owl-item').removeClass('ActiveItem');
+            $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
+            $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
+        });
+
+
+
+
+
+
+
+
+
+
+        /*$('.new-collection-slider').on('translate.owl.carousel', function(){
+            $('.owl-item.big').removeClass('big');
+            $('.owl-item.medium').removeClass('medium');
+            $('.owl-item.active').eq(0).addClass('big');
+            $('.owl-item.active').eq(1).addClass('medium');
+            $('.owl-item.active').eq(2).addClass('medium');
+
+    });*/
+    });
+
+</script>
+<script>
+    $(".cart-toggler").click(function () {
+        $(".cart-modal").addClass('active');
+        $(".cart-modal-overlay").addClass('active');
+        $("body").addClass('active');
+        return false
+    });
+    $(".close-cart-modal").click(function () {
+        $(".cart-modal").removeClass('active');
+        $(".cart-modal-overlay").removeClass('active');
+        $("body").removeClass('active');
+        return false
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $('.recommendations-slider').owlCarousel({
+            autoWidth: true,
+            loop: true,
+            items: 1,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    margin: 2
+                },
+                768: {
+                    margin: 8
+                },
+                1600: {
+                    margin: 8
+                }
+            }
+        });
+        $(".button-prev3").click(function () {
+            $(".recommendations-slider .owl-prev").click();
+        });
+
+        $(".button-next3").click(function () {
+            $(".recommendations-slider .owl-next").click();
+        });
+    });
+</script>
+
+<script>
+    $('.minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('.plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+    });
+</script>
+
+
+<script>
+    $(".cart-block-top-r .notification").click(function () {
+        $(this).toggleClass("active");
+        if (!$(this).data('status')) {
+            $(this).html('вы подписаны <i></i>');
+            $(this).data('status', true);
+        }
+        else {
+            $(this).html('подписаться <i></i>');
+            $(this).data('status', false);
+        }
+        return false
+
+    });
+
+</script>
+
+
+<script>
+    $(".cart-menu-button").click(function () {
+        $(this).next(".cart-menu-block").addClass("active");
+        $('body').addClass("active");
+    });
+    $(".close-tm").click(function () {
+        $(this).closest(".cart-menu-block").removeClass("active");
+        $('body').removeClass("active");
+    });
+    $(".favourites-cart-mobil").click(function () {
+        $(this).toggleClass("active");
+    });
+
+
+</script>
+
+
+
+<script>
+    $(".card-img-title .favourites").click(function (e) {
+        $(this).toggleClass("active");
+        (e).preventDefault();
+    });
+</script>
+<script src="./js/simplebar.js"></script>
+
+
+<script>
+
+
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+            $('header').addClass('header-bg');
+        }
+        else {
+            $('header').removeClass('header-bg');
+        }
+    });
+
+
+
+
+
+    $(document).ready(() => { // DOM готов к взаимодейтсвию
+
+        const onScrollHeader = () => { // объявляем основную функцию onScrollHeader
+
+        const header = $('header') // находим header и записываем в константу
+
+        let prevScroll = $(window).scrollTop() // узнаем на сколько была прокручена страница ранее
+        let currentScroll // на сколько прокручена страница сейчас (пока нет значения)
+
+        $(window).scroll(() => { // при прокрутке страницы
+
+        currentScroll = $(window).scrollTop() // узнаем на сколько прокрутили страницу
+
+        const headerHidden = () => header.hasClass('header_hidden') // узнаем скрыт header или нет
+
+    if (currentScroll > prevScroll && !headerHidden()) { // если прокручиваем страницу вниз и header не скрыт
+        header.addClass('header_hidden') // то скрываем header
+    }
+    if (currentScroll < prevScroll && headerHidden()) { // если прокручиваем страницу вверх и header скрыт
+        header.removeClass('header_hidden') // то отображаем header
+    }
+
+    prevScroll = currentScroll // записываем на сколько прокручена страница на данный момент
+
+    })
+
+    }
+
+    onScrollHeader() // вызываем основную функцию onScrollHeader
+
+    })
+</script>
+
+
+<script>
+
+    $('.promo-code input').keyup(function() {
+
+        if( $(this).val().length === 0 ) {
+            $(this).next("button").removeClass('active');
+        }
+        else {
+            $(this).next("button").addClass("active");
+        }
+    });
+</script>
+<script>
+
+    $(".info-click").click(function () {
+        $(this).children(".info-modal").toggleClass("active");
+    });
+</script>
+
+<script>
+
+    $(document).click(function (e) {
+        if ($(e.target).closest('.info-modal.active').length) {
+            return;
+        }
+        if ($(e.target).closest('.info-click').length) {
+        }
+        else {
+            $('.info-modal.active').removeClass("active")
+        }
+    });
+
+</script>
+
+
+
+</body>
+</html>

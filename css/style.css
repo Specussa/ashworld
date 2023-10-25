@@ -71,6 +71,10 @@ main {
   overflow: hidden;
 }
 
+.header__black .header__burger {
+  color: var(--black);
+}
+
 .header__burger_button {
   width: 20px;
   height: 15.1px;
@@ -92,6 +96,10 @@ main {
   transform: rotate(0deg);
   -webkit-transition: -webkit-transform .25s ease-in-out, left .25s ease-in-out, top .25s ease-in-out, width .25s linear, opacity .25s ease-in-out;
   transition: transform .25s ease-in-out, left .25s ease-in-out, top .25s ease-in-out, width .25s linear, opacity .25s ease-in-out;
+}
+
+.header__black .header__burger_button span {
+  background: var(--black);
 }
 
 .header__burger_button span:nth-child(1) {
@@ -340,6 +348,14 @@ main {
 }
 
 /* end header menu */
+
+/* start section top */
+
+.section__top {
+  height: 147px;
+}
+
+/* end section top */
 
 /* start media 1919px */
 @media (max-width: 1919px) {
