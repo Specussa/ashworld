@@ -5,11 +5,14 @@
   --whitecolor: #000;
   --blackcolor: #000;
   --gray: #f3f3f3;
+  --dgray: #979797;
   --lgray: #c3c3c3;
+  --hover: #f9f9f9;
   --linkhover: #444444;
   --border: #f0f0f0;
   --arimo: 'Arimo', 'HelveticaNeueCyr', sans-serif;
   --halvar: 'Halvar Breit Md', 'HelveticaNeueCyr', sans-serif;
+  --helvetica: 'HelveticaNeueCyr', sans-serif;
 }
 
 *::-moz-selection {
@@ -351,8 +354,92 @@ main {
 
 /* start section top */
 
-.section__top {
-  height: 147px;
+.section_top {
+  height: 240px;
+}
+
+.personal__profile {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  -webkit-transition: background-color 0.2s linear, border 0.2s linear;
+  transition: background-color 0.2s linear, border 0.2s linear;
+  cursor: pointer;
+}
+
+.personal__profile:hover,
+.personal__profile.active,
+.personal__profile:focus {
+  background-color: var(--hover);
+}
+
+.personal__profile:focus {
+  border: 1px solid var(--black);
+}
+
+.personal__profile_info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.personal__profile_left {
+  display: flex;
+  width: 72px;
+  height: 72px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  border-radius: 7.38px;
+}
+
+.personal__profile_nick {
+  font-family: var(--halvar);
+  font-size: 41px;
+  font-weight: 400;
+  line-height: 48px;
+  color: var(--white);
+}
+
+.personal__profile_name {
+  font-family: var(--halvar);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--black);
+}
+
+.personal__profile_email {
+  font-family: var(--helvetica);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--dgray);
+}
+
+.personal__profile_icon {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.personal__profile:hover .personal__profile_icon,
+.personal__profile.active .personal__profile_icon,
+.personal__profile:focus .personal__profile_icon {
+  opacity: 1;
 }
 
 /* end section top */
