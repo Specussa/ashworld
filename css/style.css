@@ -362,6 +362,7 @@ main {
   display: flex;
   width: 100%;
   padding: 10px;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
@@ -397,6 +398,13 @@ main {
   justify-content: center;
   background-color: var(--black);
   border-radius: 7.38px;
+}
+
+.personal__profile_right {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .personal__profile_nick {
@@ -440,6 +448,90 @@ main {
 .personal__profile.active .personal__profile_icon,
 .personal__profile:focus .personal__profile_icon {
   opacity: 1;
+}
+
+.personal__buttons {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.personal__button_image {
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.personal__buttons_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal__button {
+  display: flex;
+  padding: 14px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.2s linear, border 0.2s linear;
+  transition: background-color 0.2s linear, border 0.2s linear;
+  cursor: pointer;
+}
+
+.personal__button:hover,
+.personal__button.active,
+.personal__button:focus {
+  background-color: var(--hover);
+}
+
+.personal__button:focus {
+  border: 1px solid var(--black);
+}
+
+.personal__button_block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.personal__button_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.personal__button_name {
+  font-family: var(--arimo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--black);
+}
+
+.personal__button_count {
+  display: flex;
+  height: 21px;
+  padding: 2px 8px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--arimo);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  background-color: var(--hover);
+  border-radius: 14px;
+}
+
+.personal__button:first-child .personal__button_count {
+  color: var(--white);
+  background-color: var(--black);
 }
 
 /* end section top */
