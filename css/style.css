@@ -452,7 +452,7 @@ main {
 
 .personal__buttons {
   display: flex;
-  padding: 20px 0;
+  padding: 20px 0 52px;
   flex-direction: column;
   gap: 20px;
   border-top: 1px solid var(--border);
