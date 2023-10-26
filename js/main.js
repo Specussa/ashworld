@@ -75,3 +75,22 @@ window.addEventListener('click', e => {
   }
 })
 // end header burger
+
+// start checkbox
+const uncheck = [...document.querySelectorAll('.personal__subscription_input')];
+const onChecked = () => {
+  if(document.querySelector('.personal__subscription_label.unchecked')) {
+    
+  } else {
+    
+  }
+}
+uncheck.forEach(input => input.addEventListener('input', function(event) {
+  if (event.target.checked) {
+    event.target.closest('.personal__subscription_item').classList.remove('unchecked');
+  } else {
+    event.target.closest('.personal__subscription_item').classList.add('unchecked');
+  }
+  onChecked()
+}))
+// end checkbox

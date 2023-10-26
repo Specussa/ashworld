@@ -8,6 +8,7 @@
   --dgray: #979797;
   --lgray: #c3c3c3;
   --hover: #f9f9f9;
+  --check: #f0f0f0;
   --linkhover: #444444;
   --border: #f0f0f0;
   --arimo: 'Arimo', 'HelveticaNeueCyr', sans-serif;
@@ -540,6 +541,245 @@ main {
   background-color: var(--black);
 }
 
+.personal__head {
+  padding: 0 0 64px;
+  font-family: var(--halvar);
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.personal__subscription_button {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.personal__check_label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  font-family: var(--arimo);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--black);
+}
+
+.personal__check_input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.personal__check_label span {
+  width: 29px;
+  height: 16px;
+  display: block;
+  background-color: var(--check);
+  border-radius: 12px;
+  position: relative;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+
+.personal__check_label span:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  background-color: var(--white);
+  border-radius: 50%;
+  left: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transition: left 0.15s linear;
+  transition: left 0.15s linear;
+}
+
+.personal__check_label input:checked ~ span:before {
+  left: calc(100% - 15px);
+}
+
+.personal__check_label input:checked ~ span {
+  background-color: var(--black);
+}
+
+.personal__subscription {
+  padding: 0 0 200px;
+}
+
+.personal__subscription_label {
+  position: relative;
+  font-family: var(--arimo);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--black);
+}
+
+.personal__subscription_input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.personal__subscription_label span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.personal__subscription_label input ~ .personal__subscription_subscr,
+.personal__subscription_label input:checked ~ .personal__subscription_nosubscr {
+  display: flex;
+}
+
+.personal__subscription_label input ~ .personal__subscription_nosubscr,
+.personal__subscription_label input:checked ~ .personal__subscription_subscr {
+  display: none;
+}
+
+.personal__subscription_head {
+  padding: 32px 0 20px;
+  font-family: var(--arimo);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--black);
+  border-bottom: 1px solid var(--border);
+}
+
+.personal__subscription_item {
+  display: flex;
+  padding: 24px 0;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.personal__subscription_block {
+  display: flex;
+  gap: 20px;
+}
+
+.personal__subscription_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.personal__subscription_info_block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.personal__subscription_image {
+  display: flex;
+  width: 143px;
+  height: 175px;
+}
+
+.personal__subscription_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personal__subscription_firm {
+  font-family: var(--halvar);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.personal__subscription_name,
+.personal__subscription_size {
+  font-family: var(--arimo);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--black);
+}
+
+.personal__subscription_size {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.personal__subscription_size span {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.personal__subscription_status {
+  font-family: var(--halvar);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.personal__subscription_status span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.personal__nostock {
+  color: #b9b9b9;
+}
+
+.personal__stock {
+  color: var(--black);
+}
+
+.personal__limit {
+  color: #fd9433;
+}
+
+.personal__subscription_image,
+.personal__subscription_firm,
+.personal__subscription_name,
+.personal__subscription_size,
+.personal__subscription_status {
+  opacity: 1;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+}
+
+.unchecked .personal__subscription_image,
+.unchecked .personal__subscription_firm,
+.unchecked .personal__subscription_name,
+.unchecked .personal__subscription_size,
+.unchecked .personal__subscription_status {
+  opacity: 0.5;
+}
+
 /* end section top */
 
 /* start media 1919px */
@@ -590,6 +830,38 @@ main {
   .header__collection_name {
     font-size: 74px;
     line-height: 74px;
+  }
+  .personal__profile {
+    margin-bottom: 16px;
+  }
+  .personal__profile_left {
+    width: 58px;
+    height: 58px;
+  }
+  .personal__profile_info {
+    gap: 12px;
+  }
+  .personal__profile_name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .personal__profile_email {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .personal__buttons {
+    padding: 16px 0 44px;
+  }
+  .personal__button {
+    padding: 12px;
+    gap: 10px;
+  }
+  .personal__button_name {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .personal__button_block {
+    gap: 10px;
   }
 }
 /* end media 1919px */
