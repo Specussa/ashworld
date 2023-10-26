@@ -542,9 +542,13 @@ main {
   border-radius: 14px;
 }
 
-.personal__button:first-child .personal__button_count {
+.personal__button_discount .personal__button_count {
   color: var(--white);
   background-color: var(--black);
+}
+
+.personal__button_discount .personal__button_count span:first-child {
+  color: var(--white);
 }
 
 .personal__head {
@@ -1190,8 +1194,8 @@ main {
     flex-direction: column-reverse;
   }
   .personal__block_buttons {
-    margin: 0 -20px;
-    padding: 0 20px;
+    margin: 0 -14px;
+    padding: 14px;
     background-color: var(--white);
     border-radius: 20px;
   }
@@ -1241,6 +1245,63 @@ main {
     font-weight: 500;
     line-height: 45px;
     background-color: transparent;
+  }
+  .personal__head {
+    padding: 0 0 36px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .personal__buttons_flex:first-child {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .personal__buttons_flex:first-child  .personal__button {
+    padding: 16px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: #f6f6f6;
+  }
+  .personal__buttons_flex:first-child  .personal__button_block {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .personal__buttons_flex:first-child  .personal__button_count {
+    font-size: 12px;
+    line-height: 14px;
+    background-color: var(--white);
+  }
+  .personal__buttons {
+    padding: 0;
+    gap: 28px;
+    border-bottom: 0;
+  }
+  .personal__button {
+    padding: 10px 0;
+  }
+  .personal__exit {
+    padding: 0;
+  }
+  .personal__button_exit .personal__button_block {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .personal__profile_nick {
+    font-size: 27px;
+    line-height: 33px;
+  }
+  .personal__profile_left {
+    width: 46px;
+    height: 46px;
+  }
+  .personal__profile_icon {
+    opacity: 1;
+    background-color: transparent;
+  }
+  .personal__profile {
+    padding: 20px 0;
   }
 }
 /* end media 767px */
