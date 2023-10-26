@@ -1310,9 +1310,9 @@ main {
     padding: 10px 0;
     margin: 12px 0;
   }
-  .personal__menu {
+  .personal__subscription {
     margin: 0 -14px;
-    padding: 14px;
+    padding: 14px 14px 200px;
     background-color: var(--white);
     border-radius: 20px;
   }
