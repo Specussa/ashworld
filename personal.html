@@ -33,7 +33,7 @@
     </div>
   </div>
 </div>
-<header class="header__black">
+<header class="header__gray">
   <div class="container">
     <div class="header-wrapper">
       <div class="header-l">
@@ -919,92 +919,102 @@
                 <img src="img/icon/edit.svg" alt="">
               </span>
             </button>
-            <div class="personal__buttons">
-              <div class="personal__buttons_flex">
-                <button class="personal__button personal__button_discount">
-                  <span class="personal__button_block">
-                    <span class="personal__button_image">
-                      <img src="img/icon/discount.svg" alt="">
-                    </span>
-                    <span class="personal__button_name">
-                      Моя скидка
-                    </span>
-                  </span>
-                  <span class="personal__button_count">
-                    5%
-                  </span>
-                </button>
-                <button class="personal__button personal__button_cart">
-                  <span class="personal__button_block">
-                    <span class="personal__button_image">
-                      <img src="img/icon/cart.svg" alt="">
-                    </span>
-                    <span class="personal__button_name">
-                      Мои заказы
-                    </span>
-                  </span>
-                  <span class="personal__button_count">
-                    1
-                  </span>
-                </button>
-                <button class="personal__button personal__button_heart">
-                  <span class="personal__button_block">
-                    <span class="personal__button_image">
-                      <img src="img/icon/heart.svg" alt="">
-                    </span>
-                    <span class="personal__button_name">
-                      Избранное
-                    </span>
-                  </span>
-                  <span class="personal__button_count">
-                    1
-                  </span>
-                </button>
-              </div>
-              <div class="personal__buttons_flex">
-                <button class="personal__button personal__button_returns">
-                  <span class="personal__button_name">
-                    Возвраты
-                  </span>
-                </button>
-                <button class="personal__button personal__button_addresses">
-                  <span class="personal__button_name">
-                    Адреса
-                  </span>
-                </button>
-                <button class="personal__button personal__button_subscriptions">
-                  <span class="personal__button_name">
-                    Управление подписками
-                  </span>
-                </button>
-                <button class="personal__button personal__button_gift">
-                  <span class="personal__button_name">
-                    Подарки
-                  </span>
-                </button>
-                <button class="personal__button personal__button_certificates">
-                  <span class="personal__button_name">
-                    Сертификаты
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div class="personal__exit">
-              <button class="personal__button personal__button_exit">
+            <div class="personal__control_info">
+              <p class="personal__head personal__desktop_hidden">Привет, Алевтина!</p>
+              <button class="personal__button personal__button_discount">
+                <img class="personal__button_discount_image" src="img/personal/discount.jpg" alt="">
                 <span class="personal__button_block">
                   <span class="personal__button_image">
-                    <img src="img/icon/exit.svg" alt="">
+                    <img src="img/icon/discount.svg" alt="">
                   </span>
-                  <span class="personal__button_name">
-                    Выйти
+                  <span class="personal__button_name personal__mobile_hidden">
+                    Моя скидка
+                  </span>
+                  <span class="personal__button_name personal__desktop_hidden" style="color: var(--whitecolor)">
+                    Моя персональная скидка
                   </span>
                 </span>
+                <span class="personal__button_count" style="color: var(--whitecolor)">
+                  5%
+                </span>
               </button>
+              <div class="personal__block_buttons">
+                <div class="personal__buttons">
+                  <div class="personal__buttons_flex">
+                    <button class="personal__button personal__button_cart">
+                      <span class="personal__button_block">
+                        <span class="personal__button_image">
+                          <img src="img/icon/cart.svg" alt="">
+                        </span>
+                        <span class="personal__button_name">
+                          Мои заказы
+                        </span>
+                      </span>
+                      <span class="personal__button_count">
+                        1
+                      </span>
+                    </button>
+                    <button class="personal__button personal__button_heart">
+                      <span class="personal__button_block">
+                        <span class="personal__button_image">
+                          <img src="img/icon/heart.svg" alt="">
+                        </span>
+                        <span class="personal__button_name">
+                          Избранное
+                        </span>
+                      </span>
+                      <span class="personal__button_count">
+                        1
+                      </span>
+                    </button>
+                  </div>
+                  <div class="personal__buttons_flex">
+                    <button class="personal__button personal__button_returns">
+                      <span class="personal__button_name">
+                        Возвраты
+                      </span>
+                    </button>
+                    <button class="personal__button personal__button_addresses">
+                      <span class="personal__button_name">
+                        Адреса
+                      </span>
+                    </button>
+                    <button class="personal__button personal__button_subscriptions">
+                      <span class="personal__button_name">
+                        Управление подписками
+                      </span>
+                    </button>
+                    <button class="personal__button personal__button_gift">
+                      <span class="personal__button_name">
+                        Подарки
+                      </span>
+                    </button>
+                    <button class="personal__button personal__button_certificates">
+                      <span class="personal__button_name">
+                        Сертификаты
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="personal__exit">
+                  <button class="personal__button personal__button_exit">
+                    <span class="personal__button_block">
+                      <span class="personal__button_image">
+                        <img src="img/icon/exit.svg" alt="">
+                      </span>
+                      <span class="personal__button_name">
+                        Выйти
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-        <h3 class="personal__head">Привет, Алевтина!</h3>
+          <h3 class="personal__head personal__mobile_hidden">Привет, Алевтина!</h3>
+          <p class="personal__head personal__desktop_hidden">Управление подписками</p>
           <div class="personal__subscription">
             <div class="personal__subscription_button">
               <label class="personal__check_label">

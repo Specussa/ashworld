@@ -75,7 +75,7 @@ main {
   overflow: hidden;
 }
 
-.header__black .header__burger {
+.header__gray .header__burger {
   color: var(--black);
 }
 
@@ -102,7 +102,7 @@ main {
   transition: transform .25s ease-in-out, left .25s ease-in-out, top .25s ease-in-out, width .25s linear, opacity .25s ease-in-out;
 }
 
-.header__black .header__burger_button span {
+.header__gray .header__burger_button span {
   background: var(--black);
 }
 
@@ -362,7 +362,7 @@ main {
 .personal__profile {
   display: flex;
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 30px;
   margin-bottom: 20px;
   align-items: center;
   justify-content: space-between;
@@ -370,6 +370,7 @@ main {
   border-radius: 4px;
   background-color: transparent;
   border: 1px solid transparent;
+  border-bottom: 1px solid var(--border);
   -webkit-transition: background-color 0.2s linear, border 0.2s linear;
   transition: background-color 0.2s linear, border 0.2s linear;
   cursor: pointer;
@@ -453,10 +454,9 @@ main {
 
 .personal__buttons {
   display: flex;
-  padding: 20px 0 52px;
+  padding: 0 0 52px;
   flex-direction: column;
   gap: 20px;
-  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
@@ -466,12 +466,6 @@ main {
   flex-direction: column;
 }
 
-.personal__button_image {
-  display: flex;
-  width: 20px;
-  height: 20px;
-}
-
 .personal__buttons_flex {
   display: flex;
   flex-direction: column;
@@ -479,6 +473,7 @@ main {
 
 .personal__button {
   display: flex;
+  width: 100%;
   padding: 14px;
   align-items: center;
   justify-content: space-between;
@@ -486,9 +481,16 @@ main {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 4px;
+  position: relative;
   -webkit-transition: background-color 0.2s linear, border 0.2s linear;
   transition: background-color 0.2s linear, border 0.2s linear;
   cursor: pointer;
+}
+
+.personal__button_image {
+  display: flex;
+  width: 20px;
+  height: 20px;
 }
 
 .personal__button:hover,
@@ -514,6 +516,8 @@ main {
 }
 
 .personal__button_name {
+  position: relative;
+  z-index: 1;
   font-family: var(--arimo);
   font-size: 17px;
   font-weight: 400;
@@ -527,6 +531,8 @@ main {
   padding: 2px 8px;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 1;
   font-family: var(--arimo);
   font-size: 14px;
   font-weight: 400;
@@ -786,6 +792,14 @@ main {
   opacity: 0.5;
 }
 
+.personal__desktop_hidden {
+  display: none;
+}
+
+.personal__mobile_hidden {
+  display: block;
+}
+
 /* end section top */
 
 /* start media 1919px */
@@ -841,6 +855,7 @@ main {
     height: 186px;
   }
   .personal__profile {
+    padding: 10px 10px 26px;
     margin-bottom: 16px;
   }
   .personal__profile_left {
@@ -863,7 +878,7 @@ main {
     line-height: 18px;
   }
   .personal__buttons {
-    padding: 16px 0 44px;
+    padding: 0 0 44px;
     gap: 16px;
   }
   .personal__button {
@@ -938,6 +953,12 @@ main {
 @media (max-width: 767px) {
   :root {
     --whitecolor: #fff;
+  }
+  .header__gray {
+    background-color: #f6f6f6;
+  }
+  .header__gray.header-bg {
+    background-color: var(--white);
   }
   .header__burger {
     color: var(--black);
@@ -1156,6 +1177,70 @@ main {
     font-weight: 500;
     line-height: 29px;
     letter-spacing: -0.03em;
+  }
+  .section_top {
+    height: 141px;
+    background-color: #f6f6f6;
+  }
+  .section_personal {
+    background-color: #f6f6f6;
+  }
+  .personal__control {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .personal__block_buttons {
+    margin: 0 -20px;
+    padding: 0 20px;
+    background-color: var(--white);
+    border-radius: 20px;
+  }
+  .personal__desktop_hidden {
+    display: block;
+  }
+  .personal__mobile_hidden {
+    display: none;
+  }
+  .personal__button_discount_image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  .personal__button_discount .personal__button_image {
+    display: none;
+  }
+  .personal__button_discount {
+    min-height: 154px;
+    margin: 0 0 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .personal__button_discount .personal__button_name {
+    max-width: 125px;
+    font-family: var(--halvar);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    text-align: left;
+    word-break: break-all;
+  }
+  .personal__button_discount .personal__button_count {
+    width: max-content;
+    height: max-content;
+    margin: 0 0 0 auto;
+    font-family: var(--halvar);
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 45px;
+    background-color: transparent;
   }
 }
 /* end media 767px */
