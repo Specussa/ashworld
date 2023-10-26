@@ -356,7 +356,7 @@ main {
 /* start section top */
 
 .section_top {
-  height: 240px;
+  height: 224px;
 }
 
 .personal__profile {
@@ -542,7 +542,8 @@ main {
 }
 
 .personal__head {
-  padding: 0 0 64px;
+  padding: 16px 0 64px;
+  margin: 0;
   font-family: var(--halvar);
   font-size: 50px;
   font-weight: 500;
@@ -565,6 +566,10 @@ main {
   justify-content: space-between;
   gap: 20px;
   position: relative;
+}
+
+.personal__check_label,
+.personal__subscription_head {
   font-family: var(--arimo);
   font-size: 18px;
   font-weight: 600;
@@ -583,8 +588,8 @@ main {
 }
 
 .personal__check_label span {
-  width: 29px;
-  height: 16px;
+  width: 36px;
+  height: 20px;
   display: block;
   background-color: var(--check);
   border-radius: 12px;
@@ -597,8 +602,8 @@ main {
 .personal__check_label span:before {
   position: absolute;
   content: "";
-  height: 14px;
-  width: 14px;
+  height: 18px;
+  width: 18px;
   background-color: var(--white);
   border-radius: 50%;
   left: 1px;
@@ -609,7 +614,7 @@ main {
 }
 
 .personal__check_label input:checked ~ span:before {
-  left: calc(100% - 15px);
+  left: calc(100% - 19px);
 }
 
 .personal__check_label input:checked ~ span {
@@ -645,6 +650,12 @@ main {
   gap: 4px;
 }
 
+.personal__subscription_label img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
 .personal__subscription_label input ~ .personal__subscription_subscr,
 .personal__subscription_label input:checked ~ .personal__subscription_nosubscr {
   display: flex;
@@ -657,11 +668,6 @@ main {
 
 .personal__subscription_head {
   padding: 32px 0 20px;
-  font-family: var(--arimo);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 21px;
-  color: var(--black);
   border-bottom: 1px solid var(--border);
 }
 
@@ -831,12 +837,19 @@ main {
     font-size: 74px;
     line-height: 74px;
   }
+  .section_top {
+    height: 186px;
+  }
   .personal__profile {
     margin-bottom: 16px;
   }
   .personal__profile_left {
     width: 58px;
     height: 58px;
+  }
+  .personal__profile_nick {
+    font-size: 33px;
+    line-height: 39px;
   }
   .personal__profile_info {
     gap: 12px;
@@ -851,6 +864,7 @@ main {
   }
   .personal__buttons {
     padding: 16px 0 44px;
+    gap: 16px;
   }
   .personal__button {
     padding: 12px;
@@ -862,6 +876,60 @@ main {
   }
   .personal__button_block {
     gap: 10px;
+  }
+  .personal__button_image {
+    width: 18px;
+    height: 18px;
+  }
+  .personal__button_count {
+    height: 18px;
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .personal__exit {
+    padding: 16px 0;
+  }
+  .personal__head {
+    padding: 10px 0 44px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .personal__subscription_button {
+    padding: 20px 0;
+  }
+  .personal__check_label,
+  .personal__subscription_head {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .personal__subscription_head {
+    padding: 28px 0 16px;
+  }
+  .personal__subscription_item {
+    padding: 20px 0;
+  }
+  .personal__subscription_image {
+    width: 106px;
+    height: 130px;
+  }
+  .personal__subscription_firm {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .personal__subscription_name,
+  .personal__subscription_size,
+  .personal__subscription_label {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .personal__subscription_label img {
+    width: 14px;
+    height: 14px;
+  }
+  .personal__subscription_status {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 /* end media 1919px */
