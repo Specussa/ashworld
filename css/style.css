@@ -1028,32 +1028,6 @@ main {
     font-size: 74px;
     line-height: 74px;
   }
-  .header-с {
-    display: none;
-  }
-  .header-r {
-    justify-content: flex-end;
-  }
-  .links-header a:nth-child(2) {
-    display: none;
-  }
-  .links-header a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: var(--back);
-  }
-  .links-header img {
-    width: 14px;
-    height: 14px;
-    object-fit: contain;
-  }
-  .links-header a + a {
-    margin-left: 10px;
-  }
   .personal__row {
     display: flex;
     justify-content: space-between;
@@ -1411,6 +1385,32 @@ main {
     font-weight: 500;
     line-height: 29px;
     letter-spacing: -0.03em;
+  }
+  .header-с {
+    display: none;
+  }
+  .header-r {
+    justify-content: flex-end;
+  }
+  .links-header a:nth-child(2) {
+    display: none;
+  }
+  .links-header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--back);
+  }
+  .links-header img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+  }
+  .links-header a + a {
+    margin-left: 10px;
   }
   .section_top {
     height: 141px;
