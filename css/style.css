@@ -1003,8 +1003,9 @@ main {
 
 .personal__heart_list {
   display: flex;
+  padding: 0 0 44px;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 44px 8px;
 }
 
 .personal__heart_item {
@@ -1030,6 +1031,20 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.personal__heart_image img,
+.personal__heart_info,
+.personal__heart_tags {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.personal__heart_item.unchecked .personal__heart_image img,
+.personal__heart_item.unchecked .personal__heart_info,
+.personal__heart_item.unchecked .personal__heart_tags {
+  opacity: 0.5;
 }
 
 .personal__heart_label {
