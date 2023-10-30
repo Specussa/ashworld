@@ -167,7 +167,8 @@ header {
 }
 
 .a-link-header {
-    color: #FFF !important;
+    /* color: #FFF !important; */
+    color: #000;
     font-size: 18px;
     font-weight: 500;
     line-height: normal;
