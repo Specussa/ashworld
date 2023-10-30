@@ -1333,6 +1333,45 @@ main {
     width: 14px;
     height: 14px;
   }
+  .personal__heart_discount {
+    font-size: 12px;
+    line-height: 14px;
+    top: 14px;
+    left: 14px;
+  }
+  .personal__heart_image {
+    height: 250px;
+  }
+  .personal__heart_list {
+    gap: 36px 6px;
+  }
+  .personal__heart_item {
+    width: calc(33.333% - 4px);
+    gap: 16px;
+  }
+  .personal__heart_label {
+    width: 48px;
+    height: 48px;
+  }
+  .personal__heart_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .personal__heart_head {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .personal__heart_price {
+    font-size: 14px;
+    line-height: 16px;
+    gap: 8px;
+  }
+  .personal__heart_info {
+    gap: 2px;
+  }
+  .personal__heart_tags img {
+    height: 20px;
+  }
 }
 /* end media 1919px */
 
@@ -1832,6 +1871,41 @@ main {
   .personal__order_product_link {
     width: 34px;
     height: 34px;
+  }
+  .personal__heart_list {
+    gap: 36px 2px;
+  }
+  .personal__heart_item {
+    width: calc(50% - 1px);
+    gap: 10px;
+  }
+  .personal__heart_discount {
+    font-size: 12px;
+    line-height: 14px;
+    top: 10px;
+    left: 10px;
+  }
+  .personal__heart_label {
+    width: 36px;
+    height: 36px;
+  }
+  .personal__heart_icon {
+    width: 16px;
+    height: 16px;
+  }
+  .personal__heart_image {
+    height: 213px;
+  }
+  .personal__heart_head {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .personal__heart_price {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .personal__heart_tags img {
+    height: 18px;
   }
 }
 /* end media 767px */
