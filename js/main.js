@@ -77,20 +77,50 @@ window.addEventListener('click', e => {
 // end header burger
 
 // start checkbox
-const uncheck = [...document.querySelectorAll('.personal__subscription_input')];
-const onChecked = () => {
-  if(document.querySelector('.personal__subscription_label.unchecked')) {
-    
-  } else {
-    
+const personal = document.querySelector('.section_personal');
+if (personal) {
+  const uncheck = [...document.querySelectorAll('.personal__subscription_input')];
+  const onChecked = () => {
+    if(document.querySelector('.personal__subscription_label.unchecked')) {
+      
+    } else {
+      
+    }
   }
+  uncheck.forEach(input => input.addEventListener('input', function(event) {
+    if (event.target.checked) {
+      event.target.closest('.personal__subscription_item').classList.remove('unchecked');
+    } else {
+      event.target.closest('.personal__subscription_item').classList.add('unchecked');
+    }
+    onChecked()
+  }))
 }
-uncheck.forEach(input => input.addEventListener('input', function(event) {
-  if (event.target.checked) {
-    event.target.closest('.personal__subscription_item').classList.remove('unchecked');
-  } else {
-    event.target.closest('.personal__subscription_item').classList.add('unchecked');
-  }
-  onChecked()
-}))
+// end checkbox
+
+// start checkbox
+const pbcart = document.querySelector('.personal__button_cart');
+const porder = document.querySelector('.personal__order');
+const pbsub = document.querySelector('.personal__button_subscriptions');
+const psub = document.querySelector(".personal__subscription");
+const pbutton = document.querySelectorAll(".personal__button");
+const ptab = document.querySelectorAll(".personal__tab");
+if (personal) {
+  pbcart.addEventListener('click', function() {
+    if (!burger.classList.contains("active")) {
+      pbutton.forEach((n) => n.classList.remove("active")); 
+      ptab.forEach((n) => n.classList.remove("active")); 
+      pbcart.classList.add("active");
+      porder.classList.add("active");
+    }
+  })
+  pbsub.addEventListener('click', function() {
+    if (!burger.classList.contains("active")) {
+      pbutton.forEach((n) => n.classList.remove("active")); 
+      ptab.forEach((n) => n.classList.remove("active")); 
+      pbsub.classList.add("active");
+      psub.classList.add("active");
+    }
+  })
+}
 // end checkbox

@@ -378,6 +378,14 @@ main {
   width: calc(25% - 51px);
 }
 
+.personal__tab {
+  display: none;
+}
+
+.personal__tab.active {
+  display: block;
+}
+
 .personal__profile {
   display: flex;
   width: 100%;
