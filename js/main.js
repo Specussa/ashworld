@@ -106,7 +106,7 @@ const psub = document.querySelector(".personal__subscription");
 const pbutton = document.querySelectorAll(".personal__button");
 const ptab = document.querySelectorAll(".personal__tab");
 if (personal) {
-  pbcart.addEventListener('click', function() {
+  document.querySelector('.personal__arrow').addEventListener('click', function() {
     if (!burger.classList.contains("active")) {
       pbutton.forEach((n) => n.classList.remove("active")); 
       ptab.forEach((n) => n.classList.remove("active")); 
@@ -114,8 +114,16 @@ if (personal) {
       porder.classList.add("active");
     }
   })
+  pbcart.addEventListener('click', function() {
+    if (!pbcart.classList.contains("active")) {
+      pbutton.forEach((n) => n.classList.remove("active")); 
+      ptab.forEach((n) => n.classList.remove("active")); 
+      pbcart.classList.add("active");
+      porder.classList.add("active");
+    }
+  })
   pbsub.addEventListener('click', function() {
-    if (!burger.classList.contains("active")) {
+    if (!pbsub.classList.contains("active")) {
       pbutton.forEach((n) => n.classList.remove("active")); 
       ptab.forEach((n) => n.classList.remove("active")); 
       pbsub.classList.add("active");
