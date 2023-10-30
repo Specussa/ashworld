@@ -99,6 +99,8 @@ if (personal) {
 // end checkbox
 
 // start checkbox
+const pcenter = document.querySelector('.personal__center');
+const pleft = document.querySelector('.personal__left');
 const pbcart = document.querySelector('.personal__button_cart');
 const porder = document.querySelector('.personal__order');
 const pbsub = document.querySelector('.personal__button_subscriptions');
@@ -107,27 +109,34 @@ const pbutton = document.querySelectorAll(".personal__button");
 const ptab = document.querySelectorAll(".personal__tab");
 if (personal) {
   document.querySelector('.personal__arrow').addEventListener('click', function() {
-    if (!burger.classList.contains("active")) {
-      pbutton.forEach((n) => n.classList.remove("active")); 
-      ptab.forEach((n) => n.classList.remove("active")); 
-      pbcart.classList.add("active");
-      porder.classList.add("active");
+    if (!pleft.classList.contains("active")) {
+      pbutton.forEach((n) => n.classList.remove("active"));
+      ptab.forEach((n) => n.classList.remove("active"));
+      pleft.classList.add("active");
+      pcenter.classList.remove("active");
+      window.scrollTo(0,0);
     }
   })
   pbcart.addEventListener('click', function() {
     if (!pbcart.classList.contains("active")) {
-      pbutton.forEach((n) => n.classList.remove("active")); 
-      ptab.forEach((n) => n.classList.remove("active")); 
+      pbutton.forEach((n) => n.classList.remove("active"));
+      ptab.forEach((n) => n.classList.remove("active"));
       pbcart.classList.add("active");
       porder.classList.add("active");
+      pcenter.classList.add("active");
+      pleft.classList.remove("active");
+      window.scrollTo(0,0);
     }
   })
   pbsub.addEventListener('click', function() {
     if (!pbsub.classList.contains("active")) {
-      pbutton.forEach((n) => n.classList.remove("active")); 
-      ptab.forEach((n) => n.classList.remove("active")); 
+      pbutton.forEach((n) => n.classList.remove("active"));
+      ptab.forEach((n) => n.classList.remove("active"));
       pbsub.classList.add("active");
       psub.classList.add("active");
+      pcenter.classList.add("active");
+      pleft.classList.remove("active");
+      window.scrollTo(0,0);
     }
   })
 }

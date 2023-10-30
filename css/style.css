@@ -1453,7 +1453,7 @@ main {
     margin-left: 10px;
   }
   .section_top {
-    height: 141px;
+    height: 105px;
     background-color: var(--back);
   }
   .section_personal {
@@ -1464,14 +1464,22 @@ main {
     gap: 0;
   }
   .personal__left {
+    display: none;
     width: 100%;
   }
+  .personal__left.active {
+    display: block;
+  }
   .personal__center {
+    display: none;
     width: calc(100% + 28px);
     margin: 0 -14px;
     padding: 14px;
     background-color: var(--white);
     border-radius: 20px;
+  }
+  .personal__center.active {
+    display: block;
   }
   .personal__control {
     display: flex;
