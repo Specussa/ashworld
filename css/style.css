@@ -360,10 +360,28 @@ main {
   height: 224px;
 }
 
+.personal__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 153px;
+}
+
+.personal__left {
+  width: calc(25% - 51px);
+}
+
+.personal__center {
+  width: calc(50% - 51px);
+}
+
+.personal__right {
+  width: calc(25% - 51px);
+}
+
 .personal__profile {
   display: flex;
   width: 100%;
-  padding: 10px 10px 30px;
+  padding: 10px;
   margin-bottom: 20px;
   align-items: center;
   justify-content: space-between;
@@ -371,10 +389,14 @@ main {
   border-radius: 4px;
   background-color: transparent;
   border: 1px solid transparent;
-  border-bottom: 1px solid var(--border);
   -webkit-transition: background-color 0.2s linear, border 0.2s linear;
   transition: background-color 0.2s linear, border 0.2s linear;
   cursor: pointer;
+}
+
+.personal__divider {
+  width: 100%;
+  border-bottom: 1px solid var(--border);
 }
 
 .personal__profile:hover,
@@ -424,6 +446,7 @@ main {
   font-weight: 500;
   line-height: 21px;
   color: var(--black);
+  text-transform: uppercase;
 }
 
 .personal__profile_email {
@@ -475,7 +498,8 @@ main {
 .personal__button {
   display: flex;
   width: 100%;
-  padding: 14px;
+  height: 40px;
+  padding: 0 14px;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
@@ -520,10 +544,11 @@ main {
   position: relative;
   z-index: 1;
   font-family: var(--arimo);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 21px;
   color: var(--black);
+  text-align: left;
 }
 
 .personal__button_count {
@@ -694,7 +719,7 @@ main {
 
 .personal__subscription_block {
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 
 .personal__subscription_info {
@@ -709,7 +734,7 @@ main {
 .personal__subscription_info_block {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .personal__subscription_image {
@@ -731,6 +756,7 @@ main {
   line-height: 21px;
   letter-spacing: -0.02em;
   color: var(--black);
+  text-transform: uppercase;
 }
 
 .personal__subscription_name,
@@ -762,6 +788,7 @@ main {
   font-weight: 500;
   line-height: 16px;
   color: var(--black);
+  text-align: right;
   text-transform: uppercase;
 }
 
@@ -781,6 +808,10 @@ main {
 
 .personal__limit {
   color: #fd9433;
+}
+
+.personal__canceled {
+  color: #ed611f;
 }
 
 .personal__subscription_image,
@@ -807,6 +838,132 @@ main {
 
 .personal__mobile_hidden {
   display: block;
+}
+
+.personal__order_item {
+  display: flex;
+  padding: 25px 0;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+}
+
+.personal__order_item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.personal__order_flex {
+  display: flex;
+  padding: 0 0 6px;
+  align-items: center;
+  gap: 20px;
+}
+
+.personal__order_info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.personal__order_date {
+  width: 216px;
+  flex: 0 0 auto;
+  font-family: var(--arimo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--black);
+}
+
+.personal__order_price {
+  font-family: var(--arimo);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #bebebe;
+}
+
+.personal__order_status {
+  font-family: var(--halvar);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--black);
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.personal__order_article {
+  padding: 0 0 20px;
+  font-family: var(--arimo);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #bebebe;
+}
+
+.personal__order_product_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  position: relative;
+}
+
+.personal__order_product_item {
+  width: calc(12.5% - 5.3px);
+  position: relative;
+}
+
+.personal__order_product_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personal__order_product_size {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  font-family: var(--helvetica);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.personal__order_product_link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: var(--back);
+  border-radius: 50%;
+}
+
+.personal__order_product_link img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.personal__order_status span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* end section top */
@@ -860,11 +1017,24 @@ main {
     font-size: 74px;
     line-height: 74px;
   }
+  .personal__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 96px;
+  }
+  .personal__left {
+    width: calc(25% - 33px);
+  }
+  .personal__center {
+    width: calc(50% - 33px);
+  }
+  .personal__right {
+    width: calc(25% - 33px);
+  }
   .section_top {
     height: 186px;
   }
   .personal__profile {
-    padding: 10px 10px 26px;
     margin-bottom: 16px;
   }
   .personal__profile_left {
@@ -873,6 +1043,7 @@ main {
   }
   .personal__profile_nick {
     font-size: 33px;
+    font-weight: 500;
     line-height: 39px;
   }
   .personal__profile_info {
@@ -895,8 +1066,8 @@ main {
     gap: 10px;
   }
   .personal__button_name {
-    font-size: 15px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 19px;
   }
   .personal__button_block {
     gap: 10px;
@@ -957,6 +1128,20 @@ main {
   }
 }
 /* end media 1919px */
+
+/* start media 1439px */
+@media (max-width: 1439px) {
+  .personal__left {
+    width: calc(25% - 33px);
+  }
+  .personal__center {
+    width: calc(75% - 66px);
+  }
+  .personal__right {
+    display: none;
+  }
+}
+/* end media 1439px */
 
 /* start media 767px */
 @media (max-width: 767px) {
@@ -1194,6 +1379,14 @@ main {
   .section_personal {
     background-color: var(--back);
   }
+  .personal__row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .personal__left,
+  .personal__center {
+    width: 100%;
+  }
   .personal__control {
     display: flex;
     flex-direction: column-reverse;
@@ -1284,6 +1477,7 @@ main {
     border-bottom: 0;
   }
   .personal__button {
+    height: auto;
     padding: 10px 0;
   }
   .personal__exit {
@@ -1309,15 +1503,16 @@ main {
   .personal__profile {
     padding: 10px 0;
     margin: 12px 0;
+    border-bottom: 0;
+  }
+  .personal__divider {
+    display: none;
   }
   .personal__subscription {
     margin: 0 -14px;
     padding: 14px 14px 200px;
     background-color: var(--white);
     border-radius: 20px;
-  }
-  .personal__subscription_block {
-    gap: 16px;
   }
   .personal__subscription_image {
     width: 98px;
