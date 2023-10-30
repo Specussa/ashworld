@@ -98,6 +98,27 @@ if (personal) {
 }
 // end checkbox
 
+// start heart
+if (personal) {
+  const heartuncheck = [...document.querySelectorAll('.personal__heart_input')];
+  const onHChecked = () => {
+    if(document.querySelector('.personal__heart_label.unchecked')) {
+      
+    } else {
+      
+    }
+  }
+  heartuncheck.forEach(input => input.addEventListener('input', function(event) {
+    if (event.target.checked) {
+      event.target.closest('.personal__heart_item').classList.remove('unchecked');
+    } else {
+      event.target.closest('.personal__heart_item').classList.add('unchecked');
+    }
+    onHChecked()
+  }))
+}
+// end heart
+
 // start checkbox
 const pcenter = document.querySelector('.personal__center');
 const pleft = document.querySelector('.personal__left');
@@ -105,6 +126,8 @@ const pbcart = document.querySelector('.personal__button_cart');
 const porder = document.querySelector('.personal__order');
 const pbsub = document.querySelector('.personal__button_subscriptions');
 const psub = document.querySelector(".personal__subscription");
+const pbheart = document.querySelector(".personal__button_heart");
+const pheart = document.querySelector(".personal__heart");
 const pbutton = document.querySelectorAll(".personal__button");
 const ptab = document.querySelectorAll(".personal__tab");
 if (personal) {
@@ -116,7 +139,7 @@ if (personal) {
       pcenter.classList.remove("active");
       window.scrollTo(0,0);
     }
-  })
+  });
   pbcart.addEventListener('click', function() {
     if (!pbcart.classList.contains("active")) {
       pbutton.forEach((n) => n.classList.remove("active"));
@@ -127,7 +150,7 @@ if (personal) {
       pleft.classList.remove("active");
       window.scrollTo(0,0);
     }
-  })
+  });
   pbsub.addEventListener('click', function() {
     if (!pbsub.classList.contains("active")) {
       pbutton.forEach((n) => n.classList.remove("active"));
@@ -138,6 +161,17 @@ if (personal) {
       pleft.classList.remove("active");
       window.scrollTo(0,0);
     }
-  })
+  });
+  pbheart.addEventListener('click', function() {
+    if (!pbheart.classList.contains("active")) {
+      pbutton.forEach((n) => n.classList.remove("active"));
+      ptab.forEach((n) => n.classList.remove("active"));
+      pbheart.classList.add("active");
+      pheart.classList.add("active");
+      pcenter.classList.add("active");
+      pleft.classList.remove("active");
+      window.scrollTo(0,0);
+    }
+  });
 }
 // end checkbox

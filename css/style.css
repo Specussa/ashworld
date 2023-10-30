@@ -12,6 +12,8 @@
   --back: #f6f6f6;
   --linkhover: #444444;
   --border: #f0f0f0;
+  --orange: #fd9433;
+  --error: #ed611f;
   --arimo: 'Arimo', 'HelveticaNeueCyr', sans-serif;
   --halvar: 'Halvar Breit Md', 'HelveticaNeueCyr', sans-serif;
   --helvetica: 'HelveticaNeueCyr', sans-serif;
@@ -56,6 +58,18 @@ a {
 
 a:hover {
   color: var(--linkhover);
+}
+
+button,
+input,
+label,
+a {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 main {
@@ -673,6 +687,7 @@ main {
 }
 
 .personal__subscription_label {
+  display: flex;
   width: 160px;
   position: absolute;
   bottom: 0;
@@ -683,7 +698,8 @@ main {
   color: var(--black);
 }
 
-.personal__subscription_input {
+.personal__subscription_input,
+.personal__heart_input {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -696,6 +712,7 @@ main {
 .personal__subscription_label span {
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
   gap: 4px;
 }
 
@@ -818,11 +835,11 @@ main {
 }
 
 .personal__limit {
-  color: #fd9433;
+  color: var(--orange);
 }
 
 .personal__canceled {
-  color: #ed611f;
+  color: var(--error);
 }
 
 .personal__subscription_image,
@@ -982,6 +999,127 @@ main {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.personal__heart_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.personal__heart_item {
+  display: flex;
+  width: calc(33.333% - 6px);
+  flex-direction: column;
+  gap: 18px;
+}
+
+.personal__heart_image {
+  width: 100%;
+  height: 312px;
+  position: relative;
+}
+
+.personal__heart_image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.personal__heart_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personal__heart_label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.personal__heart_discount {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: var(--halvar);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.015em;
+  color: var(--orange);
+  z-index: 1;
+}
+
+.personal__heart_icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  color: var(--black);
+}
+
+.personal__heart_icon path {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.personal__heart_item.unchecked .personal__heart_icon path:first-child {
+  opacity: 0;
+}
+
+.personal__heart_info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.personal__heart_head {
+  font-family: var(--halvar);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.personal__heart_price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--halvar);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: -0.015em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.personal__heart_price span:nth-child(2) {
+  color: #b3b3b3;
+  text-decoration: line-through;
+}
+
+.personal__heart_tags {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.personal__heart_tags img {
+  height: 24px;
+  object-fit: contain;
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 /* end section top */
