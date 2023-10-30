@@ -971,8 +971,8 @@ main {
 }
 
 .personal__order_product_link img {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -1175,6 +1175,10 @@ main {
     bottom: 4px;
     font-size: 12px;
     line-height: 20px;
+  }
+  .personal__order_product_link img {
+    width: 14px;
+    height: 14px;
   }
 }
 /* end media 1919px */
@@ -1662,7 +1666,7 @@ main {
     height: 70px;
   }
   .personal__order_product_item {
-    width: calc(16% - 2.6px);
+    width: calc(16% - 3.2px);
   }
   .personal__order_product_size {
     width: 24px;
@@ -1671,6 +1675,10 @@ main {
     bottom: 6px;
     font-size: 10px;
     line-height: 18px;
+  }
+  .personal__order_product_link {
+    width: 34px;
+    height: 34px;
   }
 }
 /* end media 767px */
