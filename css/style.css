@@ -657,10 +657,6 @@ main {
   background-color: var(--black);
 }
 
-.personal__subscription {
-  padding: 0 0 200px;
-}
-
 .personal__subscription_label {
   width: 160px;
   position: absolute;
@@ -1383,9 +1379,15 @@ main {
     flex-direction: column;
     gap: 0;
   }
-  .personal__left,
-  .personal__center {
+  .personal__left {
     width: 100%;
+  }
+  .personal__center {
+    width: calc(100% + 28px);
+    margin: 0 -14px;
+    padding: 14px;
+    background-color: var(--white);
+    border-radius: 20px;
   }
   .personal__control {
     display: flex;
@@ -1507,12 +1509,6 @@ main {
   }
   .personal__divider {
     display: none;
-  }
-  .personal__subscription {
-    margin: 0 -14px;
-    padding: 14px 14px 200px;
-    background-color: var(--white);
-    border-radius: 20px;
   }
   .personal__subscription_image {
     width: 98px;
