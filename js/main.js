@@ -335,7 +335,7 @@ class Select {
 
   addSelectedValue(element) {
     this.selectTitle.innerHTML = element.innerHTML;
-    this.selectInput.value = element.innerHTML;
+    this.selectInput.value = element.innerText;
     this.selectInput.setAttribute('value', this.selectInput.value);
   }
 
@@ -353,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var el = e.target,
       clearVal = el.dataset.phoneClear,
       pattern = el.dataset.phonePattern,
-      matrix_def = "+7(___) ___-__-__",
+      matrix_def = "(___) ___-__-__",
       matrix = pattern ? pattern : matrix_def,
       i = 0,
       def = matrix.replace(/\D/g, ""),
@@ -376,74 +376,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
-
-// START validate briefing__form_one
-bformone.addEventListener('submit', e => {
-  scroll.scrollTo(totop);
-  e.preventDefault();
-  checkoneInputs();
-});
-function checkoneInputs() {
-  const busernameValue = busername.value.trim();
-  const bphoneValue = bphone.value.trim();
-  const bemailValue = bemail.value.trim();
-
-  if(busernameValue !== '' && busernameValue.length >= busernameMin && busernameValue.length <= busernameMax) {
-    setSuccessForBriefing(busername);
-    bstepone.classList.remove("error");
-  } else {
-    setErrorForBriefing(busername);
-    bstepone.classList.add("error");
-  }
-
-  if(bphoneValue !== '' && bphoneValue.length >= bphoneMin && bphoneValue.length <= bphoneMax) {
-    setSuccessForBriefing(bphone);
-    bstepone.classList.remove("error");
-  } else {
-    setErrorForBriefing(bphone);
-    bstepone.classList.add("error");
-  }
-
-  if(!isEmail(bemailValue)) {
-    setErrorForBriefing(bemail);
-    bstepone.classList.add("error");
-    scroll.scrollTo(totop);
-  } else if (bemailValue !== '' && bemailValue.length >= bemailMin && bemailValue.length <= bemailMax) {
-    setSuccessForBriefing(bemail);
-    bstepone.classList.remove("error");
-  } else {
-    setErrorForBriefing(bemail);
-    bstepone.classList.add("error");
-  }
-
-  if(!isEmail(bemailValue)){
-    scroll.scrollTo(totop);
-  } else if (
-    busernameValue !== '' &&
-    busernameValue.length >= busernameMin &&
-    busernameValue.length <= busernameMax &&
-    bphoneValue !== '' &&
-    bphoneValue.length >= bphoneMin &&
-    bphoneValue.length <= bphoneMax &&
-    bemailValue !== '' &&
-    bemailValue.length >= bemailMin &&
-    bemailValue.length <= bemailMax
-  ) {
-    briefingform.forEach(n => n.classList.remove('active'));
-    briefingsteps.forEach(n => n.classList.remove('active'));
-    briefingstep.forEach(n => n.classList.remove('border'));
-    briefingform.forEach(n => n.style.maxHeight = null);
-    briefingform.forEach(n => bformtwo.style.maxHeight = bformtwo.scrollHeight + "px");
-    bformtwo.classList.add("active");
-    bstepstwo.classList.add("active");
-    bsteptwo.classList.add("active");
-    bsteptwo.classList.add("unlock");
-    bsteptwo.classList.add("border");
-  }
-}
-
-function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
-// END validate briefing__form_one
 // end mask phone

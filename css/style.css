@@ -1341,7 +1341,7 @@ main {
 
 .personal__form_item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
 }
 
@@ -1448,14 +1448,13 @@ main {
 }
 
 .personal__select_arrow {
+  display: flex;
   width: 14px;
   height: 14px;
+  margin: 0 0 0 20px;
+  color: var(--black);
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: transform 0.3s linear;
-}
-
-.personal__select_arrow {
-  stroke: var(--text);
 }
 
 .personal__select_arrow_rotate {
@@ -1499,7 +1498,10 @@ main {
 }
 
 .personal__select_list_item {
+  display: flex;
   padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
   color: var(--black);
   border-bottom: 1px solid var(--border);
   background-color: var(--white);
@@ -1516,6 +1518,9 @@ main {
 }
 
 .personal__select_selected-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--arimo);
   font-size: 17px;
   font-weight: 400;
@@ -1523,8 +1528,62 @@ main {
   color: var(--black);
 }
 
-.personal__select_selected-title span {
+.personal__select_default {
   color: #bbb;
+}
+
+.iti__flag.iti__by {
+  height: 10px;
+  background-position: -790px 0px;
+}
+
+.iti__flag {
+  width: 20px;
+  height: 14px;
+  box-shadow: 0px 0px 1px 0px #888;
+  background-image: url('../img/flags.png');
+  background-repeat: no-repeat;
+  background-color: #dbdbdb;
+  background-position: 20px 0;
+}
+
+.iti__flag.iti__by {
+  background-position: -790px 0px;
+}
+
+.iti__flag.iti__ru {
+  background-position: -4361px 0px;
+}
+
+.iti__flag.iti__ua {
+  background-position: -5263px 0px;
+}
+
+.personal__select_tel {
+  display: flex;
+  width: calc(50% - 8px);
+  align-items: flex-start;
+}
+.personal__select_tel .personal__form_control {
+  width: 100%;
+}
+
+.personal__select_tel .personal__select_selected_item {
+  border-right: none;
+}
+
+.personal__select_tel .personal__form_control input {
+  border-left: none;
+}
+
+.personal__select_tel .personal__select_selected_item::after {
+  content: "";
+  height: 25px;
+  width: 1px;
+  position: absolute;
+  top: 12.5px;
+  right: 0;
+  background-color: var(--back);
 }
 
 /* end section top */

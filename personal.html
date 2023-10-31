@@ -1054,27 +1054,44 @@
                   <div class="personal__select_box">
                     <div class="personal__select" data-select>
                       <div class="personal__select_selected_item" data-select-action data-select-open>
-                        <div class="personal__select_selected-title" data-select-title><span>размер обуви</span></div>
+                        <div class="personal__select_selected-title" data-select-title><span class="personal__select_default">размер обуви</span></div>
                         <svg  class="personal__select_arrow" data-select-arrow width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.875 5L7 11.125L13.125 5" stroke="black" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M0.875 5L7 11.125L13.125 5" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                       </div>
                       <div class="personal__select_list" data-select-list>
-                        <div class="personal__select_list_item" data-select-action data-select-item>35</div>
-                        <div class="personal__select_list_item" data-select-action data-select-item>36</div>
-                        <div class="personal__select_list_item" data-select-action data-select-item>37</div>
+                        <div class="personal__select_list_item" data-select-action data-select-item><span>35</span></div>
+                        <div class="personal__select_list_item" data-select-action data-select-item><span>36</span></div>
+                        <div class="personal__select_list_item" data-select-action data-select-item><span>37</span></div>
                       </div>
                       <input class="personal__select_input" type="text" data-select-input>
                     </div>
                   </div>
                 </li>
                 <li class="personal__form_item">
-                  <div class="personal__form_control">
-                    <input type="text" data-phone-pattern id="personal__form_phone">
-                    <label>телефон*</label>
+                  <div class="personal__select_tel">
+                    <div class="personal__select_box">
+                      <div class="personal__select" data-select>
+                        <div class="personal__select_selected_item" data-select-action data-select-open>
+                          <div class="personal__select_selected-title" data-select-title><div class="iti__flag-box"><div class="iti__flag iti__ru"></div></div>+7</div>
+                          <svg  class="personal__select_arrow" data-select-arrow width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.875 5L7 11.125L13.125 5" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div class="personal__select_list" data-select-list>
+                          <div class="personal__select_list_item" data-select-action data-select-item><div class="iti__flag-box"><div class="iti__flag iti__ru"></div></div>+7</div>
+                          <div class="personal__select_list_item" data-select-action data-select-item><div class="iti__flag-box"><div class="iti__flag iti__by"></div></div>+375</div>
+                          <div class="personal__select_list_item" data-select-action data-select-item><div class="iti__flag-box"><div class="iti__flag iti__ua"></div></div>+380</div>
+                        </div>
+                        <input class="personal__select_input" type="text" data-select-input>
+                      </div>
+                    </div>
+                    <div class="personal__form_control">
+                      <input type="text" data-phone-pattern id="personal__form_phone">
+                    </div>
                   </div>
                   <div class="personal__form_control">
-                    <input type="text" id="personal__email">
+                    <input type="email" id="personal__email">
                     <label>e-mail</label>
                   </div>
                 </li>
