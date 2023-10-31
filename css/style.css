@@ -1565,6 +1565,7 @@ main {
 }
 .personal__select_tel .personal__form_control {
   width: 100%;
+  flex: 0 0 auto;
 }
 
 .personal__select_tel .personal__select_selected_item {
@@ -1848,8 +1849,13 @@ main {
     font-size: 15px;
     line-height: 21px;
   }
+  .personal__form_control label {
+    top: 10px;
+    left: 16px;
+  }
   .personal__form_control label.focus,
   .personal__form_control input:focus + label {
+    top: -6px;
     font-size: 12px;
     line-height: 14px;
   }
@@ -1894,6 +1900,10 @@ main {
   .personal__necessarily {
     font-size: 12px;
     line-height: 18px;
+  }
+  .personal__select_tel .personal__select_selected_item::after {
+    height: 21px;
+    top: 9.5px;
   }
 }
 /* end media 1919px */
@@ -2531,6 +2541,24 @@ main {
   .personal__addresses_del svg,
   .personal__addresses_edit svg {
     display: none;
+  }
+  .personal__form_item {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .personal__form_control,
+  .personal__form_checks,
+  .personal__select_tel,
+  .personal__select_box,
+  .personal__form_button input {
+    width: 100%;
+  }
+  .personal__necessarily {
+    max-width: 100%;
+    text-align: left;
+  }
+  .personal__select_box {
+    margin: 0;
   }
 }
 /* end media 767px */

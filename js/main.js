@@ -183,39 +183,29 @@ if (personal) {
     }
   });
   pbprofile.addEventListener('click', function() {
-    if (!pbprofile.classList.contains("active")) {
-      delpersonal();
-      pbprofile.classList.add("active");
-      pprofile.classList.add("active");
-    }
+    delpersonal();
+    pbprofile.classList.add("active");
+    pprofile.classList.add("active");
   });
   pbcart.addEventListener('click', function() {
-    if (!pbcart.classList.contains("active")) {
-      delpersonal();
-      pbcart.classList.add("active");
-      porder.classList.add("active");
-    }
+    delpersonal();
+    pbcart.classList.add("active");
+    porder.classList.add("active");
   });
   pbsub.addEventListener('click', function() {
-    if (!pbsub.classList.contains("active")) {
-      delpersonal();
-      pbsub.classList.add("active");
-      psub.classList.add("active");
-    }
+    delpersonal();
+    pbsub.classList.add("active");
+    psub.classList.add("active");
   });
   pbheart.addEventListener('click', function() {
-    if (!pbheart.classList.contains("active")) {
-      delpersonal();
-      pbheart.classList.add("active");
-      pheart.classList.add("active");
-    }
+    delpersonal();
+    pbheart.classList.add("active");
+    pheart.classList.add("active");
   });
   pbaddresses.addEventListener('click', function() {
-    if (!pbaddresses.classList.contains("active")) {
-      delpersonal();
-      pbaddresses.classList.add("active");
-      paddresses.classList.add("active");
-    }
+    delpersonal();
+    pbaddresses.classList.add("active");
+    paddresses.classList.add("active");
   });
 }
 // end menu personal
