@@ -128,6 +128,8 @@ const pbsub = document.querySelector('.personal__button_subscriptions');
 const psub = document.querySelector(".personal__subscription");
 const pbheart = document.querySelector(".personal__button_heart");
 const pheart = document.querySelector(".personal__heart");
+const pbaddresses = document.querySelector(".personal__button_addresses");
+const paddresses = document.querySelector(".personal__addresses");
 const pbutton = document.querySelectorAll(".personal__button");
 const ptab = document.querySelectorAll(".personal__tab");
 if (personal) {
@@ -168,6 +170,17 @@ if (personal) {
       ptab.forEach((n) => n.classList.remove("active"));
       pbheart.classList.add("active");
       pheart.classList.add("active");
+      pcenter.classList.add("active");
+      pleft.classList.remove("active");
+      window.scrollTo(0,0);
+    }
+  });
+  pbaddresses.addEventListener('click', function() {
+    if (!pbaddresses.classList.contains("active")) {
+      pbutton.forEach((n) => n.classList.remove("active"));
+      ptab.forEach((n) => n.classList.remove("active"));
+      pbaddresses.classList.add("active");
+      paddresses.classList.add("active");
       pcenter.classList.add("active");
       pleft.classList.remove("active");
       window.scrollTo(0,0);

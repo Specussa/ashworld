@@ -6,6 +6,7 @@
   --blackcolor: #000;
   --gray: #f3f3f3;
   --dgray: #979797;
+  --tgray: #bebebe;
   --lgray: #c3c3c3;
   --hover: #f9f9f9;
   --check: #f0f0f0;
@@ -13,6 +14,7 @@
   --linkhover: #444444;
   --border: #f0f0f0;
   --orange: #fd9433;
+  --green: #42a56b;
   --error: #ed611f;
   --arimo: 'Arimo', 'HelveticaNeueCyr', sans-serif;
   --halvar: 'Halvar Breit Md', 'HelveticaNeueCyr', sans-serif;
@@ -908,7 +910,7 @@ main {
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
-  color: #bebebe;
+  color: var(--tgray);
 }
 
 .personal__order_status {
@@ -927,7 +929,7 @@ main {
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
-  color: #bebebe;
+  color: var(--tgray);
 }
 
 .personal__order_product_list {
@@ -1135,6 +1137,115 @@ main {
   object-fit: contain;
   border-radius: 2px;
   overflow: hidden;
+}
+
+.personal__addresses {
+  padding: 0 0 20px;
+}
+
+.personal__addresses_item {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.personal__addresses_item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.personal__addresses_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.personal__addresses_buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.personal__addresses_buttons button {
+  color: var(--tgray);
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.personal__addresses_buttons button:hover {
+  color: var(--black);
+}
+
+.personal__addresses_buttons svg {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.personal__addresses_el {
+  display: none;
+}
+
+.personal__addresses_head {
+  font-family: var(--arimo);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--black);
+}
+
+.personal__addresses_info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.personal__addresses_adres {
+  padding-bottom: 18px;
+}
+
+.personal__addresses_info p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--arimo);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--tgray);
+}
+
+.personal__addresses_info p img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.personal__addresses_basic {
+  display: none;
+  padding-top: 4px;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--helvetica);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: var(--green);
+}
+
+.personal__addresses_basic.active {
+  display: flex;
+}
+
+.personal__addresses_basic::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--green);
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 /* end section top */
