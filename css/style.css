@@ -1304,19 +1304,12 @@ main {
   transition: all 0.2s linear;
  }
 
-.personal__form_control label.focus {
-  color: #000;
+.personal__form_control label.focus,
+.personal__form_control input:focus + label {
   top: -9px;
   font-size: 14px;
   line-height: 16px;
  }
-
-.personal__form_control input:focus + label {
-  color: #000;
-  top: -9px;
-  font-size: 14px;
-  line-height: 16px;
-}
 
 .personal__form_control input {
   display: flex;
@@ -1358,6 +1351,11 @@ main {
   height: 50px;
   align-items: center;
   justify-content: center;
+  font-family: var(--arimo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--black);
   background-color: var(--back);
   border: 1px solid var(--back);
   border-radius: 4px;
@@ -1499,7 +1497,8 @@ main {
 
 .personal__select_list_item {
   display: flex;
-  padding: 10px 20px;
+  height: 50px;
+  padding: 0 20px;
   align-items: center;
   gap: 10px;
   color: var(--black);
@@ -1842,6 +1841,59 @@ main {
   .personal__addresses_add {
     font-size: 14px;
     line-height: 16px;
+  }
+  .personal__form_control label,
+  .personal__form_control input,
+  .personal__select_selected-title {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .personal__form_control label.focus,
+  .personal__form_control input:focus + label {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .personal__form_control input,
+  .personal__select_selected_item,
+  .personal__select_list_item {
+    height: 40px;
+    padding: 0 16px;
+  }
+  .personal__form_item {
+    gap: 12px;
+  }
+  .personal__form_list {
+    gap: 16px;
+  }
+  .personal__form_check {
+    width: calc(50% - 3px);
+    height: 40px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .personal__form_checks {
+    width: calc(50% - 6px);
+    gap: 6px;
+  }
+  .personal__form_control {
+    width: calc(50% - 6px);
+  }
+  .personal__select_box {
+    width: calc(50% - 6px);
+    height: 40px;
+  }
+  .personal__form_button {
+    padding: 28px 0 12px;
+  }
+  .personal__form_button input {
+    width: 210px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .personal__necessarily {
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 /* end media 1919px */
