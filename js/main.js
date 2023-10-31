@@ -159,61 +159,291 @@ const pbheart = document.querySelector(".personal__button_heart");
 const pheart = document.querySelector(".personal__heart");
 const pbaddresses = document.querySelector(".personal__button_addresses");
 const paddresses = document.querySelector(".personal__addresses");
+const pbprofile = document.querySelector(".personal__profile_button");
+const pprofile = document.querySelector(".personal__profile");
 const pbutton = document.querySelectorAll(".personal__button");
 const ptab = document.querySelectorAll(".personal__tab");
 if (personal) {
+  function delpersonal() {
+    pbutton.forEach((n) => n.classList.remove("active"));
+    ptab.forEach((n) => n.classList.remove("active"));
+    pbprofile.classList.remove("active");
+    pcenter.classList.add("active");
+    pleft.classList.remove("active");
+    window.scrollTo(0,0);
+  }
   document.querySelector('.personal__arrow').addEventListener('click', function() {
     if (!pleft.classList.contains("active")) {
       pbutton.forEach((n) => n.classList.remove("active"));
       ptab.forEach((n) => n.classList.remove("active"));
+      pbprofile.classList.remove("active");
       pleft.classList.add("active");
       pcenter.classList.remove("active");
       window.scrollTo(0,0);
     }
   });
+  pbprofile.addEventListener('click', function() {
+    if (!pbprofile.classList.contains("active")) {
+      delpersonal();
+      pbprofile.classList.add("active");
+      pprofile.classList.add("active");
+    }
+  });
   pbcart.addEventListener('click', function() {
     if (!pbcart.classList.contains("active")) {
-      pbutton.forEach((n) => n.classList.remove("active"));
-      ptab.forEach((n) => n.classList.remove("active"));
+      delpersonal();
       pbcart.classList.add("active");
       porder.classList.add("active");
-      pcenter.classList.add("active");
-      pleft.classList.remove("active");
-      window.scrollTo(0,0);
     }
   });
   pbsub.addEventListener('click', function() {
     if (!pbsub.classList.contains("active")) {
-      pbutton.forEach((n) => n.classList.remove("active"));
-      ptab.forEach((n) => n.classList.remove("active"));
+      delpersonal();
       pbsub.classList.add("active");
       psub.classList.add("active");
-      pcenter.classList.add("active");
-      pleft.classList.remove("active");
-      window.scrollTo(0,0);
     }
   });
   pbheart.addEventListener('click', function() {
     if (!pbheart.classList.contains("active")) {
-      pbutton.forEach((n) => n.classList.remove("active"));
-      ptab.forEach((n) => n.classList.remove("active"));
+      delpersonal();
       pbheart.classList.add("active");
       pheart.classList.add("active");
-      pcenter.classList.add("active");
-      pleft.classList.remove("active");
-      window.scrollTo(0,0);
     }
   });
   pbaddresses.addEventListener('click', function() {
     if (!pbaddresses.classList.contains("active")) {
-      pbutton.forEach((n) => n.classList.remove("active"));
-      ptab.forEach((n) => n.classList.remove("active"));
+      delpersonal();
       pbaddresses.classList.add("active");
       paddresses.classList.add("active");
-      pcenter.classList.add("active");
-      pleft.classList.remove("active");
-      window.scrollTo(0,0);
     }
   });
 }
 // end menu personal
+
+// start form label
+const personalform = document.getElementById('personal__form');
+if (personalform) {
+  $(".personal__form_control").click(function () {
+    $(this).children("input").focus();
+  });
+
+  $(document).on("change", ".personal__form_control", function () {
+    if ($(this).children("input").val() !== '') {
+      $(this).children("label").addClass("focus");
+    }
+    else {
+      $(this).children("label").removeClass("focus");
+    }
+  });
+}
+// end form label
+
+// start heart checkbox
+if (personalform) {
+  const pfitype = [...document.querySelectorAll('.personal__form_checks_type .personal__form_input_hidden')];
+  const pfchecktype = document.querySelectorAll('.personal__form_checks_type .personal__form_check');
+  
+  pfitype.forEach(input => input.addEventListener('input', function(event) {
+    if (event.target.checked) {
+      for(var i = 0;i < pfchecktype.length; i++) {pfchecktype[i].classList.remove('active');}
+      event.target.closest('.personal__form_check').classList.add('active');
+    }
+  }))
+}
+// end heart checkbox
+
+// start select
+const SELECT = '[data-select]'
+const SELECT_LIST = '[data-select-list]'
+const SELECT_ARROW = '[data-select-arrow]'
+const SELECT_ACTION = '[data-select-action]'
+const SELECT_TITLE = '[data-select-title]'
+const SELECT_INPUT = '[data-select-input]'
+const SELECT_ITEM = 'selectItem'
+const OPEN_SELECT = 'selectOpen'
+
+class Select {
+  static attach() {
+    document.querySelectorAll(SELECT)
+      .forEach(select => new Select().init(select))
+  }
+
+  init(select) {
+    if (this.findSelect(select)) {
+      this.applyListener()
+    }
+  }
+
+  applyListener() {
+    document.querySelector('*').addEventListener('click', e => {
+      const element = this.select.contains(e.target) && e.target.closest(SELECT_ACTION)
+
+      if (this.isCallSelectElement(element)) {
+        if (this.isOpened()) {
+          this.closeSelectList();
+        } else {
+          this.openSelectList()
+        }
+      }
+
+      if (this.isCallSelectItemElement(element)) {
+        this.addSelectedValue(element)
+      }
+
+      if (this.isCallSelectElement(element) !== true && this.selectOverlayIsClickedElement(element) !== true) {
+        this.closeSelectList()
+      }
+    })
+  }
+
+  isCallSelectElement(element, target) {
+    return element && OPEN_SELECT in element.dataset
+  }
+
+  isCallSelectItemElement(element, target) {
+    return element && SELECT_ITEM in element.dataset
+  }
+
+  findSelect(select) {
+
+    if (select) {
+      this.select = select
+      this.selectList = this.select.querySelector(SELECT_LIST)
+      this.selectArrow = this.select.querySelector(SELECT_ARROW)
+      this.selectTitle = this.select.querySelector(SELECT_TITLE)
+      this.selectInput = this.select.querySelector(SELECT_INPUT)
+      return true
+    }
+    return false
+  }
+
+  isOpened() {
+    return this.selectList.classList.contains('personal__select_list_opened')
+  }
+
+  openSelectList() {
+    this.selectList.style.maxHeight = this.selectList.scrollHeight + "px";
+    this.selectList.classList.add('personal__select_list_opened')
+    this.selectArrow.classList.add('personal__select_arrow_rotate')
+  }
+
+  closeSelectList() {
+    this.selectList.style.maxHeight = null;
+    this.selectList.classList.remove('personal__select_list_opened')
+    this.selectArrow.classList.remove('personal__select_arrow_rotate')
+  }
+
+  addSelectedValue(element) {
+    this.selectTitle.innerHTML = element.innerHTML;
+    this.selectInput.value = element.innerHTML;
+    this.selectInput.setAttribute('value', this.selectInput.value);
+  }
+
+  selectOverlayIsClickedElement(element, target) {
+    return element && 'select' in element.dataset
+  }
+}
+
+Select.attach()
+// end select
+
+// start mask phone
+document.addEventListener("DOMContentLoaded", function () {
+  var eventCalllback = function (e) {
+    var el = e.target,
+      clearVal = el.dataset.phoneClear,
+      pattern = el.dataset.phonePattern,
+      matrix_def = "+7(___) ___-__-__",
+      matrix = pattern ? pattern : matrix_def,
+      i = 0,
+      def = matrix.replace(/\D/g, ""),
+      val = e.target.value.replace(/\D/g, "");
+    if (clearVal !== 'false' && e.type === 'blur') {
+      if (val.length < matrix.match(/([\_\d])/g).length) {
+        e.target.value = '';
+        return;
+      }
+    }
+    if (def.length >= val.length) val = def;
+    e.target.value = matrix.replace(/./g, function (a) {
+      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+    });
+  }
+  var phone_inputs = document.querySelectorAll('[data-phone-pattern]');
+  for (let elem of phone_inputs) {
+    for (let ev of ['input', 'blur', 'focus']) {
+      elem.addEventListener(ev, eventCalllback);
+    }
+  }
+});
+
+// START validate briefing__form_one
+bformone.addEventListener('submit', e => {
+  scroll.scrollTo(totop);
+  e.preventDefault();
+  checkoneInputs();
+});
+function checkoneInputs() {
+  const busernameValue = busername.value.trim();
+  const bphoneValue = bphone.value.trim();
+  const bemailValue = bemail.value.trim();
+
+  if(busernameValue !== '' && busernameValue.length >= busernameMin && busernameValue.length <= busernameMax) {
+    setSuccessForBriefing(busername);
+    bstepone.classList.remove("error");
+  } else {
+    setErrorForBriefing(busername);
+    bstepone.classList.add("error");
+  }
+
+  if(bphoneValue !== '' && bphoneValue.length >= bphoneMin && bphoneValue.length <= bphoneMax) {
+    setSuccessForBriefing(bphone);
+    bstepone.classList.remove("error");
+  } else {
+    setErrorForBriefing(bphone);
+    bstepone.classList.add("error");
+  }
+
+  if(!isEmail(bemailValue)) {
+    setErrorForBriefing(bemail);
+    bstepone.classList.add("error");
+    scroll.scrollTo(totop);
+  } else if (bemailValue !== '' && bemailValue.length >= bemailMin && bemailValue.length <= bemailMax) {
+    setSuccessForBriefing(bemail);
+    bstepone.classList.remove("error");
+  } else {
+    setErrorForBriefing(bemail);
+    bstepone.classList.add("error");
+  }
+
+  if(!isEmail(bemailValue)){
+    scroll.scrollTo(totop);
+  } else if (
+    busernameValue !== '' &&
+    busernameValue.length >= busernameMin &&
+    busernameValue.length <= busernameMax &&
+    bphoneValue !== '' &&
+    bphoneValue.length >= bphoneMin &&
+    bphoneValue.length <= bphoneMax &&
+    bemailValue !== '' &&
+    bemailValue.length >= bemailMin &&
+    bemailValue.length <= bemailMax
+  ) {
+    briefingform.forEach(n => n.classList.remove('active'));
+    briefingsteps.forEach(n => n.classList.remove('active'));
+    briefingstep.forEach(n => n.classList.remove('border'));
+    briefingform.forEach(n => n.style.maxHeight = null);
+    briefingform.forEach(n => bformtwo.style.maxHeight = bformtwo.scrollHeight + "px");
+    bformtwo.classList.add("active");
+    bstepstwo.classList.add("active");
+    bsteptwo.classList.add("active");
+    bsteptwo.classList.add("unlock");
+    bsteptwo.classList.add("border");
+  }
+}
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+// END validate briefing__form_one
+// end mask phone

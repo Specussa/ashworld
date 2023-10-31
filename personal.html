@@ -906,7 +906,7 @@
       <div class="personal__row">
         <div class="personal__left active">
           <div class="personal__control">
-            <button class="personal__profile">
+            <button class="personal__profile_button active">
               <span class="personal__profile_info">
                 <span class="personal__profile_left">
                   <p class="personal__profile_nick">А</p>
@@ -1020,6 +1020,72 @@
           <div class="personal__top personal__desktop_hidden">
             <button class="personal__arrow"><img src="img/icon/arrow-left.svg" alt=""></button>
             <span class="personal__count">(2)</span>
+          </div>
+          <div class="personal__tab personal__profile active">
+            <form id="personal__form" class="personal__form">
+              <ul class="personal__form_list">
+                <li class="personal__form_item">
+                  <div class="personal__form_control">
+                    <input type="text" id="personal__form_firstname">
+                    <label>имя</label>
+                  </div>
+                  <div class="personal__form_control">
+                    <input type="text" id="personal__form_lastname">
+                    <label>фамилия</label>
+                  </div>
+                </li>
+                <li class="personal__form_item">
+                  <div class="personal__form_control">
+                    <input type="date" id="personal__form_date">
+                    <label>дата рождения</label>
+                  </div>
+                  <div class="personal__form_checks personal__form_checks_type">
+                    <label class="personal__form_check active">
+                      <span class="personal__form_check_text">женский</span>
+                      <input class="personal__form_input_hidden" name="type" type="radio" checked>
+                    </label>
+                    <label class="personal__form_check">
+                      <span class="personal__form_check_text">мужской</span>
+                      <input class="personal__form_input_hidden" name="type" type="radio">
+                    </label>
+                  </div>
+                </li>
+                <li class="personal__form_item">
+                  <div class="personal__select_box">
+                    <div class="personal__select" data-select>
+                      <div class="personal__select_selected_item" data-select-action data-select-open>
+                        <div class="personal__select_selected-title" data-select-title><span>размер обуви</span></div>
+                        <svg  class="personal__select_arrow" data-select-arrow width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.875 5L7 11.125L13.125 5" stroke="black" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="personal__select_list" data-select-list>
+                        <div class="personal__select_list_item" data-select-action data-select-item>35</div>
+                        <div class="personal__select_list_item" data-select-action data-select-item>36</div>
+                        <div class="personal__select_list_item" data-select-action data-select-item>37</div>
+                      </div>
+                      <input class="personal__select_input" type="text" data-select-input>
+                    </div>
+                  </div>
+                </li>
+                <li class="personal__form_item">
+                  <div class="personal__form_control">
+                    <input type="text" data-phone-pattern id="personal__form_phone">
+                    <label>телефон*</label>
+                  </div>
+                  <div class="personal__form_control">
+                    <input type="text" id="personal__email">
+                    <label>e-mail</label>
+                  </div>
+                </li>
+              </ul>
+              <div class="personal__form_bottom">
+                <div class="personal__form_button">
+                  <input type="submit" name="submit" value="Продолжить">
+                </div>
+                <p class="personal__necessarily">Нажимая на кнопку «сохранить», я принимаю условия <a href="#">публичной оферты</a> и <a href="#">политики конфиденциальности</a></p>
+              </div>
+            </form>
           </div>
           <div class="personal__tab personal__addresses">
             <ul class="personal__addresses_list">
