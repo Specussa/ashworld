@@ -76,7 +76,7 @@ window.addEventListener('click', e => {
 })
 // end header burger
 
-// start checkbox
+// start subscription checkbox
 const personal = document.querySelector('.section_personal');
 if (personal) {
   const uncheck = [...document.querySelectorAll('.personal__subscription_input')];
@@ -96,9 +96,9 @@ if (personal) {
     onChecked()
   }))
 }
-// end checkbox
+// end subscription checkbox
 
-// start heart
+// start heart checkbox
 if (personal) {
   const heartuncheck = [...document.querySelectorAll('.personal__heart_input')];
   const onHChecked = () => {
@@ -117,9 +117,38 @@ if (personal) {
     onHChecked()
   }))
 }
-// end heart
+// end heart checkbox
 
-// start checkbox
+// start heart checkbox
+const paddressesel = document.querySelectorAll(".personal__addresses_el");
+const poverlay = document.querySelectorAll(".personal__addresses_overlay");
+const pclose = document.querySelectorAll(".personal__addresses_close");
+if (personal) {
+  for (let i = 0; i < paddressesel.length; i++) {
+    paddressesel[i].onclick = function() {
+      this.previousElementSibling.classList.add('active');
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    }
+  }
+  for (let i = 0; i < poverlay.length; i++) {
+    poverlay[i].onclick = function() {
+      this.parentNode.classList.remove('active');
+      document.documentElement.style.overflow = null;
+      document.body.style.overflow = null;
+    }
+  }
+  for (let i = 0; i < pclose.length; i++) {
+    pclose[i].onclick = function() {
+      this.closest('.personal__addresses_fixed').classList.remove('active');
+      document.documentElement.style.overflow = null;
+      document.body.style.overflow = null;
+    }
+  }
+}
+// end heart checkbox
+
+// start menu personal
 const pcenter = document.querySelector('.personal__center');
 const pleft = document.querySelector('.personal__left');
 const pbcart = document.querySelector('.personal__button_cart');
@@ -187,4 +216,4 @@ if (personal) {
     }
   });
 }
-// end checkbox
+// end menu personal
