@@ -1579,455 +1579,359 @@
     </div>
   </section>
 </main>
-
-
 <script src="./js/jquery-3.2.1.min.js"></script>
-
 <script src="./js/bootstrap.bundle.js"></script>
-
 <script src="./js/owl.carousel.js"></script>
-
 <script src="./js/main.js"></script>
-
-
 <script>
+  $(document).ready(function () {
+    $('.top-slider').owlCarousel({
+      loop: true,
+      items: 1,
+      margin: 0,
+      nav: false,
+      dots: true,
+      responsive: {
+        0: {},
+        768: {},
+        1200: {}
+      }
+    });
+  });
+  $(document).ready(function () {
+    $('.products-slider').owlCarousel({
+      autoWidth: true,
+      loop: true,
+      items: 1,
+      margin: 10,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {
+          margin: 2
+        },
+        768: {
+          margin: 8
+        },
+        1440: {
+          margin: 10
+        }
+      }
+    });
+  });
+  $(document).ready(function () {
+    $('.ashgirls-slider').owlCarousel({
+      autoWidth: true,
+      loop: true,
+      items: 1,
+      margin: 0,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {
+/*
+          margin: 72
+*/
+        },
+        768: {
+/*
+          margin: 82
+*/
+        },
+        1024: {
+/*
+          margin: 130
+*/
+        },
+        1600: {
+/*
+          margin: 206
+*/
+        },
+        1925: {
+/*
+          margin: 223
+*/
+        }
+      }
+    });
+  });
+  $(document).ready(function () {
+    $('.journal-slider').owlCarousel({
+      autoWidth: true,
+      loop: true,
+      items: 1,
+      margin: 0,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {
+/*
+          margin: 8
+*/
+        },
+        768: {
+/*
+          margin: 6
+*/
+        },
+        992: {
+/*
+          margin: 10
+*/
+        }
+      }
+    });
+  });
+  $(document).ready(function () {
+    $('.slider-product').owlCarousel({
+      autoWidth: true,
+      loop: true,
+      items: 1,
+      margin: 10,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {margin: 2},
+        768: {margin: 8},
+        1200: {            margin: 8
+        },
+        1600: {            margin: 10
+        }
+      }
+    });
+  });
+  $(document).ready(function () {
+    $('.products2-slider').owlCarousel({
+      autoWidth: true,
+      loop: true,
+      items: 1,
+      margin: 10,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {
+          margin: 2
+        },
+        768: {
+          margin: 8
+        },
+        1600: {
+          margin: 10
+        }
+      }
+    });
+    $(".button-prev2").click(function () {
+      $(".products2-slider .owl-prev").click();
+      $(this).closest('.product-card').click(false);
+    });
 
-    $(document).ready(function () {
-        $('.top-slider').owlCarousel({
-            loop: true,
+    $(".button-next2").click(function () {
+      $(".products2-slider .owl-next").click();
+      $(this).closest('.product-card').click(false);
+    });
+  });
+
+  $(document).ready(function () {
+      $('.new-collection-slider').owlCarousel({
+        autoWidth: true,
+        loop: true,
+        items: 5,
+        margin: 0,
+        nav: false,
+        mouseDrag: false,
+        touchDrag: false,
+        dots: false,
+        responsive: {
+          0: {
+            items: 1,
+            autoWidth: false,
+            margin: 0
+          },
+          768: {
             items: 1,
             margin: 0,
-            nav: false,
-            dots: true,
-            responsive: {
-                0: {},
-                768: {},
-                1200: {}
-            }
-        });
-
-    });
-
-    $(document).ready(function () {
-        $('.products-slider').owlCarousel({
-            autoWidth: true,
-            loop: true,
-            items: 1,
-            margin: 10,
-            nav: false,
-            dots: false,
-            responsive: {
-                0: {
-                    margin: 2
-                },
-                768: {
-                    margin: 8
-                },
-                1440: {
-                    margin: 10
-                }
-            }
-        });
-
-    });
-
-    $(document).ready(function () {
-        $('.ashgirls-slider').owlCarousel({
-            autoWidth: true,
-            loop: true,
-            items: 1,
+            autoWidth: false
+          },
+          992: {
             margin: 0,
-            nav: false,
-            dots: false,
-            responsive: {
-                0: {
-/*
-                    margin: 72
-*/
-                },
-                768: {
-/*
-                    margin: 82
-*/
-                },
-                1024: {
-/*
-                    margin: 130
-*/
-                },
-                1600: {
-/*
-                    margin: 206
-*/
-                },
-                1925: {
-/*
-                    margin: 223
-*/
-                }
-            }
-        });
+            autoWidth: true
+          }
 
-    });
+        }
+      });
+      $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
+      $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
 
-    $(document).ready(function () {
-        $('.journal-slider').owlCarousel({
-            autoWidth: true,
-            loop: true,
-            items: 1,
-            margin: 0,
-            nav: false,
-            dots: false,
-            responsive: {
-                0: {
-/*
-                    margin: 8
-*/
-                },
-                768: {
-/*
-                    margin: 6
-*/
-                },
-                992: {
-/*
-                    margin: 10
-*/
-                }
-            }
-        });
-
-    });
-
-
-
-
-
-
-
-    $(document).ready(function () {
-        $('.slider-product').owlCarousel({
-            autoWidth: true,
-            loop: true,
-            items: 1,
-            margin: 10,
-            nav: false,
-            dots: false,
-            responsive: {
-                0: {margin: 2},
-                768: {margin: 8},
-                1200: {            margin: 8
-                },
-                1600: {            margin: 10
-                }
-            }
-        });
-
-    });
-
-
-    $(document).ready(function () {
-        $('.products2-slider').owlCarousel({
-            autoWidth: true,
-            loop: true,
-            items: 1,
-            margin: 10,
-            nav: false,
-            dots: false,
-            responsive: {
-                0: {
-                    margin: 2
-                },
-                768: {
-                    margin: 8
-                },
-                1600: {
-                    margin: 10
-                }
-            }
-        });
-        $(".button-prev2").click(function () {
-            $(".products2-slider .owl-prev").click();
-            $(this).closest('.product-card').click(false);
-        });
-
-        $(".button-next2").click(function () {
-            $(".products2-slider .owl-next").click();
-            $(this).closest('.product-card').click(false);
-        });
-    });
-
-    $(document).ready(function () {
-        $('.new-collection-slider').owlCarousel({
-            autoWidth: true,
-            loop: true,
-            items: 5,
-            margin: 0,
-            nav: false,
-            mouseDrag: false,
-            touchDrag: false,
-            dots: false,
-            responsive: {
-                0: {
-                    items: 1,
-                    autoWidth: false,
-                    margin: 0
-                },
-                768: {
-                    items: 1,
-                    margin: 0,
-                    autoWidth: false
-                },
-                992: {
-                    margin: 0,
-                    autoWidth: true
-                }
-
-            }
-        });
+      $(".button-prev1").click(function () {
+        $(".new-collection-slider .owl-prev").click();
+        $('.new-collection-slider .owl-item').removeClass('ActiveItem');
         $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
         $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
+      });
 
-        $(".button-prev1").click(function () {
-            $(".new-collection-slider .owl-prev").click();
-            $('.new-collection-slider .owl-item').removeClass('ActiveItem');
-            $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
-            $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
-        });
-
-        $(".button-next1").click(function () {
-            $(".new-collection-slider .owl-next").click();
-            $('.new-collection-slider .owl-item').removeClass('ActiveItem');
-            $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
-            $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
-        });
-
-
-
-
-
-
-
-
-
-
-        /*$('.new-collection-slider').on('translate.owl.carousel', function(){
-            $('.owl-item.big').removeClass('big');
-            $('.owl-item.medium').removeClass('medium');
-            $('.owl-item.active').eq(0).addClass('big');
-            $('.owl-item.active').eq(1).addClass('medium');
-            $('.owl-item.active').eq(2).addClass('medium');
-
+      $(".button-next1").click(function () {
+        $(".new-collection-slider .owl-next").click();
+        $('.new-collection-slider .owl-item').removeClass('ActiveItem');
+        $('.new-collection-slider .owl-item.active').eq(2).addClass('ActiveItem');
+        $('.new-collection-slider .owl-item.active').eq(3).addClass('ActiveItem');
+      });
+    /*$('.new-collection-slider').on('translate.owl.carousel', function(){
+      $('.owl-item.big').removeClass('big');
+      $('.owl-item.medium').removeClass('medium');
+      $('.owl-item.active').eq(0).addClass('big');
+      $('.owl-item.active').eq(1).addClass('medium');
+      $('.owl-item.active').eq(2).addClass('medium');
     });*/
-    });
-
+  });
 </script>
 <script>
-    $(".cart-toggler").click(function () {
-        $(".cart-modal").addClass('active');
-        $(".cart-modal-overlay").addClass('active');
-        $("body").addClass('active');
-        return false
-    });
-    $(".close-cart-modal").click(function () {
-        $(".cart-modal").removeClass('active');
-        $(".cart-modal-overlay").removeClass('active');
-        $("body").removeClass('active');
-        return false
-    })
-
+  $(".cart-toggler").click(function () {
+    $(".cart-modal").addClass('active');
+    $(".cart-modal-overlay").addClass('active');
+    $("body").addClass('active');
+    return false
+  });
+  $(".close-cart-modal").click(function () {
+    $(".cart-modal").removeClass('active');
+    $(".cart-modal-overlay").removeClass('active');
+    $("body").removeClass('active');
+    return false
+  })
 </script>
-
-
-
-
-
-
-
-
-
-
-
 <script>
-    $(document).ready(function () {
-        $('.recommendations-slider').owlCarousel({
-            autoWidth: true,
-            loop: true,
-            items: 1,
-            margin: 10,
-            nav: false,
-            dots: false,
-            responsive: {
-                0: {
-                    margin: 2
-                },
-                768: {
-                    margin: 8
-                },
-                1600: {
-                    margin: 8
-                }
-            }
-        });
-        $(".button-prev3").click(function () {
-            $(".recommendations-slider .owl-prev").click();
-        });
-
-        $(".button-next3").click(function () {
-            $(".recommendations-slider .owl-next").click();
-        });
-    });
-</script>
-
-<script>
-    $('.minus').click(function () {
-        var $input = $(this).parent().find('input');
-        var count = parseInt($input.val()) - 1;
-        count = count < 1 ? 1 : count;
-        $input.val(count);
-        $input.change();
-        return false;
-    });
-    $('.plus').click(function () {
-        var $input = $(this).parent().find('input');
-        $input.val(parseInt($input.val()) + 1);
-        $input.change();
-        return false;
-    });
-</script>
-
-
-<script>
-    $(".cart-block-top-r .notification").click(function () {
-        $(this).toggleClass("active");
-        if (!$(this).data('status')) {
-            $(this).html('вы подписаны <i></i>');
-            $(this).data('status', true);
+  $(document).ready(function () {
+    $('.recommendations-slider').owlCarousel({
+      autoWidth: true,
+      loop: true,
+      items: 1,
+      margin: 10,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {
+          margin: 2
+        },
+        768: {
+          margin: 8
+        },
+        1600: {
+          margin: 8
         }
-        else {
-            $(this).html('подписаться <i></i>');
-            $(this).data('status', false);
-        }
-        return false
-
+      }
+    });
+    $(".button-prev3").click(function () {
+      $(".recommendations-slider .owl-prev").click();
     });
 
+    $(".button-next3").click(function () {
+      $(".recommendations-slider .owl-next").click();
+    });
+  });
 </script>
-
-
 <script>
-    $(".cart-menu-button").click(function () {
-        $(this).next(".cart-menu-block").addClass("active");
-        $('body').addClass("active");
-    });
-    $(".close-tm").click(function () {
-        $(this).closest(".cart-menu-block").removeClass("active");
-        $('body').removeClass("active");
-    });
-    $(".favourites-cart-mobil").click(function () {
-        $(this).toggleClass("active");
-    });
-
-
+  $('.minus').click(function () {
+    var $input = $(this).parent().find('input');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+  $('.plus').click(function () {
+    var $input = $(this).parent().find('input');
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
+  });
 </script>
-
-
-
 <script>
-    $(".card-img-title .favourites").click(function (e) {
-        $(this).toggleClass("active");
-        (e).preventDefault();
-    });
+  $(".cart-block-top-r .notification").click(function () {
+    $(this).toggleClass("active");
+    if (!$(this).data('status')) {
+      $(this).html('вы подписаны <i></i>');
+      $(this).data('status', true);
+    }
+    else {
+      $(this).html('подписаться <i></i>');
+      $(this).data('status', false);
+    }
+    return false
+  });
+</script>
+<script>
+  $(".cart-menu-button").click(function () {
+    $(this).next(".cart-menu-block").addClass("active");
+    $('body').addClass("active");
+  });
+  $(".close-tm").click(function () {
+    $(this).closest(".cart-menu-block").removeClass("active");
+    $('body').removeClass("active");
+  });
+  $(".favourites-cart-mobil").click(function () {
+    $(this).toggleClass("active");
+  });
+</script>
+<script>
+  $(".card-img-title .favourites").click(function (e) {
+    $(this).toggleClass("active");
+    (e).preventDefault();
+  });
 </script>
 <script src="./js/simplebar.js"></script>
-
-
 <script>
-
-
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 1) {
-            $('header').addClass('header-bg');
-        }
-        else {
-            $('header').removeClass('header-bg');
-        }
-    });
-
-
-
-
-
-    $(document).ready(() => { // DOM готов к взаимодейтсвию
-
-        const onScrollHeader = () => { // объявляем основную функцию onScrollHeader
-
-        const header = $('header') // находим header и записываем в константу
-
-        let prevScroll = $(window).scrollTop() // узнаем на сколько была прокручена страница ранее
-        let currentScroll // на сколько прокручена страница сейчас (пока нет значения)
-
-        $(window).scroll(() => { // при прокрутке страницы
-
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1) {
+      $('header').addClass('header-bg');
+    }
+    else {
+      $('header').removeClass('header-bg');
+    }
+  });
+  $(document).ready(() => { // DOM готов к взаимодейтсвию
+    const onScrollHeader = () => { // объявляем основную функцию onScrollHeader
+      const header = $('header') // находим header и записываем в константу
+      let prevScroll = $(window).scrollTop() // узнаем на сколько была прокручена страница ранее
+      let currentScroll // на сколько прокручена страница сейчас (пока нет значения)
+      $(window).scroll(() => { // при прокрутке страницы
         currentScroll = $(window).scrollTop() // узнаем на сколько прокрутили страницу
-
         const headerHidden = () => header.hasClass('header_hidden') // узнаем скрыт header или нет
-
-    if (currentScroll > prevScroll && !headerHidden()) { // если прокручиваем страницу вниз и header не скрыт
-        header.addClass('header_hidden') // то скрываем header
+        if (currentScroll > prevScroll && !headerHidden()) { // если прокручиваем страницу вниз и header не скрыт
+          header.addClass('header_hidden') // то скрываем header
+        }
+        if (currentScroll < prevScroll && headerHidden()) { // если прокручиваем страницу вверх и header скрыт
+          header.removeClass('header_hidden') // то отображаем header
+        }
+        prevScroll = currentScroll // записываем на сколько прокручена страница на данный момент
+      })
     }
-    if (currentScroll < prevScroll && headerHidden()) { // если прокручиваем страницу вверх и header скрыт
-        header.removeClass('header_hidden') // то отображаем header
-    }
-
-    prevScroll = currentScroll // записываем на сколько прокручена страница на данный момент
-
-    })
-
-    }
-
     onScrollHeader() // вызываем основную функцию onScrollHeader
-
-    })
-</script>
-
-
-<script>
-
-    $('.promo-code input').keyup(function() {
-
-        if( $(this).val().length === 0 ) {
-            $(this).next("button").removeClass('active');
-        }
-        else {
-            $(this).next("button").addClass("active");
-        }
-    });
+  })
 </script>
 <script>
-
-    $(".info-click").click(function () {
-        $(this).children(".info-modal").toggleClass("active");
-    });
+  $('.promo-code input').keyup(function() {
+    if( $(this).val().length === 0 ) {
+      $(this).next("button").removeClass('active');
+    } else {
+      $(this).next("button").addClass("active");
+    }
+  });
 </script>
-
 <script>
-
-    $(document).click(function (e) {
-        if ($(e.target).closest('.info-modal.active').length) {
-            return;
-        }
-        if ($(e.target).closest('.info-click').length) {
-        }
-        else {
-            $('.info-modal.active').removeClass("active")
-        }
-    });
-
+  $(".info-click").click(function () {
+    $(this).children(".info-modal").toggleClass("active");
+  });
 </script>
-
-
-
+<script>
+  $(document).click(function (e) {
+    if ($(e.target).closest('.info-modal.active').length) {
+      return;
+    }
+    if ($(e.target).closest('.info-click').length) {
+    } else {
+      $('.info-modal.active').removeClass("active")
+    }
+  });
+</script>
 </body>
 </html>
