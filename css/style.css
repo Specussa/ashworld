@@ -1560,7 +1560,6 @@ main {
 }
 .personal__select_tel .personal__form_control {
   width: 100%;
-  flex: 0 0 auto;
 }
 
 .personal__select_tel .personal__select_selected_item {
@@ -2557,6 +2556,9 @@ main {
   }
   .personal__select_box {
     margin: 0;
+  }
+  .personal__select_tel .personal__select_box {
+    width: auto;
   }
 }
 /* end media 767px */
