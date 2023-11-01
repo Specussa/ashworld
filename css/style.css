@@ -1531,12 +1531,7 @@ main {
   color: #bbb;
 }
 
-.iti__flag.iti__by {
-  height: 10px;
-  background-position: -790px 0px;
-}
-
-.iti__flag {
+.personal__flag {
   width: 20px;
   height: 14px;
   box-shadow: 0px 0px 1px 0px #888;
@@ -1546,15 +1541,15 @@ main {
   background-position: 20px 0;
 }
 
-.iti__flag.iti__by {
-  background-position: -790px 0px;
-}
-
-.iti__flag.iti__ru {
+.personal__flag_ru {
   background-position: -4361px 0px;
 }
 
-.iti__flag.iti__ua {
+.personal__flag_by {
+  background-position: -790px 0px;
+}
+
+.personal__flag_ua {
   background-position: -5263px 0px;
 }
 
