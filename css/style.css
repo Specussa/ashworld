@@ -1900,6 +1900,9 @@ main {
     height: 21px;
     top: 9.5px;
   }
+  .personal__select_list {
+    top: 39px;
+  }
 }
 /* end media 1919px */
 
