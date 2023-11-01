@@ -1440,8 +1440,8 @@ main {
   justify-content: space-between;
   color: var(--black);
   background: var(--white);
-  border: none;
   border: 1px solid var(--border);
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -1564,6 +1564,7 @@ main {
 
 .personal__select_tel .personal__select_selected_item {
   border-right: none;
+  border-radius: 4px 0 0 4px;
 }
 
 .personal__select_tel .personal__form_control input {
