@@ -1713,7 +1713,7 @@ a {
 }
 
 .personal__form_head {
-  margin: 64px 0 4px;
+  margin: 44px 0 4px;
   font-family: var(--halvar);
   font-size: 27px;
   font-weight: 500;
@@ -1903,6 +1903,54 @@ a {
 .personal__bottom p a {
   text-decoration: underline;
   color: #bbb;
+}
+
+.order__block {
+  width: 100%;
+}
+
+.personal__map_block {
+  display: flex;
+  width: 100%;
+  padding: 24px 28px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #f6f6f6;
+  border-radius: 4px;
+}
+
+.personal__map_desc {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--arimo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--black);
+}
+
+.personal__map_desc img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.personal__map_button {
+  display: flex;
+  height: 40px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--helvetica);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  text-transform: uppercase;
 }
 
 /* end section order */
