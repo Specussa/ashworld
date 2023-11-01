@@ -1731,6 +1731,7 @@ a {
 }
 
 .order__check_label {
+  width: calc(50% - 8px);
   justify-content: flex-start;
   gap: 10px;
   font-family: var(--arimo);
@@ -1738,6 +1739,83 @@ a {
   font-weight: 400;
   line-height: 21px;
   color: var(--black);
+}
+
+.personal__approval {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+}
+
+.personal__approval_label {
+  font-size: 16px;
+  text-transform: none;
+}
+
+.personal__approval_label {
+  display: flex;
+  width: calc(50% - 8px);
+  align-items: center;
+  gap: 10px;
+  font-family: var(--arimo);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--black);
+  position: relative;
+  cursor: pointer;
+}
+
+.personal__approval_label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.personal__approval_label i {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: url("../images/checkbox.svg");
+}
+
+.personal__approval_label input:checked ~ i {
+  background: url("../images/checkbox-active.svg");
+}
+
+.personal__comment {
+  display: flex;
+  width: 100%;
+}
+
+.personal__comment textarea {
+  width: 100%;
+  height: 50px;
+  padding: 14px 20px;
+  resize: none;
+  overflow: hidden;
+  font-family: var(--arimo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.personal__comment textarea::placeholder {
+  color: #bbb;
+}
+
+.personal__purpose {
+  padding: 8px 0 0;
+  font-family: var(--helvetica);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #b0b0b0;
 }
 
 /* end section order */
