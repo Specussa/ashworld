@@ -74,10 +74,6 @@ a {
   user-select: none;
 }
 
-main {
-  overflow: hidden;
-}
-
 /* start header */
 
 .header__burger {
@@ -383,6 +379,10 @@ main {
   height: 224px;
 }
 
+/* end section top */
+
+/* start section personal */
+
 .personal__row {
   display: flex;
   justify-content: space-between;
@@ -399,6 +399,11 @@ main {
 
 .personal__right {
   width: calc(25% - 51px);
+}
+
+.personal__control {
+  position: sticky;
+  top: 0;
 }
 
 .personal__tab {
@@ -1582,7 +1587,13 @@ main {
   background-color: var(--back);
 }
 
-/* end section top */
+/* end section personal */
+
+/* start section order */
+
+
+
+/* end section order */
 
 /* start media 1919px */
 @media (max-width: 1919px) {
