@@ -1568,6 +1568,7 @@ main {
 
 .personal__select_tel .personal__form_control input {
   border-left: none;
+  border-radius: 0 4px 4px 0;
 }
 
 .personal__select_tel .personal__select_selected_item::after {
