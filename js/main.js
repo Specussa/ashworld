@@ -211,24 +211,39 @@ if (personal) {
 // end menu personal
 
 // start form label
-const personalform = document.getElementById('personal__form');
-if (personalform) {
+const personalformc = document.querySelector('.personal__form_control');
+if (personalformc) {
   $(".personal__form_control").click(function () {
     $(this).children("input").focus();
+    $(this).children(".addresses-list").addClass("focus");
   });
 
   $(document).on("change", ".personal__form_control", function () {
     if ($(this).children("input").val() !== '') {
       $(this).children("label").addClass("focus");
-    }
-    else {
+    } else {
       $(this).children("label").removeClass("focus");
+    }
+  });
+  $(document).ready(function () {
+    $(".addresses-list a").click(function () {
+      var texttm = $(this).text();
+      $(this).parent().prev().prev("input").val(texttm);
+      $(this).parent().prev("label").addClass("focus");
+      $(this).removeAttr("href");
+      $(".addresses-list").removeClass("focus");
+    });
+  });
+  $('body').on('click', function(e) {
+    if($(e.target).closest('.personal__form_control').length == 0) {
+      $('.addresses-list').removeClass("focus");
     }
   });
 }
 // end form label
 
 // start heart checkbox
+const personalform = document.getElementById('personal__form');
 if (personalform) {
   const pfitype = [...document.querySelectorAll('.personal__form_checks_type .personal__form_input_hidden')];
   const pfchecktype = document.querySelectorAll('.personal__form_checks_type .personal__form_check');

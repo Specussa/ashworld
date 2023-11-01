@@ -785,21 +785,19 @@
         <div class="count-product">16 <span>товаров</span></div>
       </div>
       <h1>оформление заказа</h1>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="order-l"></div>
-        </div>
-        <div class="col-md-6">
-          <div class="order-c">
-            <div class="order-block">
-              <h3>Доставка</h3>
-              <div class="cost">Стоимость доставки
+      <div class="order__row">
+        <div class="order__left"></div>
+        <div class="order__center">
+          <form id="order__form" class="order__form">
+            <div class="order__block">
+              <h3 class="order__head">Доставка</h3>
+              <div class="order__cost">Стоимость доставки
                 <span>Бесплатно</span>
               </div>
-              <div class="input-block">
-                <p>Адрес доставки</p>
-                <div class="input-block-wrapper ">
-                  <input type="text" placeholder="" class="input-tm">
+              <div class="order__addresses_block">
+                <p class="order__addresses_head">Адрес доставки</p>
+                <div class="personal__form_control order__form_control">
+                  <input type="text" id="order__addresses">
                   <label>населенный пункт*</label>
                   <div class="addresses-list">
                     <a href="">г. Новосибирск, <span>Новосибирская обл.</span></a>
@@ -814,30 +812,47 @@
                 </div>
               </div>
             </div>
-            <div class="order-block">
-              <h3>получатель</h3>
-              <div class="inputs-blocks">
-                <div class="row">
-                  <div class="col-md-6">
-                    <input type="text" placeholder="имя*" class="input-tm">
+            <ul class="personal__form_list">
+              <h3 class="personal__form_head">получатель</h3>
+              <li class="personal__form_item">
+                <div class="personal__form_control">
+                  <input type="text" id="personal__form_firstname">
+                  <label>имя</label>
+                </div>
+                <div class="personal__form_control">
+                  <input type="text" id="personal__form_lastname">
+                  <label>фамилия</label>
+                </div>
+              </li>
+              <p class="personal__form_heading">Контакты</p>
+              <li class="personal__form_item">
+                <div class="personal__select_tel">
+                  <div class="personal__select_box">
+                    <div class="personal__select" data-select>
+                      <div class="personal__select_selected_item" data-select-action data-select-open>
+                        <div class="personal__select_selected-title" data-select-title><div class="personal__flag"><div class="personal__flag personal__flag_ru"></div></div>+7</div>
+                        <svg class="personal__select_arrow" data-select-arrow width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.875 5L7 11.125L13.125 5" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="personal__select_list" data-select-list>
+                        <div class="personal__select_list_item" data-select-action data-select-item><div class="personal__flag"><div class="personal__flag personal__flag_ru"></div></div>+7</div>
+                        <div class="personal__select_list_item" data-select-action data-select-item><div class="personal__flag"><div class="personal__flag personal__flag_by"></div></div>+375</div>
+                        <div class="personal__select_list_item" data-select-action data-select-item><div class="personal__flag"><div class="personal__flag personal__flag_ua"></div></div>+380</div>
+                      </div>
+                      <input class="personal__select_input" type="text" data-select-input>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <input type="text" placeholder="фамилия" class="input-tm">
+                  <div class="personal__form_control">
+                    <input type="text" data-phone-pattern id="personal__form_phone">
                   </div>
                 </div>
-              </div>
-              <div class="inputs-blocks-contact">
-                <p>Контакты</p>
-                <div class="row">
-                  <div class="col-md-6">
-                    <input id="phone" name="phone" type="tel" class="input-tm" placeholder="телефон*">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="email" placeholder="e-mail" class="input-tm">
-                    <p class="purpose">для отправки чека</p>
-                  </div>
+                <div class="personal__form_control">
+                  <input type="email" id="personal__email">
+                  <label>e-mail</label>
+                  <p class="purpose">для отправки чека</p>
                 </div>
-              </div>
+              </li>
               <div class="approval-tm">
                 <div class="row">
                   <div class="col-md-6">
@@ -849,89 +864,85 @@
                     </label>
                   </div>
                   <div class="col-md-6">
-                    <div class="consent-subscription">
-                      <label class="input-slider">
-                        <input type="checkbox">
-                        <span></span>
-                      </label>
+                    <label class="personal__check_label order__check_label">
+                      <input class="personal__check_input" type="checkbox" checked="">
+                      <span></span>
                       Подписаться на новости
-                    </div>
+                    </label>
                   </div>
                 </div>
               </div>
               <div class="comment-order">
                 <textarea placeholder="комментарий к заказу"></textarea>
               </div>
-            </div>
-            <div class="order-block">
-              <h3>способ оплаты</h3>
-              <div class="payment-methods">
-                <div class="payment-method-block">
-                  <div class="radio-tm">
-                    <label>
-                      <input type="radio" name="radio-payment">
-                      <span class="label-wrapper">
-                      <i></i>
-                      <span>СБП</span>
-                      <img src="./images/payment-1.svg" alt="">
-                      </span>
-                    </label>
+              <div class="order-block">
+                <h3>способ оплаты</h3>
+                <div class="payment-methods">
+                  <div class="payment-method-block">
+                    <div class="radio-tm">
+                      <label>
+                        <input type="radio" name="radio-payment">
+                        <span class="label-wrapper">
+                        <i></i>
+                        <span>СБП</span>
+                        <img src="./images/payment-1.svg" alt="">
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="payment-method-block">
+                    <div class="radio-tm">
+                      <label>
+                        <input type="radio" name="radio-payment">
+                        <span class="label-wrapper">
+                        <i></i>
+                        <span>Картой онлайн</span>
+                        <img src="./images/payment-2.svg" alt="">
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="payment-method-block">
+                    <div class="radio-tm">
+                      <label>
+                        <input type="radio" name="radio-payment">
+                        <span class="label-wrapper">
+                        <i></i>
+                        <span>Долями</span>
+                        <img src="./images/payment-3.svg" alt="">
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="payment-method-block">
+                    <div class="radio-tm">
+                      <label>
+                        <input type="radio" name="radio-payment">
+                        <span class="label-wrapper">
+                        <i></i>
+                        <span>SberPay</span>
+                        <img src="./images/payment-4.svg" alt="">
+                        </span>
+                      </label>
+                    </div>
                   </div>
                 </div>
-                <div class="payment-method-block">
-                  <div class="radio-tm">
-                    <label>
-                      <input type="radio" name="radio-payment">
-                      <span class="label-wrapper">
-                      <i></i>
-                      <span>Картой онлайн</span>
-                      <img src="./images/payment-2.svg" alt="">
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="payment-method-block">
-                  <div class="radio-tm">
-                    <label>
-                      <input type="radio" name="radio-payment">
-                      <span class="label-wrapper">
-                      <i></i>
-                      <span>Долями</span>
-                      <img src="./images/payment-3.svg" alt="">
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="payment-method-block">
-                  <div class="radio-tm">
-                    <label>
-                      <input type="radio" name="radio-payment">
-                      <span class="label-wrapper">
-                      <i></i>
-                      <span>SberPay</span>
-                      <img src="./images/payment-4.svg" alt="">
-                      </span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <button class="add-order">офрмить заказ</button>
-              <div class="order-footer">
-                <div class="consent-subscription">
-                  <label class="input-slider">
-                    <input type="checkbox">
+                <button class="add-order">офрмить заказ</button>
+                <div class="order-footer">
+                  <label class="personal__check_label">
+                    Сохранить данные для авторизации
+                    <input class="personal__check_input" type="checkbox" checked="">
                     <span></span>
                   </label>
-                  Сохранить данные для авторизации
+                  <p class="approval">Нажимая на кнопку “Подписаться”, я соглашаюсь на обработку моих персональных данных, ознакомлен(а) и согласен(а) с условиями <a href="">Публичной оферты</a></p>
                 </div>
-                <p class="approval">Нажимая на кнопку “Подписаться”, я соглашаюсь на обработку моих персональных данных, ознакомлен(а) и согласен(а) с условиями <a href="">Публичной оферты</a></p>
               </div>
-            </div>
-          </div>
+            </ul>
+          </form>
         </div>
-        <div class="col-md-3">
+        <div class="order__left">
           <div class="order-r">
-            <div class="order-info">
+            <div class="order__info">
               <div class="order-info-title">
                 <h3>Ваш заказ</h3>
                 <a href="">изменить</a>
