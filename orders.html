@@ -873,68 +873,70 @@
                   <textarea placeholder="комментарий к заказу"></textarea>
                 </div>
               </li>
-              <div class="order-block">
-                <h3>способ оплаты</h3>
-                <div class="payment-methods">
-                  <div class="payment-method-block">
-                    <div class="radio-tm">
-                      <label>
-                        <input type="radio" name="radio-payment">
-                        <span class="label-wrapper">
-                        <i></i>
-                        <span>СБП</span>
-                        <img src="./images/payment-1.svg" alt="">
-                        </span>
-                      </label>
+              <li class="personal__form_item">
+                <div class="order-block">
+                  <h3>способ оплаты</h3>
+                  <div class="payment-methods">
+                    <div class="payment-method-block">
+                      <div class="personal__radio">
+                        <label>
+                          <input type="radio" name="radio-payment" checked>
+                          <span class="label-wrapper">
+                          <i></i>
+                          <span>СБП</span>
+                          <img src="./images/payment-1.svg" alt="">
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="payment-method-block">
+                      <div class="personal__radio">
+                        <label>
+                          <input type="radio" name="radio-payment">
+                          <span class="label-wrapper">
+                          <i></i>
+                          <span>Картой онлайн</span>
+                          <img src="./images/payment-2.svg" alt="">
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="payment-method-block">
+                      <div class="personal__radio">
+                        <label>
+                          <input type="radio" name="radio-payment">
+                          <span class="label-wrapper">
+                          <i></i>
+                          <span>Долями</span>
+                          <img src="./images/payment-3.svg" alt="">
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="payment-method-block">
+                      <div class="personal__radio">
+                        <label>
+                          <input type="radio" name="radio-payment">
+                          <span class="label-wrapper">
+                          <i></i>
+                          <span>SberPay</span>
+                          <img src="./images/payment-4.svg" alt="">
+                          </span>
+                        </label>
+                      </div>
                     </div>
                   </div>
-                  <div class="payment-method-block">
-                    <div class="radio-tm">
-                      <label>
-                        <input type="radio" name="radio-payment">
-                        <span class="label-wrapper">
-                        <i></i>
-                        <span>Картой онлайн</span>
-                        <img src="./images/payment-2.svg" alt="">
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="payment-method-block">
-                    <div class="radio-tm">
-                      <label>
-                        <input type="radio" name="radio-payment">
-                        <span class="label-wrapper">
-                        <i></i>
-                        <span>Долями</span>
-                        <img src="./images/payment-3.svg" alt="">
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="payment-method-block">
-                    <div class="radio-tm">
-                      <label>
-                        <input type="radio" name="radio-payment">
-                        <span class="label-wrapper">
-                        <i></i>
-                        <span>SberPay</span>
-                        <img src="./images/payment-4.svg" alt="">
-                        </span>
-                      </label>
-                    </div>
+                  <button class="add-order">оформить заказ</button>
+                  <div class="personal__bottom">
+                    <label class="personal__check_label">
+                      <input class="personal__check_input" type="checkbox" checked="">
+                      <span></span>
+                      Сохранить данные для авторизации
+                    </label>
+                    <p>Нажимая на кнопку “Подписаться”, я соглашаюсь на обработку моих персональных данных, ознакомлен(а) и согласен(а) с условиями <a href="">Публичной оферты</a></p>
                   </div>
                 </div>
-                <button class="add-order">офрмить заказ</button>
-                <div class="order-footer">
-                  <label class="personal__check_label">
-                    Сохранить данные для авторизации
-                    <input class="personal__check_input" type="checkbox" checked="">
-                    <span></span>
-                  </label>
-                  <p class="approval">Нажимая на кнопку “Подписаться”, я соглашаюсь на обработку моих персональных данных, ознакомлен(а) и согласен(а) с условиями <a href="">Публичной оферты</a></p>
-                </div>
-              </div>
+              </li>
             </ul>
           </form>
         </div>
