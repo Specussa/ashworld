@@ -221,8 +221,10 @@ if (personalformc) {
   $(document).on("change", ".personal__form_control", function () {
     if ($(this).children("input").val() !== '') {
       $(this).children("label").addClass("focus");
+      $(this).children(".order__map_icons").addClass("focus");
     } else {
       $(this).children("label").removeClass("focus");
+      $(this).children(".order__map_icons").removeClass("focus");
     }
   });
   $(document).ready(function () {
@@ -238,6 +240,12 @@ if (personalformc) {
     if($(e.target).closest('.personal__form_control').length == 0) {
       $('.addresses-list').removeClass("focus");
     }
+  });
+}
+const omclear = document.querySelector('.order__map_icons')
+if (omclear) {
+  omclear.addEventListener('click', function() {
+    this.closest('.order__map_control').children[0].value = "";
   });
 }
 // end form label
@@ -382,3 +390,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 // end mask phone
+
+// start map_button
+
+// personal__map_button
+
+// end map_button

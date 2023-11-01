@@ -1950,8 +1950,16 @@ a {
   line-height: 19px;
   color: var(--black);
   border: 1px solid var(--black);
+  background-color: transparent;
   border-radius: 4px;
   text-transform: uppercase;
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear;
+}
+
+.personal__map_button:hover {
+  color: var(--white);
+  background-color: var(--black);
 }
 
 .order__info_title {
@@ -2015,6 +2023,105 @@ a {
   color: var(--black);
   background-color: var(--white);
   border-radius: 50%;
+}
+
+.personal__form_control.order__map_control {
+  width: 100%;
+}
+
+.personal__form_control.order__map_control input {
+  border-radius: 41px;
+}
+
+.order__map_icons {
+  display: flex;
+  flex-direction: column;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  overflow: hidden;
+  z-index: 1;
+  color: var(--black);
+}
+
+.order__map_icons img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.order__map_icons a {
+  display: flex;
+  position: absolute;
+}
+
+.order__map_icons a:first-child {
+  top: 0;
+}
+
+.order__map_icons a:last-child {
+  top: 16px;
+}
+
+.order__map_icons.focus a:first-child,
+.order__map_control input:focus ~ .order__map_icons a:first-child {
+  top: -16px;
+}
+
+.order__map_icons.focus a:last-child,
+.order__map_control input:focus ~ .order__map_icons a:last-child {
+  top: 0;
+}
+
+.order__map_control input:focus ~ .order__map_icons a {
+  color: var(--black);
+}
+
+.order__map_icons.focus a {
+  color: #bebebe;
+}
+
+.order__map_fixed {
+  display: flex;
+  width: 50vh;
+  height: var(--height);
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 102;
+  background-color: var(--white);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.order__map_fixed.active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.order__map_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+.order__map_fixed.active .order__map_overlay {
+  opacity: 1;
 }
 
 /* end section order */
