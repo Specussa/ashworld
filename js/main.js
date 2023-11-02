@@ -401,12 +401,12 @@ const omapoverlay = document.querySelector('.order__map_overlay');
 const omapbutton = document.querySelector('.order__map_button');
 pmapbutton.addEventListener('click', function() {
   if (pmapbutton.classList.contains("active")) {
-    document.documentElement.classList.remove("open");
+    document.documentElement.classList.remove("noscroll");
     pmapbutton.classList.remove("active");
     omapfixed.classList.remove("active");
     omapoverlay.classList.remove("active");
   } else {
-    document.documentElement.classList.add("open");
+    document.documentElement.classList.add("noscroll");
     pmapbutton.classList.add("active");
     omapfixed.classList.add("active");
     omapoverlay.classList.add("active");
@@ -414,7 +414,7 @@ pmapbutton.addEventListener('click', function() {
 });
 omapoverlay.addEventListener('click', function() {
   if (omapoverlay.classList.contains("active")) {
-    document.documentElement.classList.remove("open");
+    document.documentElement.classList.remove("noscroll");
     pmapbutton.classList.remove("active");
     omapfixed.classList.remove("active");
     omapoverlay.classList.remove("active");
@@ -422,7 +422,7 @@ omapoverlay.addEventListener('click', function() {
 });
 omapbutton.addEventListener('click', function() {
   if (omapoverlay.classList.contains("active")) {
-    document.documentElement.classList.remove("open");
+    document.documentElement.classList.remove("noscroll");
     pmapbutton.classList.remove("active");
     omapfixed.classList.remove("active");
     omapoverlay.classList.remove("active");
@@ -438,7 +438,7 @@ ompbutton.addEventListener('click', function() {
   pminfo.innerHTML = omblock.children[0].innerHTML;
   pminfo.classList.add('active');
   pminfo.previousElementSibling.classList.add('hidden');
-  document.documentElement.classList.remove("open");
+  document.documentElement.classList.remove("noscroll");
   pmapbutton.classList.remove("active");
   omapfixed.classList.remove("active");
   omapoverlay.classList.remove("active");
