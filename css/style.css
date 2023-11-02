@@ -3596,7 +3596,7 @@ a {
     width: 150px;
   }
   .order__row {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 0;
   }
   .order__right,
@@ -3670,6 +3670,19 @@ a {
   .personal__form_item:nth-child(2) .personal__map_block {
     padding: 0;
     background-color: transparent;
+  }
+  .personal__form_head,
+  .personal__form_heading {
+    margin: 20px 0 4px;
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .order__info {
+    padding: 0 0 40px;
+    margin: 0;
+  }
+  .order__info_product {
+    height: 120px;
   }
 }
 /* end media 767px */
