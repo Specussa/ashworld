@@ -232,6 +232,7 @@ if (personalformc) {
       var texttm = $(this).text();
       $(this).parent().prev().prev("input").val(texttm);
       $(this).parent().prev("label").addClass("focus");
+      $(this).parent().next(".order__map_icons").addClass("focus");
       $(this).removeAttr("href");
       $(".addresses-list").removeClass("focus");
     });
@@ -246,6 +247,8 @@ const omclear = document.querySelector('.order__map_icons')
 if (omclear) {
   omclear.addEventListener('click', function() {
     this.closest('.order__map_control').children[0].value = "";
+    this.closest('.order__map_control').children[1].classList.remove('focus');
+    this.closest('.order__map_control').children[3].classList.remove('focus');
   });
 }
 // end form label
@@ -392,7 +395,41 @@ document.addEventListener("DOMContentLoaded", function () {
 // end mask phone
 
 // start map_button
-
-// personal__map_button
-
+const pmapbutton = document.querySelector('.personal__map_button');
+const omapfixed = document.querySelector('.order__map_fixed');
+const omapoverlay = document.querySelector('.order__map_overlay');
+const omapbutton = document.querySelector('.order__map_button');
+pmapbutton.addEventListener('click', function() {
+  if (pmapbutton.classList.contains("active")) {
+    document.documentElement.classList.remove("open");
+    pmapbutton.classList.remove("active");
+    omapfixed.classList.remove("active");
+    omapoverlay.classList.remove("active");
+    document.documentElement.classList.remove("open");
+  } else {
+    document.documentElement.classList.add("open");
+    pmapbutton.classList.add("active");
+    omapfixed.classList.add("active");
+    omapoverlay.classList.add("active");
+    document.documentElement.classList.add("open");
+  }
+});
+omapoverlay.addEventListener('click', function() {
+  if (omapoverlay.classList.contains("active")) {
+    document.documentElement.classList.remove("open");
+    pmapbutton.classList.remove("active");
+    omapfixed.classList.remove("active");
+    omapoverlay.classList.remove("active");
+    document.documentElement.classList.remove("open");
+  }
+});
+omapbutton.addEventListener('click', function() {
+  if (omapoverlay.classList.contains("active")) {
+    document.documentElement.classList.remove("open");
+    pmapbutton.classList.remove("active");
+    omapfixed.classList.remove("active");
+    omapoverlay.classList.remove("active");
+    document.documentElement.classList.remove("open");
+  }
+});
 // end map_button

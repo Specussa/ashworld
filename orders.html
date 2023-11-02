@@ -776,22 +776,24 @@
 
 <main>
   <section class="section_top"></section>
-  <section class="order-section">
-    <div class="container container-order">
-      <div class="catalog-title">
-        <a href="" class="return">
-          <img src="./images/return-2.svg" alt="">
+  <section class="section__order">
+    <div class="container order__container">
+      <div class="order__title">
+        <a href="" class="order__return">
+          <img src="img/icon/arrow-left.svg" alt="">
         </a>
-        <div class="count-product">16 <span>товаров</span></div>
+        <div class="order__count">16 <span>товаров</span></div>
       </div>
       <h1>оформление заказа</h1>
       <div class="order__row">
         <div class="order__left">
+          <div class="order__map_overlay"></div>
           <div class="order__map_fixed">
-            <div class="order__map_overlay"></div>
             <div class="order__map_info">
-              <p>Выбор пункта выдачи</p>
-              <a class="order__map_button"><img src="img/icon/close.svg" alt=""></a>
+              <div class="order__map_info_top">
+                <p class="order__map_info_desc">Выбор пункта выдачи</p>
+                <a class="order__map_button"><img src="img/icon/close.svg" alt=""></a>
+              </div>
               <div class="personal__form_control order__map_control">
                 <input type="text" id="order__addresses">
                 <label>Поиск по адресу</label>
