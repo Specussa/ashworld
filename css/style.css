@@ -1620,7 +1620,7 @@ a {
 }
 
 .addresses-list {
-  border-radius: 4px;
+  border-radius: 20px;
   border: 1px solid #000;
   background: #FFF;
   overflow: hidden;
@@ -1634,12 +1634,13 @@ a {
 
 .addresses-list a {
   display: flex;
+  padding: 14px 20px;
   align-items: center;
-  color: #000;
+  font-family: var(--arimo);
   font-size: 17px;
   font-weight: 400;
   line-height: 130%;
-  padding: 14px 20px;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -2147,6 +2148,7 @@ a {
   height: 206px;
   padding: 54px 40px 20px;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 20px;
 }
 
@@ -2265,7 +2267,7 @@ a {
   position: absolute;
   left: 24px;
   top: 24px;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--white);
   border-radius: 10px;
 }
@@ -2402,8 +2404,8 @@ a {
   line-height: 21px;
 }
 
-.map__point_desc,
-.map__point_time {
+.personal__map_info .map__point_desc,
+.personal__map_info .map__point_time {
   font-size: 17px;
   line-height: 22px;
 }
@@ -2416,8 +2418,8 @@ a {
   justify-content: center;
   gap: 10px;
   position: absolute;
-  bottom: 24px;
-  right: 24px;
+  bottom: 40px;
+  right: 45px;
   z-index: 1;
   font-family: var(--arimo);
   font-size: 16px;
@@ -2878,22 +2880,79 @@ a {
     font-size: 38px;
     line-height: 34px;
   }
+  .order__map_info_desc {
+    max-width: 289px;
+    font-size: 29px;
+    line-height: 26px;
+  }
+  .order__map_button {
+    width: 34px;
+    height: 34px;
+  }
+  .order__map_button img {
+    width: 10px;
+    height: 10px;
+  }
+  .addresses-list a {
+    padding: 11px 16px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .order__map_info {
+    height: 180px;
+  }
+  .order__map {
+    height: calc(var(--height) - 180px);
+  }
 }
 /* end media 1919px */
 
 /* start media 1439px */
 @media (max-width: 1439px) {
-  .personal__row {
+  .personal__row,
+  .order__row {
     gap: 20px;
   }
-  .personal__left {
+  .personal__left,
+  .order__right {
     width: calc(37% - 10px);
   }
-  .personal__center {
+  .personal__center,
+  .order__center {
     width: calc(63% - 10px);
   }
   .personal__right {
     display: none;
+  }
+  .order__left {
+    width: 0;
+  }
+  .order__map_fixed {
+    width: 492px;
+  }
+  .order__map_geo {
+    height: 40px;
+    padding: 0 16px;
+    gap: 8px;
+    bottom: 30px;
+    right: 30px;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 20px;
+  }
+  .map__point_head,
+  .map__point_heading {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .map__point_desc,
+  .map__point_time {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .order__map_point_button {
+    font-size: 15px;
+    line-height: 17px;
   }
 }
 /* end media 1439px */
@@ -3535,6 +3594,82 @@ a {
   }
   .personal__select_tel .personal__select_box {
     width: 150px;
+  }
+  .order__row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .order__right,
+  .order__center,
+  .order__left {
+    width: 100%;
+  }
+  .order__map_info_desc {
+    max-width: 230px;
+    font-size: 20px;
+    line-height: 18px;
+  }
+  .order__map_fixed {
+    width: 100%;
+  }
+  .order__map_geo {
+    top: 25px;
+    right: 27px;
+  }
+  .order__map_block {
+    width: 100%;
+    height: max-content;
+    padding: 24px;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+  }
+  .map__point_top,
+  .map__point_bottom {
+    flex-direction: column;
+  }
+  .order__map_point_button {
+    height: 50px;
+    border-radius: 4px;
+  }
+  .order__map_info {
+    height: 160px;
+  }
+  .order__map {
+    height: calc(var(--height) - 160px);
+  }
+  .personal__map_info .map__point_top {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .personal__map_info .map__point_bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .map__point_top {
+    padding: 0 0 12px;
+  }
+  .personal__map_info .map__point_head,
+  .personal__map_info .map__point_heading {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #a5a5a5;
+  }
+  .personal__map_info .map__point_desc,
+  .personal__map_info .map__point_time {
+    font-size: 15px;
+    line-height: 17px;
+    color: #a5a5a5;
+  }
+  .personal__map_block {
+    padding: 20px;
+  }
+  .personal__form_item:nth-child(2) .personal__map_block {
+    padding: 0;
+    background-color: transparent;
   }
 }
 /* end media 767px */
