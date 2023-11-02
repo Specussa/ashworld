@@ -795,7 +795,7 @@
                 <a class="order__map_button"><img src="img/icon/close.svg" alt=""></a>
               </div>
               <div class="personal__form_control order__map_control">
-                <input type="text" id="order__addresses">
+                <input type="text" id="order__search">
                 <label>Поиск по адресу</label>
                 <div class="addresses-list">
                   <a href="">г. Новосибирск, <span>Новосибирская обл.</span></a>
@@ -818,8 +818,22 @@
                 </span>
               </div>
             </div>
-            <div class="order__map_yandex">
-
+            <div id="map" class="order__map">
+              <div class="order__map_block">
+                <div class="map__point_block">
+                  <div class="map__point_top">
+                    <div class="map__point_head">Почтовое отделение № 119285</div>
+                    <p class="map__point_desc">г Москва, ул Мосфильмовская, дом 34, индекс 438232</p>
+                  </div>
+                  <div class="map__point_bottom">
+                    <p class="map__point_heading">График работы</p>
+                    <p class="map__point_time"><span>пн-пт</span> <span>08:00–20:00</span></p>
+                    <p class="map__point_time"><span>сб</span> <span>09:00–20:00</span></p>
+                    <p class="map__point_time"><span>вс</span> <span>10:00–18:00</span></p>
+                  </div>
+                </div>
+                <a class="order__map_point_button">заберу отсюда</a>
+              </div>
             </div>
           </div>
         </div>
@@ -854,6 +868,7 @@
               <li class="personal__form_item">
                 <div class="personal__map_block">
                   <p class="personal__map_desc"><img src="img/icon/warning.svg" alt="">В ваш регион доступна доставка Почтой России.</p>
+                  <div class="personal__map_info"></div>
                   <a class="personal__map_button">выбрать пункт выдачи</a>
                 </div>
               </li>
@@ -1053,10 +1068,12 @@
     </div>
   </section>
 </main>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/bootstrap.bundle.js"></script>
 <script src="./js/owl.carousel.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/map.js"></script>
 <script>
   $(document).ready(function () {
     $('.top-slider').owlCarousel({

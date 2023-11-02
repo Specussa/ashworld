@@ -405,13 +405,11 @@ pmapbutton.addEventListener('click', function() {
     pmapbutton.classList.remove("active");
     omapfixed.classList.remove("active");
     omapoverlay.classList.remove("active");
-    document.documentElement.classList.remove("open");
   } else {
     document.documentElement.classList.add("open");
     pmapbutton.classList.add("active");
     omapfixed.classList.add("active");
     omapoverlay.classList.add("active");
-    document.documentElement.classList.add("open");
   }
 });
 omapoverlay.addEventListener('click', function() {
@@ -420,7 +418,6 @@ omapoverlay.addEventListener('click', function() {
     pmapbutton.classList.remove("active");
     omapfixed.classList.remove("active");
     omapoverlay.classList.remove("active");
-    document.documentElement.classList.remove("open");
   }
 });
 omapbutton.addEventListener('click', function() {
@@ -429,7 +426,22 @@ omapbutton.addEventListener('click', function() {
     pmapbutton.classList.remove("active");
     omapfixed.classList.remove("active");
     omapoverlay.classList.remove("active");
-    document.documentElement.classList.remove("open");
   }
 });
 // end map_button
+
+// start map html
+const omblock = document.querySelector('.order__map_block');
+const ompbutton = document.querySelector('.order__map_point_button');
+const pminfo = document.querySelector('.personal__map_info');
+ompbutton.addEventListener('click', function() {
+  pminfo.innerHTML = omblock.children[0].innerHTML;
+  pminfo.classList.add('active');
+  pminfo.previousElementSibling.classList.add('hidden');
+  document.documentElement.classList.remove("open");
+  pmapbutton.classList.remove("active");
+  omapfixed.classList.remove("active");
+  omapoverlay.classList.remove("active");
+  pmapbutton.innerText = 'изменить пункт выдачи';
+});
+// end map html
