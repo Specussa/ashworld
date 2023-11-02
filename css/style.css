@@ -2434,6 +2434,10 @@ a {
   object-fit: contain;
 }
 
+.order__total {
+  margin: 20px 0 0;
+}
+
 /* end section order */
 
 /* start media 1919px */
@@ -2758,6 +2762,121 @@ a {
   }
   .personal__select_list {
     top: 39px;
+  }
+  .order__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+  }
+  .order__left {
+    width: calc(25% - 14px);
+  }
+  .order__center {
+    width: calc(50% - 14px);
+  }
+  .order__right {
+    width: calc(25% - 14px);
+  }
+  .order__head {
+    margin: 0 0 20px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .order__cost {
+    display: flex;
+    height: 60px;
+    padding: 0 24px;
+    margin-bottom: 28px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .order__cost span {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .order__addresses_block {
+    gap: 16px;
+  }
+  .order__addresses_head {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .personal__map_desc {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .personal__map_block {
+    padding: 24px;
+    gap: 16px;
+  }
+  .personal__map_button {
+    height: 34px;
+    padding: 0 18px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .personal__form_head {
+    margin: 36px 0 4px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .personal__approval_label,
+  .order__check_label {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .personal__comment textarea {
+    height: 40px;
+    padding: 10px 16px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .personal__bottom .personal__check_label {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .personal__bottom p {
+    padding: 12px 0 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .add-order {
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .payment-methods {
+    margin-bottom: 16px;
+  }
+  .personal__radio label span {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .order__total {
+    margin: 16px 0 0;
+  }
+  .order__info_product {
+    height: 114px;
+  }
+  .order__info_flex {
+    margin-bottom: 16px;
+  }
+  .order__info_title {
+    margin-bottom: 12px;
+  }
+  .order__info_title h3 {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .order__info_title a {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .section__order h1 {
+    padding: 32px 0 44px;
+    font-size: 38px;
+    line-height: 34px;
   }
 }
 /* end media 1919px */
