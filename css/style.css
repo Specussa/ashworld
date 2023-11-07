@@ -1931,7 +1931,6 @@ a {
 
 .personal__map_desc {
   display: flex;
-  align-items: center;
   gap: 12px;
   font-family: var(--arimo);
   font-size: 17px;
@@ -1947,6 +1946,7 @@ a {
 .personal__map_desc img {
   width: 14px;
   height: 14px;
+  transform: translateY(3px);
   object-fit: contain;
 }
 
@@ -2522,11 +2522,13 @@ a {
   gap: 36px;
   background-color: var(--hover);
   border-radius: 6px;
+  position: relative;
 }
 
 .personal__logined_addresses {
   display: flex;
   width: 100%;
+  padding: 0 100px 0 0;
   align-items: flex-start;
   justify-content: space-between;
   gap: 20px;
@@ -2555,6 +2557,9 @@ a {
 }
 
 .personal__logined_addresses_button {
+  position: absolute;
+  top: 36px;
+  right: 48px;
   font-family: var(--arimo);
   font-size: 17px;
   font-weight: 400;
@@ -2685,6 +2690,60 @@ a {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 4px;
+}
+
+.personal__radio label i {
+  flex: 0 0 auto;
+}
+
+.order__profile_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order__profile_form .personal__form_control,
+.order__profile_form .personal__select_tel {
+  width: 100%;
+}
+
+.personal__form_control_flex .personal__form_control {
+  width: calc(50% - 8px);
+}
+
+.order__profile_form .personal__select_box {
+  margin: 0;
+}
+
+.personal__form_control_flex {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.order__profile_form_button {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  margin: auto 0 0;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--helvetica);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.personal__form_buyer {
+  margin: 12px 0 0;
+  font-family: var(--helvetica);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--black);
 }
 
 /* end section order */
@@ -3153,6 +3212,25 @@ a {
   .order__map {
     height: calc(var(--height) - 180px);
   }
+  .order__profile_form {
+    gap: 16px;
+  }
+  .order__profile_form_button {
+    height: 50px;
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .order__form_control {
+    width: 100%;
+  }
+  .personal__logined {
+    padding: 32px 40px;
+    gap: 32px;
+  }
+  .personal__logined_addresses_button {
+    top: 32px;
+    right: 40px;
+  }
 }
 /* end media 1919px */
 
@@ -3203,6 +3281,12 @@ a {
   .order__map_point_button {
     font-size: 15px;
     line-height: 17px;
+  }
+  .personal__date .payment-method-block {
+    width: 112px;
+  }
+  .personal__date .personal__radio label i {
+    margin: 0 0 25px;
   }
 }
 /* end media 1439px */
@@ -3934,6 +4018,48 @@ a {
   }
   .order__info_product {
     height: 120px;
+  }
+  .order__profile_form {
+    gap: 20px;
+  }
+  .order__personal_info {
+    padding: 48px 14px;
+  }
+  .personal__logined_addresses {
+    padding: 0;
+  }
+  .personal__logined_addresses_button {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .personal__logined {
+    padding: 20px 14px;
+    gap: 20px;
+  }
+  .personal__logined_profile {
+    flex-direction: column;
+  }
+  .personal__logined_block,
+  .personal__approval_label,
+  .order__check_label {
+    width: 100%;
+  }
+  .personal__approval {
+    flex-direction: column;
+  }
+  .section__order {
+    padding: 20px 0;
   }
 }
 /* end media 767px */

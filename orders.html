@@ -794,6 +794,92 @@
                 <p class="order__map_info_desc">Выбор пункта выдачи</p>
                 <a class="order__profile_button"><img src="img/icon/close.svg" alt=""></a>
               </div>
+              <form class="order__profile_form" action="">
+                <div class="order__addresses_block">
+                  <div class="personal__form_control order__form_control">
+                    <input type="text" id="order__personal_addresses">
+                    <label>населенный пункт*</label>
+                    <div class="addresses-list">
+                      <a href="">г. Новосибирск, <span>Новосибирская обл.</span></a>
+                      <a href="">г. Новороссийск, <span>Краснодарский край</span></a>
+                      <a href="">г. Новошахтинск, <span>Ростовская обл.</span></a>
+                      <a href="">г. Новочеркасск, <span>Самарская обл.</span></a>
+                      <a href="">г. Новосибирск, <span>Новосибирская обл.</span></a>
+                      <a href="">г. Новочеркасск, <span>Самарская обл.</span></a>
+                      <a href="">г. Новороссийск, <span>Краснодарский край</span></a>
+                      <a href="">г. Новочеркасск, <span>Самарская обл.</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="personal__map_block">
+                  <p class="personal__map_desc"><img src="img/icon/warning.svg" alt=""><span>В ваш регион доступна <b>бесплатная доставка курьером</b>. Возможна примерка, а так же частичный возврат курьеру.</span></p>
+                </div>
+                <div class="personal__form_control">
+                  <input type="text" id="personal__personal_street">
+                  <label>улица*</label>
+                </div>
+                <div class="personal__form_control_flex">
+                  <div class="personal__form_control">
+                    <input type="text" id="personal__personal_one">
+                    <label>дом*</label>
+                  </div>
+                  <div class="personal__form_control">
+                    <input type="text" id="personal__personal_two">
+                    <label>квартира/офис*</label>
+                  </div>
+                </div>
+                <div class="personal__form_control_flex">
+                  <div class="personal__form_control">
+                    <input type="text" id="personal__personal_three">
+                    <label>подъезд</label>
+                  </div>
+                  <div class="personal__form_control">
+                    <input type="text" id="personal__personal_four">
+                    <label>этаж</label>
+                  </div>
+                </div>
+                <div class="personal__form_control">
+                  <input type="text" id="personal__personal_comment">
+                  <label>комментарий курьеру</label>
+                </div>
+                <p class="personal__form_buyer">Получатель</p>
+                <div class="personal__form_control_flex">
+                  <div class="personal__form_control">
+                    <input type="text" id="personal__personal_firstname">
+                    <label>имя</label>
+                  </div>
+                  <div class="personal__form_control">
+                    <input type="text" id="personal__personal_lastname">
+                    <label>фамилия</label>
+                  </div>
+                </div>
+                <div class="personal__select_tel">
+                  <div class="personal__select_box">
+                    <div class="personal__select" data-select>
+                      <div class="personal__select_selected_item" data-select-action data-select-open>
+                        <div class="personal__select_selected-title" data-select-title><div class="personal__flag"><div class="personal__flag personal__flag_ru"></div></div>+7</div>
+                        <svg class="personal__select_arrow" data-select-arrow width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.875 5L7 11.125L13.125 5" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="personal__select_list" data-select-list>
+                        <div class="personal__select_list_item" data-select-action data-select-item><div class="personal__flag"><div class="personal__flag personal__flag_ru"></div></div>+7</div>
+                        <div class="personal__select_list_item" data-select-action data-select-item><div class="personal__flag"><div class="personal__flag personal__flag_by"></div></div>+375</div>
+                        <div class="personal__select_list_item" data-select-action data-select-item><div class="personal__flag"><div class="personal__flag personal__flag_ua"></div></div>+380</div>
+                      </div>
+                      <input class="personal__select_input" type="text" data-select-input>
+                    </div>
+                  </div>
+                  <div class="personal__form_control">
+                    <input type="text" data-phone-pattern id="personal__personal_phone">
+                  </div>
+                </div>
+                <div class="personal__form_control">
+                  <input type="text" id="personal__personal_comments">
+                  <label>комментарий к заказу</label>
+                </div>
+                <button class="order__profile_form_button">сохранить и продолжить</button>
+              </form>
               <div class="personal__addresses">
                 <ul class="personal__profile_list">
                   <li class="personal__profile_item">
@@ -1146,7 +1232,6 @@
                       <p class="personal__logined_addresses_head">Доставка курьером по адресу</p>
                       <p class="personal__logined_addresses_desc">Москва,  ул. Безымянная 47/1, кв. 6, п3, этаж 5</p>
                     </div>
-                    <a class="personal__logined_addresses_button">Изменить</a>
                   </div>
                   <p class="personal__logined_comments">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1175,6 +1260,7 @@
                       <p class="personal__logined_comment">Проверить перед отгрузкой</p>
                     </div>
                   </div>
+                  <a class="personal__logined_addresses_button">Изменить</a>
                 </div>
               </li>
               <li class="personal__form_item">
