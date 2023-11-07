@@ -120,10 +120,11 @@ if (personal) {
 // end heart checkbox
 
 // start heart checkbox
+const paddresseselbutton = document.querySelector(".personal__addresses_el");
 const paddressesel = document.querySelectorAll(".personal__addresses_el");
 const poverlay = document.querySelectorAll(".personal__addresses_overlay");
 const pclose = document.querySelectorAll(".personal__addresses_close");
-if (personal) {
+if (paddresseselbutton) {
   for (let i = 0; i < paddressesel.length; i++) {
     paddressesel[i].onclick = function() {
       this.previousElementSibling.classList.add('active');
@@ -418,6 +419,8 @@ omapoverlay.addEventListener('click', function() {
     pmapbutton.classList.remove("active");
     omapfixed.classList.remove("active");
     omapoverlay.classList.remove("active");
+    plbutton.classList.remove("active");
+    opfixed.classList.remove("active");
   }
 });
 omapbutton.addEventListener('click', function() {
@@ -429,6 +432,32 @@ omapbutton.addEventListener('click', function() {
   }
 });
 // end map_button
+// start logined_button
+const plbutton = document.querySelector('.personal__logined_addresses_button');
+const opfixed = document.querySelector('.order__profile_fixed');
+const opbutton = document.querySelector('.order__profile_button');
+plbutton.addEventListener('click', function() {
+  if (plbutton.classList.contains("active")) {
+    document.documentElement.classList.remove("noscroll");
+    plbutton.classList.remove("active");
+    opfixed.classList.remove("active");
+    omapoverlay.classList.remove("active");
+  } else {
+    document.documentElement.classList.add("noscroll");
+    plbutton.classList.add("active");
+    opfixed.classList.add("active");
+    omapoverlay.classList.add("active");
+  }
+});
+opbutton.addEventListener('click', function() {
+  if (omapoverlay.classList.contains("active")) {
+    document.documentElement.classList.remove("noscroll");
+    plbutton.classList.remove("active");
+    opfixed.classList.remove("active");
+    omapoverlay.classList.remove("active");
+  }
+});
+// end logined_button
 
 // start map html
 const omblock = document.querySelector('.order__map_block');

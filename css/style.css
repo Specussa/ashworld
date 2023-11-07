@@ -1212,6 +1212,8 @@ a {
 
 .personal__addresses_el {
   display: none;
+  position: relative;
+  z-index: 1;
 }
 
 .personal__addresses_head {
@@ -2154,6 +2156,7 @@ a {
 
 .order__map_info_top {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
 }
@@ -2213,7 +2216,8 @@ a {
   text-transform: uppercase;
 }
 
-.order__map_button {
+.order__map_button,
+.order__profile_button {
   display: flex;
   width: 40px;
   height: 40px;
@@ -2223,7 +2227,8 @@ a {
   border-radius: 50%;
 }
 
-.order__map_button img {
+.order__map_button img,
+.order__profile_button img {
   width: 12px;
   height: 12px;
   object-fit: contain;
@@ -2614,6 +2619,72 @@ a {
   font-weight: 400;
   line-height: 21px;
   color: #adadad;
+}
+
+.order__profile_fixed {
+  display: flex;
+  width: 656px;
+  height: var(--height);
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 103;
+  background-color: var(--white);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.order__profile_fixed.active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.order__personal_info {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 54px 30px;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.personal__profile_list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.personal__profile_item {
+  display: flex;
+}
+
+.personal__profile_block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.personal__profile_item .payment-method-block {
+  width: 100%;
+}
+
+.personal__profile_item .personal__radio {
+  margin: 0;
+}
+
+.personal__profile_item .label-wrapper {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4px;
 }
 
 /* end section order */
@@ -3061,11 +3132,13 @@ a {
     font-size: 29px;
     line-height: 26px;
   }
-  .order__map_button {
+  .order__map_button,
+  .order__profile_button {
     width: 34px;
     height: 34px;
   }
-  .order__map_button img {
+  .order__map_button img,
+  .order__profile_button img {
     width: 10px;
     height: 10px;
   }
@@ -3103,7 +3176,8 @@ a {
   .order__left {
     width: 0;
   }
-  .order__map_fixed {
+  .order__map_fixed,
+  .order__profile_fixed {
     width: 492px;
   }
   .order__map_geo {
@@ -3785,7 +3859,8 @@ a {
     font-size: 20px;
     line-height: 18px;
   }
-  .order__map_fixed {
+  .order__map_fixed,
+  .order__profile_fixed {
     width: 100%;
   }
   .order__map_geo {
