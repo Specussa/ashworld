@@ -2440,6 +2440,182 @@ a {
   margin: 20px 0 0;
 }
 
+.personal__datetime {
+  display: flex;
+  width: 100%;
+  padding: 12px 0 44px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.personal__date .payment-methods,
+.personal__time .payment-methods {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  gap: 8px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.personal__date .payment-methods::-webkit-scrollbar,
+.personal__time .payment-methods::-webkit-scrollbar {
+  display: none;
+}
+
+.personal__date .payment-methods::-webkit-scrollbar-thumb,
+.personal__time .payment-methods::-webkit-scrollbar {
+  display: none;
+}
+
+.personal__date .payment-method-block {
+  width: calc(20% - 6.4px);
+}
+
+.personal__date .personal__radio,
+.personal__time .personal__radio {
+  margin: 0;
+}
+
+.personal__date .label-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.personal__date .personal__radio label i {
+  margin: 0 0 51px;
+}
+
+.personal__date .label-wrapper span:nth-child(2) {
+  font-family: var(--helvetica);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--black);
+}
+
+.personal__date .label-wrapper span:nth-child(3) {
+  font-family: var(--helvetica);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--black);
+}
+
+.personal__time .label-wrapper {
+  width: 130px;
+  border-radius: 23px;
+}
+
+.personal__logined {
+  display: flex;
+  width: 100%;
+  padding: 36px 48px;
+  flex-direction: column;
+  gap: 36px;
+  background-color: var(--hover);
+  border-radius: 6px;
+}
+
+.personal__logined_addresses {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.personal__logined_addresses_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.personal__logined_addresses_head {
+  font-family: var(--helvetica);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--black);
+}
+
+.personal__logined_addresses_desc {
+  font-family: var(--arimo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--black);
+}
+
+.personal__logined_addresses_button {
+  font-family: var(--arimo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.personal__form_order {
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.personal__logined_comments {
+  display: flex;
+  margin: 0 0 17px;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--arimo);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #adadad;
+}
+
+.personal__logined_comments img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.personal__logined_profile {
+  display: flex;
+  gap: 20px;
+}
+
+.personal__logined_block {
+  display: flex;
+  width: calc(50% - 10px);
+  flex-direction: column;
+  gap: 8px;
+}
+
+.personal__logined_block svg {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 12px;
+  object-fit: contain;
+}
+
+.personal__logined_head {
+  font-family: var(--arimo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--black);
+}
+
+.personal__logined_comment {
+  font-family: var(--arimo);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #adadad;
+}
+
 /* end section order */
 
 /* start media 1919px */
