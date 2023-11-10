@@ -1405,7 +1405,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .personal__form_button {
   display: flex;
-  padding: 32px 0 16px;
+  padding: 20px 0 16px;
   justify-content: flex-end;
 }
 
