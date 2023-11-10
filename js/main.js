@@ -400,77 +400,83 @@ const pmapbutton = document.querySelector('.personal__map_button');
 const omapfixed = document.querySelector('.order__map_fixed');
 const omapoverlay = document.querySelector('.order__map_overlay');
 const omapbutton = document.querySelector('.order__map_button');
-pmapbutton.addEventListener('click', function() {
-  if (pmapbutton.classList.contains("active")) {
-    document.documentElement.classList.remove("noscroll");
-    pmapbutton.classList.remove("active");
-    omapfixed.classList.remove("active");
-    omapoverlay.classList.remove("active");
-  } else {
-    document.documentElement.classList.add("noscroll");
-    pmapbutton.classList.add("active");
-    omapfixed.classList.add("active");
-    omapoverlay.classList.add("active");
-  }
-});
-omapoverlay.addEventListener('click', function() {
-  if (omapoverlay.classList.contains("active")) {
-    document.documentElement.classList.remove("noscroll");
-    pmapbutton.classList.remove("active");
-    omapfixed.classList.remove("active");
-    omapoverlay.classList.remove("active");
-    plbutton.classList.remove("active");
-    opfixed.classList.remove("active");
-  }
-});
-omapbutton.addEventListener('click', function() {
-  if (omapoverlay.classList.contains("active")) {
-    document.documentElement.classList.remove("noscroll");
-    pmapbutton.classList.remove("active");
-    omapfixed.classList.remove("active");
-    omapoverlay.classList.remove("active");
-  }
-});
+if (pmapbutton) {
+  pmapbutton.addEventListener('click', function() {
+    if (pmapbutton.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      pmapbutton.classList.remove("active");
+      omapfixed.classList.remove("active");
+      omapoverlay.classList.remove("active");
+    } else {
+      document.documentElement.classList.add("noscroll");
+      pmapbutton.classList.add("active");
+      omapfixed.classList.add("active");
+      omapoverlay.classList.add("active");
+    }
+  });
+  omapoverlay.addEventListener('click', function() {
+    if (omapoverlay.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      pmapbutton.classList.remove("active");
+      omapfixed.classList.remove("active");
+      omapoverlay.classList.remove("active");
+      plbutton.classList.remove("active");
+      opfixed.classList.remove("active");
+    }
+  });
+  omapbutton.addEventListener('click', function() {
+    if (omapoverlay.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      pmapbutton.classList.remove("active");
+      omapfixed.classList.remove("active");
+      omapoverlay.classList.remove("active");
+    }
+  });
+}
 // end map_button
 // start logined_button
 const plbutton = document.querySelector('.personal__logined_addresses_button');
 const opfixed = document.querySelector('.order__profile_fixed');
 const opbutton = document.querySelector('.order__profile_button');
-plbutton.addEventListener('click', function() {
-  if (plbutton.classList.contains("active")) {
-    document.documentElement.classList.remove("noscroll");
-    plbutton.classList.remove("active");
-    opfixed.classList.remove("active");
-    omapoverlay.classList.remove("active");
-  } else {
-    document.documentElement.classList.add("noscroll");
-    plbutton.classList.add("active");
-    opfixed.classList.add("active");
-    omapoverlay.classList.add("active");
-  }
-});
-opbutton.addEventListener('click', function() {
-  if (omapoverlay.classList.contains("active")) {
-    document.documentElement.classList.remove("noscroll");
-    plbutton.classList.remove("active");
-    opfixed.classList.remove("active");
-    omapoverlay.classList.remove("active");
-  }
-});
+if (plbutton) {
+  plbutton.addEventListener('click', function() {
+    if (plbutton.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      plbutton.classList.remove("active");
+      opfixed.classList.remove("active");
+      omapoverlay.classList.remove("active");
+    } else {
+      document.documentElement.classList.add("noscroll");
+      plbutton.classList.add("active");
+      opfixed.classList.add("active");
+      omapoverlay.classList.add("active");
+    }
+  });
+  opbutton.addEventListener('click', function() {
+    if (omapoverlay.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      plbutton.classList.remove("active");
+      opfixed.classList.remove("active");
+      omapoverlay.classList.remove("active");
+    }
+  });
+}
 // end logined_button
 
 // start map html
 const omblock = document.querySelector('.order__map_block');
 const ompbutton = document.querySelector('.order__map_point_button');
 const pminfo = document.querySelector('.personal__map_info');
-ompbutton.addEventListener('click', function() {
-  pminfo.innerHTML = omblock.children[0].innerHTML;
-  pminfo.classList.add('active');
-  pminfo.previousElementSibling.classList.add('hidden');
-  document.documentElement.classList.remove("noscroll");
-  pmapbutton.classList.remove("active");
-  omapfixed.classList.remove("active");
-  omapoverlay.classList.remove("active");
-  pmapbutton.innerText = 'изменить пункт выдачи';
-});
+if (ompbutton) {
+  ompbutton.addEventListener('click', function() {
+    pminfo.innerHTML = omblock.children[0].innerHTML;
+    pminfo.classList.add('active');
+    pminfo.previousElementSibling.classList.add('hidden');
+    document.documentElement.classList.remove("noscroll");
+    pmapbutton.classList.remove("active");
+    omapfixed.classList.remove("active");
+    omapoverlay.classList.remove("active");
+    pmapbutton.innerText = 'изменить пункт выдачи';
+  });
+}
 // end map html

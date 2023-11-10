@@ -79,6 +79,11 @@ a {
   user-select: none;
 }
 
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  opacity: 0;
+}
+
 /* start header */
 
 .header__burger {
@@ -947,12 +952,12 @@ a {
 .personal__order_product_list {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   position: relative;
 }
 
 .personal__order_product_item {
-  width: calc(12.5% - 5.3px);
+  width: 80px;
   height: 100px;
   position: relative;
 }
@@ -1321,6 +1326,18 @@ a {
   top: -9px;
   font-size: 14px;
   line-height: 16px;
+ }
+
+ .personal__form_control input:focus + label {
+  color: var(--black);
+ }
+
+ .personal__form_control input:focus {
+  border: 1px solid var(--black);
+ }
+
+ [data-phone-pattern] {
+  border: 1px solid var(--border) !important;
  }
 
 .personal__form_control input {
@@ -2840,6 +2857,9 @@ a {
     font-size: 14px;
     line-height: 18px;
   }
+  .personal__button {
+    height: 40px;
+  }
   .personal__buttons {
     padding: 0 0 44px;
     gap: 16px;
@@ -2922,7 +2942,8 @@ a {
     font-size: 15px;
     line-height: 16px;
   }
-  .personal__order_price {
+  .personal__order_price,
+  .personal__order_article {
     font-size: 14px;
     line-height: 16px;
   }
@@ -2940,6 +2961,14 @@ a {
     bottom: 4px;
     font-size: 12px;
     line-height: 20px;
+  }
+  .personal__order_product_link img {
+    width: 14px;
+    height: 14px;
+  }
+  .personal__order_product_link {
+    width: 34px;
+    height: 34px;
   }
   .personal__order_product_link img {
     width: 14px;
@@ -3617,7 +3646,7 @@ a {
     overflow: hidden;
   }
   .personal__button_discount .personal__button_name {
-    max-width: 125px;
+    max-width: 190px;
     font-family: var(--halvar);
     font-size: 14px;
     font-weight: 500;
@@ -3625,7 +3654,7 @@ a {
     letter-spacing: -0.02em;
     color: var(--black);
     text-align: left;
-    word-break: break-all;
+    text-transform: uppercase;
   }
   .personal__button_discount .personal__button_count {
     width: max-content;
@@ -3639,8 +3668,9 @@ a {
   }
   .personal__head {
     padding: 0 0 28px;
-    font-size: 22px;
-    line-height: 20px;
+    font-size: 32px;
+    line-height: 31px;
+    letter-spacing: -0.055em;
   }
   .personal__buttons_flex:first-child {
     flex-direction: row;
@@ -3679,6 +3709,10 @@ a {
     width: 100%;
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+  .personal__button_name {
+    font-size: 15px;
+    line-height: 21px;
   }
   .personal__profile_nick {
     font-size: 27px;
@@ -3753,8 +3787,23 @@ a {
   }
   .personal__order_date {
     width: 100%;
-    padding-right: 160px;
+    padding: 0 160px 72px 0;
     word-break: break-all;
+  }
+  .personal__order_item {
+    position: relative;
+  }
+  .personal__order_price,
+  .personal__order_article {
+    height: 20px;
+    position: absolute;
+    left: 0;
+  }
+  .personal__order_price {
+    top: 60px;
+  }
+  .personal__order_article {
+    top: 40px;
   }
   .personal__order_product_item {
     height: 70px;
@@ -3811,6 +3860,10 @@ a {
   }
   .personal__addresses_adres {
     max-width: 236px;
+    padding-bottom: 20px;
+  }
+  .personal__addresses_basic {
+    padding-top: 10px;
   }
   .personal__addresses_fixed {
     display: flex;
@@ -4012,6 +4065,12 @@ a {
     font-size: 15px;
     line-height: 17px;
   }
+  .personal__form_list {
+    gap: 20px;
+  }
+  .personal__form_button {
+    padding: 28px 0 16px;
+  }
   .order__info {
     padding: 0 0 40px;
     margin: 0;
@@ -4060,6 +4119,9 @@ a {
   }
   .section__order {
     padding: 20px 0;
+  }
+  .personal__subscription_info_block {
+    gap: 6px;
   }
 }
 /* end media 767px */
