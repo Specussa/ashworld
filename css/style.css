@@ -3025,6 +3025,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     line-height: 18px;
   }
   .personal__addresses_basic {
+    padding-top: 10px;
     font-size: 12px;
     line-height: 15px;
   }
