@@ -1182,7 +1182,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .personal__addresses_block {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .personal__addresses_block span {
@@ -1236,7 +1236,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .personal__addresses_adres {
-  padding-bottom: 18px;
+  padding-bottom: 22px;
 }
 
 .personal__addresses_info p {
@@ -1258,7 +1258,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .personal__addresses_basic {
   display: none;
-  padding-top: 4px;
+  padding-top: 8px;
   align-items: center;
   gap: 6px;
   font-family: var(--helvetica);
@@ -1285,7 +1285,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .personal__addresses_add {
   display: flex;
   width: 100%;
-  padding: 24px 0;
+  padding: 32px 0;
   align-items: center;
   justify-content: center;
   gap: 6px;
@@ -2858,7 +2858,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     line-height: 18px;
   }
   .personal__button {
-    height: 40px;
+    height: 34px;
   }
   .personal__buttons {
     padding: 0 0 44px;
@@ -2869,8 +2869,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
     gap: 10px;
   }
   .personal__button_name {
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 15px;
+    line-height: 21px;
   }
   .personal__button_block {
     gap: 10px;
@@ -2902,7 +2902,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     line-height: 18px;
   }
   .personal__subscription_head {
-    padding: 28px 0 16px;
+    padding: 32px 0 20px;
   }
   .personal__subscription_item {
     padding: 20px 0;
@@ -3020,6 +3020,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 15px;
     line-height: 21px;
   }
+  .personal__addresses_adres {
+    padding-bottom: 18px;
+  }
   .personal__addresses_info p {
     font-size: 14px;
     line-height: 18px;
@@ -3032,6 +3035,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .personal__addresses_add {
     font-size: 14px;
     line-height: 16px;
+  }
+  .personal__addresses_add {
+    padding: 24px 0;
+  }
+  .personal__addresses_buttons,
+  .personal__addresses_block {
+    gap: 16px;
   }
   .personal__form_control label,
   .personal__form_control input,
@@ -3581,7 +3591,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin-left: 10px;
   }
   .section_top {
-    height: 105px;
+    height: 97px;
     background-color: var(--back);
   }
   .section_personal {
