@@ -2626,6 +2626,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
   gap: 20px;
 }
 
+.personal__form_controls {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.personal__form_control_one {
+  width: 100%;
+}
+
 .personal__logined_block {
   display: flex;
   width: calc(50% - 10px);
@@ -3291,6 +3302,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .personal__logined_addresses_button {
     top: 32px;
     right: 40px;
+  }
+  .personal__form_controls {
+    gap: 16px;
   }
 }
 /* end media 1919px */
@@ -4162,6 +4176,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .personal__subscription_info_block {
     gap: 6px;
+  }
+  .personal__form_controls {
+    gap: 20px;
   }
 }
 /* end media 767px */
