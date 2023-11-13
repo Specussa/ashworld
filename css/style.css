@@ -1716,6 +1716,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .order__addresses_block {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 20px;
 }
@@ -1737,13 +1738,24 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 10px;
 }
 
-.personal__form_head {
+.personal__form_head,
+.personal__form_head_two,
+.personal__form_head_three {
   margin: 44px 0 4px;
   font-family: var(--halvar);
   font-size: 27px;
   font-weight: 500;
   line-height: 31px;
   color: var(--black);
+  text-transform: uppercase;
+}
+
+.personal__form_head_two {
+  margin: 0 0 12px;
+}
+
+.personal__form_head_three {
+  margin: 0;
 }
 
 .personal__form_heading {
@@ -2465,7 +2477,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .personal__datetime {
   display: flex;
   width: 100%;
-  padding: 12px 0 44px;
+  padding: 12px 0;
   flex-direction: column;
   gap: 16px;
 }
@@ -2610,6 +2622,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .personal__logined_profile {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -3163,10 +3176,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 14px;
     line-height: 17px;
   }
-  .personal__form_head {
+  .personal__form_head,
+  .personal__form_head_two,
+  .personal__form_head_three {
     margin: 36px 0 4px;
     font-size: 20px;
     line-height: 23px;
+  }
+  .personal__form_head_two {
+    margin: 0 0 4px;
+  }
+  .personal__form_head_three {
+    margin: 0;
   }
   .personal__approval_label,
   .order__check_label {
@@ -4071,10 +4092,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background-color: transparent;
   }
   .personal__form_head,
-  .personal__form_heading {
+  .personal__form_heading,
+  .personal__form_head_two,
+  .personal__form_head_three {
     margin: 20px 0 4px;
     font-size: 15px;
     line-height: 17px;
+  }
+  .personal__form_head_two {
+    margin: 0 0 4px;
+  }
+  .personal__form_head_three {
+    margin: 0;
   }
   .personal__form_list {
     gap: 20px;
