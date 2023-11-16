@@ -448,11 +448,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .personal__profile_button:hover,
 .personal__profile_button.active,
-.personal__profile_button:focus {
+.personal__profile_button:focus,
+.personal__profile_button.focus {
   background-color: var(--hover);
 }
 
-.personal__profile_button:focus {
+.personal__profile_button:focus,
+.personal__profile_button.focus {
   border: 1px solid var(--black);
 }
 
@@ -568,11 +570,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .personal__button:hover,
 .personal__button.active,
-.personal__button:focus {
+.personal__button:focus,
+.personal__button.focus {
   background-color: var(--hover);
 }
 
-.personal__button:focus {
+.personal__button:focus,
+.personal__button.focus {
   border: 1px solid var(--black);
 }
 

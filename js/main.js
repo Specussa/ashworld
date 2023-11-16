@@ -173,40 +173,42 @@ if (personal) {
     pleft.classList.remove("active");
     window.scrollTo(0,0);
   }
-  document.querySelector('.personal__arrow').addEventListener('click', function() {
-    if (!pleft.classList.contains("active")) {
-      pbutton.forEach((n) => n.classList.remove("active"));
-      ptab.forEach((n) => n.classList.remove("active"));
-      pbprofile.classList.remove("active");
-      pleft.classList.add("active");
-      pcenter.classList.remove("active");
-      window.scrollTo(0,0);
-    }
-  });
+  // if (document.querySelector('.personal__arrow')) {
+  //   document.querySelector('.personal__arrow').addEventListener('click', function() {
+  //     if (!pleft.classList.contains("active")) {
+  //       pbutton.forEach((n) => n.classList.remove("active"));
+  //       ptab.forEach((n) => n.classList.remove("active"));
+  //       pbprofile.classList.remove("active");
+  //       pleft.classList.add("active");
+  //       pcenter.classList.remove("active");
+  //       window.scrollTo(0,0);
+  //     }
+  //   });
+  // }
   pbprofile.addEventListener('click', function() {
     delpersonal();
     pbprofile.classList.add("active");
-    pprofile.classList.add("active");
+    // pprofile.classList.add("active");
   });
   pbcart.addEventListener('click', function() {
     delpersonal();
     pbcart.classList.add("active");
-    porder.classList.add("active");
+    // porder.classList.add("active");
   });
   pbsub.addEventListener('click', function() {
     delpersonal();
     pbsub.classList.add("active");
-    psub.classList.add("active");
+    // psub.classList.add("active");
   });
   pbheart.addEventListener('click', function() {
     delpersonal();
     pbheart.classList.add("active");
-    pheart.classList.add("active");
+    // pheart.classList.add("active");
   });
   pbaddresses.addEventListener('click', function() {
     delpersonal();
     pbaddresses.classList.add("active");
-    paddresses.classList.add("active");
+    // paddresses.classList.add("active");
   });
 }
 // end menu personal
