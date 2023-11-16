@@ -6483,17 +6483,6 @@ p.price-economy {
     .modal-content2 {
         padding-top: 45px;
     }
-    .header_hidden {
-        transition: 0.6s;
-        transform: translateY(-100%);
-    }
-    header {
-        position: fixed!important;
-        top: 0;
-        transition: 0.6s;
-        background-color: #fff;
-        z-index: 100;
-    }
     
     
     .catalog-list-q .catalog-img {
@@ -6507,7 +6496,6 @@ p.price-economy {
     .catalog-button img {
         margin-right: 6px;
     }
-    
     
     .cart-block {
         border-bottom: 1px solid rgba(226, 226, 226, 1);

@@ -13,15 +13,49 @@ window.addEventListener('resize', appHeight);
 appHeight();
 // end height
 
+// start header
+const burger = document.querySelector('.header__burger');
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 1) {
+    $('header').addClass('header-bg');
+  }
+  else {
+    $('header').removeClass('header-bg');
+  }
+});
+
+$(document).ready(() => {
+  const onScrollHeader = () => {;
+    const header = $('header');
+    let prevScroll = $(window).scrollTop();
+    let currentScroll;
+
+    $(window).scroll(() => {
+      currentScroll = $(window).scrollTop();
+      const headerHidden = () => header.hasClass('header_hidden');
+      if (currentScroll > prevScroll && !headerHidden() && currentScroll > 10 ) {
+        header.addClass('header_hidden')
+        header.removeClass("active");
+        burger.classList.remove("active");
+      }
+      if (currentScroll < prevScroll && headerHidden()) {
+        header.removeClass('header_hidden')
+        header.removeClass("active");
+        burger.classList.remove("active");
+      }
+      prevScroll = currentScroll
+    })
+  }
+  onScrollHeader()
+})
+// end header
+
 // start header tabs
 const headermenutabs = document.querySelectorAll(".header__menu_tabs");
 [...headermenutabs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()) {elem.setAttribute("data-select-item", index + 1);}});
 
 const headermenulists = document.querySelectorAll(".header__menu_lists");
 [...headermenulists].forEach(function (li) {for (let [index, elem] of [...li.children].entries()) {elem.setAttribute("data-select-item", index + 1);}});
-
-const hlisttop = document.querySelectorAll('.header__menu_sublist'); 
-[...hlisttop].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.style.setProperty('--inc-step', index+1);}});
 
 const headermenutab = document.querySelectorAll(".header__menu_tab_button");
 const headermenulist = document.querySelectorAll(".header__menu_list");
@@ -42,8 +76,7 @@ for (i = 0; i < headermenutab.length; i++) {
 // end header tabs
 
 // кнопка header burger
-const burger = document.querySelector('.header__burger');
-const headermenu = document.querySelector('.header__menu');
+const headermenu = document.querySelector('header');
 burger.addEventListener('click', function() {
   if (burger.classList.contains("active")) {
     document.documentElement.classList.remove("open");
@@ -436,6 +469,7 @@ if (pmapbutton) {
   });
 }
 // end map_button
+
 // start logined_button
 const plbutton = document.querySelector('.personal__logined_addresses_button');
 const opfixed = document.querySelector('.order__profile_fixed');
