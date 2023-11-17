@@ -141,6 +141,11 @@ header {
   background-color: var(--white);
 }
 
+header.header-bg,
+header.active {
+  padding: 16px 0;
+}
+
 .header__white .header__burger,
 .header__white .a-link-header,
 .header__white .logo,
@@ -2887,6 +2892,10 @@ header.active .header__menu_tabs {
     width: 49px;
     height: 70px;
   }
+  header.header-bg,
+  header.active {
+    padding: 13px 0;
+  }
   .header__menu_heading {
     padding: 16px 0 24px;
     font-size: 14px;
@@ -3469,6 +3478,10 @@ header.active .header__menu_tabs {
   }
   header {
     padding: 4px 0 0;
+  }
+  header.header-bg,
+  header.active {
+    padding: 8px 0;
   }
   .header__gray {
     background-color: var(--back);
