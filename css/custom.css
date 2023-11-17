@@ -134,15 +134,6 @@ header .container {
     max-width: 100%;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    padding: 30px 0;
-}
-
 .menu-button {
     color: #FFF;
     font-size: 18px;
@@ -4764,10 +4755,6 @@ p.price-economy {
         padding-top: 30px;
     }
     
-    header {
-        padding: 20px 0;
-    }
-    
     .hits-section {
         padding: 60px 0 97px 0;
     }
@@ -6534,12 +6521,6 @@ p.price-economy {
     
     .cart-modal {
         overflow: scroll;
-    }
-    
-    
-    .header-bg {
-        padding: 4px;
-        background: #fff;
     }
     
     

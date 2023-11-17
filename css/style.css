@@ -91,11 +91,28 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 header {
+  width: 100%;
+  padding: 38px 0 0;
   position: fixed!important;
   top: 0;
   transition: 0.6s;
   background-color: #fff;
   z-index: 100;
+}
+
+.header-с {
+  width: 59px;
+  height: 86px;
+}
+
+.header-с svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header-wrapper {
+  height: 124px;
 }
 
 .header_hidden {
@@ -222,10 +239,10 @@ header {
   margin: 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.3s linear, padding 0s linear, margin 0s linear, max-height 0.3s linear, visibility 0s linear;
-  transition: opacity 0.3s linear, padding 0s linear, margin 0s linear, max-height 0.3s linear, visibility 0s linear;
-  -webkit-transition-delay: 0s, 0.3s, 0.3s, 0.3s, 0.3s;
-  transition-delay: 0s, 0.3s, 0.3s, 0.3s, 0.3s;
+  -webkit-transition: opacity 0.3s linear, padding 0s linear, margin 0s linear, max-height 0.3s linear, visibility 0s linear, -webkit-transform 0.3s linear;
+  transition: opacity 0.3s linear, padding 0s linear, margin 0s linear, max-height 0.3s linear, visibility 0s linear, transform 0.3s linear;
+  -webkit-transition-delay: 0s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
+  transition-delay: 0s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
 }
 
 header.active .header__menu {
@@ -234,13 +251,31 @@ header.active .header__menu {
   margin: 13px 0 0;
   opacity: 1;
   visibility: visible;
-  -webkit-transition-delay: 0s, 0s, 0s, 0s, 0s;
+  -webkit-transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
   transition-delay: 0s, 0s, 0s, 0s, 0s;
 }
 
 .header__menu_lists {
+  width: 100%;
+  height: 100%;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: max-height 0.3s linear;
+  transition: max-height 0.3s linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+.header__menu_lists.active {
+  max-height: 2000px;
+  opacity: 1;
+  -webkit-transition: max-height 0.3s linear;
+  transition: max-height 0.3s linear;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
 .header__menu_tabs {
@@ -289,21 +324,22 @@ header.active .header__menu_tabs {
 .header__menu_list {
   display: flex;
   width: 100%;
-  height: 100%;
-  max-height: 0px;
+  height: 0;
   justify-content: space-between;
   gap: 80px;
-  -webkit-transition: max-height 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-  transition: max-height 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
   overflow: hidden;
 }
 
 .header__menu_list.active {
-  max-height: 2000px;
-  -webkit-transition: max-height 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-  transition: max-height 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
@@ -2844,8 +2880,12 @@ header.active .header__menu_tabs {
 
 /* start media 1919px */
 @media (max-width: 1919px) {
-  header.active {
-    padding: 24px;
+  header {
+    padding: 32px 0 0;
+  }
+  .header-с {
+    width: 49px;
+    height: 70px;
   }
   .header__menu_heading {
     padding: 16px 0 24px;
@@ -2890,6 +2930,9 @@ header.active .header__menu_tabs {
   .header__collection_name {
     font-size: 74px;
     line-height: 74px;
+  }
+  .header-wrapper {
+    height: 102px;
   }
   .personal__row {
     display: flex;
@@ -3424,6 +3467,9 @@ header.active .header__menu_tabs {
   :root {
     --whitecolor: #fff;
   }
+  header {
+    padding: 4px 0 0;
+  }
   .header__gray {
     background-color: var(--back);
   }
@@ -3437,13 +3483,23 @@ header.active .header__menu_tabs {
     background: var(--black);
   }
   .header__menu {
-    height: calc(var(--height) - 50px);
-    -webkit-transition-delay: 0s, 0.6s, 0.6s, 0.3s, 0.6s;
-    transition-delay: 0s, 0.6s, 0.6s, 0.3s, 0.6s;
+    width: 100%;
+    height: calc(var(--height) - 59px);
+    margin: 0;
+    background-color: var(--white);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition-delay: 0s, 0.6s, 0.6s, 0.3s, 0.6s, 0s;
+    transition-delay: 0s, 0.6s, 0.6s, 0.3s, 0.6s, 0s;
+  }
+  header.active .header__menu {
+    margin: 0;
+    padding: 10px 0 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
   header.active {
     max-height: calc(var(--height) - 50px);
-    padding: 0;
   }
   .header__menu_tab,
   .header__menu_tab:hover {
@@ -3504,7 +3560,6 @@ header.active .header__menu_tabs {
   .open .header-bg,
   .open .header_hidden {
     max-height: var(--height);
-    padding: 0;
     position: fixed !important;
     top: 0;
     left: 0;
@@ -3515,12 +3570,13 @@ header.active .header__menu_tabs {
     -webkit-transition: 0s;
     transition: padding 0.2s linear;
   }
-  .open .header-wrapper,
   .header-wrapper {
-    height: 60px;
+    height: 61px;
   }
-  .header__menu_lists {
-    max-height: calc(var(--height) - 103.5px);
+  .header__menu_lists,
+  .header__menu_lists.active {
+    height: auto !important;
+    max-height: calc(var(--height) - 165.5px);
     padding: 0 0 14px;
   }
   .header__menu_lists::-webkit-scrollbar {
@@ -3651,13 +3707,27 @@ header.active .header__menu_tabs {
     letter-spacing: -0.03em;
   }
   .header-с {
-    display: none;
+    width: 36px;
+    height: 53px;
   }
   .header-r {
     justify-content: flex-end;
   }
-  .links-header a:nth-child(2) {
+  header.active .links-header a:nth-child(3),
+  header.active .links-header a:nth-child(4),
+  header .links-header a:nth-child(1),
+  header .links-header a:nth-child(2) {
     display: none;
+  }
+  header.active .links-header a:nth-child(1),
+  header.active .links-header a:nth-child(2),
+  header .links-header a:nth-child(3),
+  header .links-header a:nth-child(4) {
+    display: flex;
+  }
+  header.active .links-header a:nth-child(1),
+  header.active .links-header a:nth-child(2) {
+    background-color: var(--back);
   }
   .links-header a {
     display: flex;
@@ -3666,7 +3736,6 @@ header.active .header__menu_tabs {
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background-color: var(--back);
   }
   .links-header img {
     width: 14px;

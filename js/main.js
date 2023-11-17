@@ -35,13 +35,13 @@ $(document).ready(() => {
       const headerHidden = () => header.hasClass('header_hidden');
       if (currentScroll > prevScroll && !headerHidden() && currentScroll > 10 ) {
         header.addClass('header_hidden')
-        header.removeClass("active");
-        burger.classList.remove("active");
+        // header.removeClass("active");
+        // burger.classList.remove("active");
       }
       if (currentScroll < prevScroll && headerHidden()) {
         header.removeClass('header_hidden')
-        header.removeClass("active");
-        burger.classList.remove("active");
+        // header.removeClass("active");
+        // burger.classList.remove("active");
       }
       prevScroll = currentScroll
     })
@@ -66,7 +66,7 @@ for (i = 0; i < headermenutab.length; i++) {
       const headermenulistCOUNT = document.querySelector('.header__menu_list[data-select-item="' + headermenutabCOUNT + '"]');
       headermenutab.forEach((n) => n.classList.remove("active")); 
       headermenulist.forEach((n) => n.classList.remove("active"));
-      headermenulist.forEach((n) => n.style.maxHeight = null);
+      // headermenulist.forEach((n) => n.style.maxHeight = null);
       this.classList.add("active");
       headermenulistCOUNT.classList.add("active");
       headermenulistCOUNT.style.maxHeight = headermenulistCOUNT.scrollHeight + "px";
@@ -77,6 +77,7 @@ for (i = 0; i < headermenutab.length; i++) {
 
 // кнопка header burger
 const headermenu = document.querySelector('header');
+const headermls = document.querySelector('.header__menu_lists');
 burger.addEventListener('click', function() {
   if (burger.classList.contains("active")) {
     document.documentElement.classList.remove("open");
@@ -84,14 +85,17 @@ burger.addEventListener('click', function() {
     headermenu.classList.remove("active");
     headermenutab.forEach((n) => n.classList.remove("active")); 
     headermenulist.forEach((n) => n.classList.remove("active"));
-    headermenulist.forEach((n) => n.style.maxHeight = null);
+    headermls.classList.remove("active");
+    // headermenulist.forEach((n) => n.style.maxHeight = null);
   } else {
     document.documentElement.classList.add("open");
     burger.classList.add("active");
     headermenu.classList.add("active");
     document.querySelector('.header__menu_tab_button[data-select-item="1"]').classList.add("active");
     document.querySelector('.header__menu_list[data-select-item="1"]').classList.add("active");
-    document.querySelector('.header__menu_list[data-select-item="1"]').style.maxHeight = document.querySelector('.header__menu_list[data-select-item="1"]').scrollHeight + "px";
+    headermls.style.height = headermenulist[0].scrollHeight + 'px';
+    headermls.classList.add("active");
+    // document.querySelector('.header__menu_list[data-select-item="1"]').style.maxHeight = document.querySelector('.header__menu_list[data-select-item="1"]').scrollHeight + "px";
   }
 })
 window.addEventListener('click', e => {
@@ -103,7 +107,7 @@ window.addEventListener('click', e => {
       headermenu.classList.remove("active");
       headermenutab.forEach((n) => n.classList.remove("active")); 
       headermenulist.forEach((n) => n.classList.remove("active"));
-      headermenulist.forEach((n) => n.style.maxHeight = null);
+      // headermenulist.forEach((n) => n.style.maxHeight = null);
     }
   }
 })
