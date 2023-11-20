@@ -3502,9 +3502,6 @@ header.active .header__menu_tabs {
   header.active {
     padding: 8px 0;
   }
-  .section__logo {
-    background-color: var(--back);
-  }
   .header__burger {
     color: var(--black);
   }
