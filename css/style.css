@@ -2629,7 +2629,7 @@ header.active .header__menu_tabs {
 }
 
 .personal__time .label-wrapper {
-  width: auto;
+  width: 130px;
   border-radius: 23px;
 }
 
