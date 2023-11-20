@@ -3792,10 +3792,10 @@ header.active .header__menu_tabs {
   .personal__center {
     display: none;
     width: calc(100% + 28px);
-    margin: 0 -14px;
+    margin: -32px -14px 0;
     padding: 14px;
     background-color: var(--white);
-    border-radius: 20px;
+    /* border-radius: 20px; */
   }
   .personal__center.active {
     display: block;
@@ -4175,7 +4175,7 @@ header.active .header__menu_tabs {
     width: 150px;
   }
   .order__row {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 0;
   }
   .order__right,
