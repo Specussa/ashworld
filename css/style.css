@@ -965,14 +965,6 @@ header.active .header__menu_tabs {
   opacity: 0.5;
 }
 
-.personal__desktop_hidden {
-  display: none;
-}
-
-.personal__mobile_hidden {
-  display: block;
-}
-
 .personal__order_item {
   display: flex;
   padding: 25px 0;
@@ -1244,6 +1236,10 @@ header.active .header__menu_tabs {
 
 .personal__addresses {
   padding: 0 0 20px;
+}
+
+.personal__addresses.hidden {
+ display: none;
 }
 
 .personal__addresses_item {
@@ -1945,6 +1941,10 @@ header.active .header__menu_tabs {
   height: 40px;
 }
 
+.personal__wrapper span {
+  margin-right: auto;
+}
+
 .personal__radio .label-wrapper {
   border-radius: 4px;
   background: #F6F6F6;
@@ -1952,7 +1952,7 @@ header.active .header__menu_tabs {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border: 1px solid #F6F6F6;
 }
 
@@ -1962,6 +1962,7 @@ header.active .header__menu_tabs {
 }
 
 .personal__radio input {
+  display: none;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1985,7 +1986,6 @@ header.active .header__menu_tabs {
 }
 
 .personal__radio label span {
-  margin-right: auto;
   color: #000;
   font-size: 15px;
   font-weight: 400;
@@ -2336,7 +2336,8 @@ header.active .header__menu_tabs {
 }
 
 .order__map_button,
-.order__profile_button {
+.order__profile_button,
+.order__profile_all_button {
   display: flex;
   width: 40px;
   height: 40px;
@@ -2347,7 +2348,8 @@ header.active .header__menu_tabs {
 }
 
 .order__map_button img,
-.order__profile_button img {
+.order__profile_button img,
+.order__profile_all_button img {
   width: 12px;
   height: 12px;
   object-fit: contain;
@@ -2655,16 +2657,24 @@ header.active .header__menu_tabs {
 
 .personal__logined_addresses_flex {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 6px;
 }
 
-.personal__logined_addresses_head {
+.personal__logined_addresses_head,
+.personal__logined_addresses_heads {
   font-family: var(--helvetica);
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
   color: var(--black);
+}
+
+.personal__logined_addresses_heads {
+  padding: 3px 8px 4px 8px;
+  border-radius: 2px;
+  background-color: #e1e6ff;
 }
 
 .personal__logined_addresses_desc {
@@ -2757,7 +2767,10 @@ header.active .header__menu_tabs {
   color: #adadad;
 }
 
-.order__profile_fixed {
+.order__profile_fixed,
+.order__profile_one_fixed,
+.order__profile_two_fixed,
+.order__profile_three_fixed {
   display: flex;
   width: 656px;
   height: var(--height);
@@ -2774,7 +2787,10 @@ header.active .header__menu_tabs {
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 }
 
-.order__profile_fixed.active {
+.order__profile_fixed.active,
+.order__profile_one_fixed.active,
+.order__profile_two_fixed.active,
+.order__profile_three_fixed.active {
   -webkit-transform: translateX(0);
   transform: translateX(0);
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
@@ -2833,6 +2849,14 @@ header.active .header__menu_tabs {
   gap: 20px;
 }
 
+.order__profile_forms {
+  display: none;
+}
+
+.order__profile_forms.active {
+  display: flex;
+}
+
 .order__profile_form .personal__form_control,
 .order__profile_form .personal__select_tel {
   width: 100%;
@@ -2857,6 +2881,7 @@ header.active .header__menu_tabs {
   width: 100%;
   height: 60px;
   margin: auto 0 0;
+  flex: 0 0 auto;
   justify-content: center;
   align-items: center;
   font-family: var(--helvetica);
@@ -2894,6 +2919,14 @@ header.active .header__menu_tabs {
 }
 
 /* end section logo */
+
+.personal__desktop_hidden {
+  display: none;
+}
+
+.personal__mobile_hidden {
+  display: inline-flex;
+}
 
 /* start media 1919px */
 @media (max-width: 1919px) {
@@ -3381,12 +3414,14 @@ header.active .header__menu_tabs {
     line-height: 26px;
   }
   .order__map_button,
-  .order__profile_button {
+  .order__profile_button,
+  .order__profile_all_button {
     width: 34px;
     height: 34px;
   }
   .order__map_button img,
-  .order__profile_button img {
+  .order__profile_button img,
+  .order__profile_all_button img {
     width: 10px;
     height: 10px;
   }
@@ -3454,7 +3489,10 @@ header.active .header__menu_tabs {
     width: 0;
   }
   .order__map_fixed,
-  .order__profile_fixed {
+  .order__profile_fixed,
+  .order__profile_one_fixed,
+  .order__profile_two_fixed,
+  .order__profile_three_fixed {
     width: 492px;
   }
   .order__map_geo {
@@ -3809,12 +3847,6 @@ header.active .header__menu_tabs {
     padding: 14px;
     background-color: var(--white);
     border-radius: 20px;
-  }
-  .personal__desktop_hidden {
-    display: block;
-  }
-  .personal__mobile_hidden {
-    display: none;
   }
   .personal__button_discount_image {
     width: 100%;
@@ -4189,7 +4221,10 @@ header.active .header__menu_tabs {
     line-height: 18px;
   }
   .order__map_fixed,
-  .order__profile_fixed {
+  .order__profile_fixed,
+  .order__profile_one_fixed,
+  .order__profile_two_fixed,
+  .order__profile_three_fixed {
     width: 100%;
   }
   .order__map_geo {
@@ -4274,11 +4309,14 @@ header.active .header__menu_tabs {
   .order__info {
     padding: 0 0 40px;
     margin: 0;
+    border: none;
   }
   .order__info_product {
     height: 120px;
   }
   .order__profile_form {
+    height: 100%;
+    justify-content: space-between;
     gap: 20px;
   }
   .order__personal_info {
@@ -4302,9 +4340,30 @@ header.active .header__menu_tabs {
     border-radius: 4px;
     text-decoration: none;
   }
+  .personal__logined_top,
+  .personal__logined_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .personal__logined_block svg {
+    margin: 0;
+  }
+  .personal__logined_block .personal__logined_arrow {
+    width: 14px;
+    height: 14px;
+  }
+  .personal__logined_addresses_flex {
+    gap: 16px;
+  }
+  .personal__logined_addresses_desc {
+    color: #bebebe;
+  }
   .personal__logined {
-    padding: 20px 14px;
+    padding: 0;
     gap: 20px;
+    background-color: transparent;
   }
   .personal__logined_profile {
     flex-direction: column;
@@ -4332,6 +4391,12 @@ header.active .header__menu_tabs {
   .section__logo_icon svg {
     width: 36px;
     height: 53px;
+  }
+  .personal__desktop_hidden {
+    display: inline-flex;
+  }
+  .personal__mobile_hidden {
+    display: none;
   }
 }
 /* end media 767px */

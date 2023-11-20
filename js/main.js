@@ -167,22 +167,19 @@ if (paddresseselbutton) {
   for (let i = 0; i < paddressesel.length; i++) {
     paddressesel[i].onclick = function() {
       this.previousElementSibling.classList.add('active');
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
+      document.documentElement.classList.add("noscroll");
     }
   }
   for (let i = 0; i < poverlay.length; i++) {
     poverlay[i].onclick = function() {
       this.parentNode.classList.remove('active');
-      document.documentElement.style.overflow = null;
-      document.body.style.overflow = null;
+      document.documentElement.classList.remove("noscroll");
     }
   }
   for (let i = 0; i < pclose.length; i++) {
     pclose[i].onclick = function() {
       this.closest('.personal__addresses_fixed').classList.remove('active');
-      document.documentElement.style.overflow = null;
-      document.body.style.overflow = null;
+      document.documentElement.classList.remove("noscroll");
     }
   }
 }
@@ -441,36 +438,40 @@ const pmapbutton = document.querySelector('.personal__map_button');
 const omapfixed = document.querySelector('.order__map_fixed');
 const omapoverlay = document.querySelector('.order__map_overlay');
 const omapbutton = document.querySelector('.order__map_button');
+const opfixed = document.querySelector('.order__profile_fixed');
+const orderpof = document.querySelector('.order__profile_one_fixed');
+const orderptf = document.querySelector('.order__profile_two_fixed');
+const orderpttf = document.querySelector('.order__profile_three_fixed');
 if (pmapbutton) {
   pmapbutton.addEventListener('click', function() {
     if (pmapbutton.classList.contains("active")) {
       document.documentElement.classList.remove("noscroll");
-      pmapbutton.classList.remove("active");
       omapfixed.classList.remove("active");
       omapoverlay.classList.remove("active");
     } else {
       document.documentElement.classList.add("noscroll");
-      pmapbutton.classList.add("active");
       omapfixed.classList.add("active");
       omapoverlay.classList.add("active");
-    }
-  });
-  omapoverlay.addEventListener('click', function() {
-    if (omapoverlay.classList.contains("active")) {
-      document.documentElement.classList.remove("noscroll");
-      pmapbutton.classList.remove("active");
-      omapfixed.classList.remove("active");
-      omapoverlay.classList.remove("active");
-      plbutton.classList.remove("active");
-      opfixed.classList.remove("active");
     }
   });
   omapbutton.addEventListener('click', function() {
     if (omapoverlay.classList.contains("active")) {
       document.documentElement.classList.remove("noscroll");
-      pmapbutton.classList.remove("active");
       omapfixed.classList.remove("active");
       omapoverlay.classList.remove("active");
+    }
+  });
+}
+if (omapoverlay) {
+  omapoverlay.addEventListener('click', function() {
+    if (omapoverlay.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      omapoverlay.classList.remove("active");
+      if(omapfixed){omapfixed.classList.remove("active")};
+      if(opfixed){opfixed.classList.remove("active")};
+      if(orderpof){orderpof.classList.remove("active")};
+      if(orderptf){orderptf.classList.remove("active")};
+      if(orderpttf){orderpttf.classList.remove("active")};
     }
   });
 }
@@ -478,18 +479,15 @@ if (pmapbutton) {
 
 // start logined_button
 const plbutton = document.querySelector('.personal__logined_addresses_button');
-const opfixed = document.querySelector('.order__profile_fixed');
 const opbutton = document.querySelector('.order__profile_button');
 if (plbutton) {
   plbutton.addEventListener('click', function() {
-    if (plbutton.classList.contains("active")) {
+    if (opfixed.classList.contains("active")) {
       document.documentElement.classList.remove("noscroll");
-      plbutton.classList.remove("active");
       opfixed.classList.remove("active");
       omapoverlay.classList.remove("active");
     } else {
       document.documentElement.classList.add("noscroll");
-      plbutton.classList.add("active");
       opfixed.classList.add("active");
       omapoverlay.classList.add("active");
     }
@@ -502,6 +500,70 @@ if (plbutton) {
       omapoverlay.classList.remove("active");
     }
   });
+}
+const personallp = document.querySelector('.personal__logined_profile');
+const orderpo = document.querySelector('.order__profile_one');
+const orderpt = document.querySelector('.order__profile_two');
+const orderptt = document.querySelector('.order__profile_three');
+const orderpallclose = document.getElementsByClassName("order__profile_all_button");
+if (personallp) {
+  if (orderpo) {
+    orderpo.addEventListener('click', function() {
+      if (orderpof.classList.contains("active")) {
+        document.documentElement.classList.remove("noscroll");
+        orderpof.classList.remove("active");
+        omapoverlay.classList.remove("active");
+      } else {
+        document.documentElement.classList.add("noscroll");
+        orderpof.classList.add("active");
+        omapoverlay.classList.add("active");
+      }
+    });
+  }
+  orderpt.addEventListener('click', function() {
+    if (orderptf.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      orderptf.classList.remove("active");
+      omapoverlay.classList.remove("active");
+    } else {
+      document.documentElement.classList.add("noscroll");
+      orderptf.classList.add("active");
+      omapoverlay.classList.add("active");
+    }
+  });
+  orderptt.addEventListener('click', function() {
+    if (orderpttf.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      orderpttf.classList.remove("active");
+      omapoverlay.classList.remove("active");
+    } else {
+      document.documentElement.classList.add("noscroll");
+      orderpttf.classList.add("active");
+      omapoverlay.classList.add("active");
+    }
+  });
+  for (i = 0; i < orderpallclose.length; i++) {
+    orderpallclose[i].onclick = function() {
+      if (omapoverlay.classList.contains("active")) {
+        document.documentElement.classList.remove("noscroll");
+        if (orderpo) {orderpof.classList.remove("active")};
+        orderptf.classList.remove("active");
+        orderpttf.classList.remove("active");
+        omapoverlay.classList.remove("active");
+      }
+    };
+  }
+}
+
+const orderpfs = document.querySelector('.order__profile_forms');
+const orderpfb = document.getElementsByClassName("order__profile_form_buttons");
+if (orderpfs) {
+  for (i = 0; i < orderpfb.length; i++) {
+    orderpfb[i].onclick = function() {
+      orderpfs.classList.add("active");
+      paddresses.classList.add("hidden");
+    };
+  }
 }
 // end logined_button
 
