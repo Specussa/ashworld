@@ -78,39 +78,41 @@ for (i = 0; i < headermenutab.length; i++) {
 // кнопка header burger
 const headermenu = document.querySelector('header');
 const headermls = document.querySelector('.header__menu_lists');
-burger.addEventListener('click', function() {
-  if (burger.classList.contains("active")) {
-    document.documentElement.classList.remove("open");
-    burger.classList.remove("active");
-    headermenu.classList.remove("active");
-    headermenutab.forEach((n) => n.classList.remove("active")); 
-    headermenulist.forEach((n) => n.classList.remove("active"));
-    headermls.classList.remove("active");
-    // headermenulist.forEach((n) => n.style.maxHeight = null);
-  } else {
-    document.documentElement.classList.add("open");
-    burger.classList.add("active");
-    headermenu.classList.add("active");
-    document.querySelector('.header__menu_tab_button[data-select-item="1"]').classList.add("active");
-    document.querySelector('.header__menu_list[data-select-item="1"]').classList.add("active");
-    headermls.style.height = headermenulist[0].scrollHeight + 'px';
-    headermls.classList.add("active");
-    // document.querySelector('.header__menu_list[data-select-item="1"]').style.maxHeight = document.querySelector('.header__menu_list[data-select-item="1"]').scrollHeight + "px";
-  }
-})
-window.addEventListener('click', e => {
-  const target = e.target
-  if (!target.closest('.header__burger') && !target.closest('.header__menu')) {
+if (burger) {
+  burger.addEventListener('click', function() {
     if (burger.classList.contains("active")) {
       document.documentElement.classList.remove("open");
       burger.classList.remove("active");
       headermenu.classList.remove("active");
       headermenutab.forEach((n) => n.classList.remove("active")); 
       headermenulist.forEach((n) => n.classList.remove("active"));
+      headermls.classList.remove("active");
       // headermenulist.forEach((n) => n.style.maxHeight = null);
+    } else {
+      document.documentElement.classList.add("open");
+      burger.classList.add("active");
+      headermenu.classList.add("active");
+      document.querySelector('.header__menu_tab_button[data-select-item="1"]').classList.add("active");
+      document.querySelector('.header__menu_list[data-select-item="1"]').classList.add("active");
+      headermls.style.height = headermenulist[0].scrollHeight + 'px';
+      headermls.classList.add("active");
+      // document.querySelector('.header__menu_list[data-select-item="1"]').style.maxHeight = document.querySelector('.header__menu_list[data-select-item="1"]').scrollHeight + "px";
     }
-  }
-})
+  })
+  window.addEventListener('click', e => {
+    const target = e.target
+    if (!target.closest('.header__burger') && !target.closest('.header__menu')) {
+      if (burger.classList.contains("active")) {
+        document.documentElement.classList.remove("open");
+        burger.classList.remove("active");
+        headermenu.classList.remove("active");
+        headermenutab.forEach((n) => n.classList.remove("active")); 
+        headermenulist.forEach((n) => n.classList.remove("active"));
+        // headermenulist.forEach((n) => n.style.maxHeight = null);
+      }
+    }
+  })
+}
 // end header burger
 
 // start subscription checkbox

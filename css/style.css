@@ -164,10 +164,6 @@ header.active {
   color: var(--black);
 }
 
-.header__gray .header__burger {
-  color: var(--black);
-}
-
 .header__burger_button {
   width: 20px;
   height: 15.1px;
@@ -197,10 +193,6 @@ header.active {
 
 .header__white.header-bg .header__burger_button span,
 .header__white.active .header__burger_button span {
-  background: var(--black);
-}
-
-.header__gray .header__burger_button span {
   background: var(--black);
 }
 
@@ -1452,7 +1444,7 @@ header.active .header__menu_tabs {
 .personal__form_list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .personal__form_item {
@@ -1733,7 +1725,7 @@ header.active .header__menu_tabs {
 }
 
 .addresses-list {
-  border-radius: 20px;
+  border-radius: 4px;
   border: 1px solid #000;
   background: #FFF;
   overflow: hidden;
@@ -1947,6 +1939,10 @@ header.active .header__menu_tabs {
   font-weight: 400;
   line-height: 14px;
   color: #b0b0b0;
+}
+
+.personal__wrapper {
+  height: 40px;
 }
 
 .personal__radio .label-wrapper {
@@ -2633,7 +2629,7 @@ header.active .header__menu_tabs {
 }
 
 .personal__time .label-wrapper {
-  width: 130px;
+  width: auto;
   border-radius: 23px;
 }
 
@@ -2882,6 +2878,22 @@ header.active .header__menu_tabs {
 }
 
 /* end section order */
+
+/* start section logo */
+
+.section__logo_block {
+  display: flex;
+  padding: 38px 0 36px;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__logo_icon svg {
+  width: 59px;
+  height: 86px;
+}
+
+/* end section logo */
 
 /* start media 1919px */
 @media (max-width: 1919px) {
@@ -3411,6 +3423,13 @@ header.active .header__menu_tabs {
   .personal__form_controls {
     gap: 16px;
   }
+  .section__logo_block {
+    padding: 32px 0 28px;
+  }
+  .section__logo_icon svg {
+    width: 49px;
+    height: 70px;
+  }
 }
 /* end media 1919px */
 
@@ -3483,11 +3502,8 @@ header.active .header__menu_tabs {
   header.active {
     padding: 8px 0;
   }
-  .header__gray {
+  .section__logo {
     background-color: var(--back);
-  }
-  .header__gray.header-bg {
-    background-color: var(--white);
   }
   .header__burger {
     color: var(--black);
@@ -4312,6 +4328,13 @@ header.active .header__menu_tabs {
   }
   .personal__form_controls {
     gap: 20px;
+  }
+  .section__logo_block {
+    padding: 4px 0;
+  }
+  .section__logo_icon svg {
+    width: 36px;
+    height: 53px;
   }
 }
 /* end media 767px */
