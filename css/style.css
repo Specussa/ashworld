@@ -88,6 +88,19 @@ input[type='time'] {
   -webkit-min-logical-width: calc(100% - 16px);
   -webkit-appearance: none;
   appearance: none;
+  background-color: var(--white);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:hover {
+  -webkit-text-fill-color: var(--black);
+  -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
+  color: var(--black);
+  box-shadow: 0 0 0 1000px var(--white) inset;
 }
 
 /* start header */
@@ -389,7 +402,7 @@ header.active .header__menu_tabs {
 .header__menu_head {
   font-family: var(--arimo);
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 34px;
   position: relative;
   z-index: 1;
@@ -566,7 +579,7 @@ header.active .header__menu_tabs {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .personal__profile_nick {
@@ -650,6 +663,12 @@ header.active .header__menu_tabs {
   cursor: pointer;
 }
 
+.personal__button_heart,
+.personal__button_cart,
+.personal__button_discount {
+  height: 50px;
+}
+
 .personal__button_image {
   display: flex;
   width: 20px;
@@ -689,6 +708,13 @@ header.active .header__menu_tabs {
   line-height: 21px;
   color: var(--black);
   text-align: left;
+}
+
+.personal__button_heart .personal__button_name,
+.personal__button_cart .personal__button_name,
+.personal__button_discount .personal__button_name {
+  font-size: 17px;
+  line-height: 22px;
 }
 
 .personal__button_count {
@@ -860,7 +886,7 @@ header.active .header__menu_tabs {
 
 .personal__subscription_block {
   display: flex;
-  gap: 16px;
+  gap: 20px;
 }
 
 .personal__subscription_info {
@@ -875,7 +901,7 @@ header.active .header__menu_tabs {
 .personal__subscription_info_block {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .personal__subscription_image {
@@ -1399,6 +1425,7 @@ header.active .header__menu_tabs {
 }
 
 .personal__form_control label {
+  padding: 0 5px;
   font-family: var(--arimo);
   font-size: 17px;
   font-weight: 400;
@@ -1478,9 +1505,13 @@ header.active .header__menu_tabs {
   background-color: var(--back);
   border: 1px solid var(--back);
   border-radius: 4px;
-  -webkit-transition: border 0.2s linear;
-  transition: border 0.2s linear;
+  -webkit-transition: border 0.2s linear, background-color 0.2s linear;
+  transition: border 0.2s linear, background-color 0.2s linear;
   cursor: pointer;
+}
+
+.personal__form_check:hover {
+  background-color: #f0f0f0;
 }
 
 .personal__form_check.active {
@@ -1513,6 +1544,7 @@ header.active .header__menu_tabs {
   background-color: var(--black);
   border-radius: 4px;
   border: none;
+  text-transform: uppercase;
 }
 
 .personal__necessarily {
@@ -3063,6 +3095,12 @@ header.active .header__menu_tabs {
     gap: 10px;
   }
   .personal__button_name {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .personal__button_heart .personal__button_name,
+  .personal__button_cart .personal__button_name,
+  .personal__button_discount .personal__button_name {
     font-size: 15px;
     line-height: 21px;
   }
@@ -3146,6 +3184,7 @@ header.active .header__menu_tabs {
     line-height: 14px;
   }
   .personal__order_product_item {
+    width: 68px;
     height: 84px;
   }
   .personal__order_product_size {
@@ -3484,6 +3523,20 @@ header.active .header__menu_tabs {
   .section__logo_icon svg {
     width: 49px;
     height: 70px;
+  }
+  .personal__order_product_list {
+    gap: 6px;
+  }
+  .personal__subscription_block {
+    gap: 16px;
+  }
+  .personal__button {
+    height: 34px;
+  }
+  .personal__button_heart,
+  .personal__button_cart,
+  .personal__button_discount {
+    height: 40px;
   }
 }
 /* end media 1919px */
@@ -3916,6 +3969,11 @@ header.active .header__menu_tabs {
     line-height: 31px;
     letter-spacing: -0.055em;
   }
+  .personal__newhead {
+    font-size: 22px;
+    line-height: 20px;
+    letter-spacing: -0.04em;
+  }
   .personal__buttons_flex:first-child {
     flex-direction: row;
     gap: 6px;
@@ -3943,6 +4001,11 @@ header.active .header__menu_tabs {
     border-bottom: 0;
   }
   .personal__button {
+    height: 40px;
+  }
+  .personal__button_heart,
+  .personal__button_cart,
+  .personal__button_discount {
     height: auto;
     padding: 10px 0;
   }
@@ -3957,6 +4020,12 @@ header.active .header__menu_tabs {
   .personal__button_name {
     font-size: 15px;
     line-height: 21px;
+  }
+  .personal__button_heart .personal__button_name,
+  .personal__button_cart .personal__button_name,
+  .personal__button_discount .personal__button_name {
+    font-size: 15px;
+    line-height: 18px;
   }
   .personal__profile_nick {
     font-size: 27px;
@@ -3990,6 +4059,7 @@ header.active .header__menu_tabs {
   }
   .personal__top {
     display: flex;
+    width: 100%;
     padding: 0 0 24px;
     align-items: center;
     justify-content: space-between;
@@ -4050,10 +4120,8 @@ header.active .header__menu_tabs {
     top: 40px;
   }
   .personal__order_product_item {
+    width: 56px;
     height: 70px;
-  }
-  .personal__order_product_item {
-    width: calc(16% - 3.2px);
   }
   .personal__order_product_size {
     width: 24px;
@@ -4107,7 +4175,7 @@ header.active .header__menu_tabs {
     padding-bottom: 20px;
   }
   .personal__addresses_basic {
-    padding-top: 10px;
+    padding-top: 4px;
   }
   .personal__addresses_fixed {
     display: flex;
@@ -4411,7 +4479,7 @@ header.active .header__menu_tabs {
     padding: 20px 0;
   }
   .personal__subscription_info_block {
-    gap: 6px;
+    gap: 3px;
   }
   .personal__form_controls {
     gap: 20px;
