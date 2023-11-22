@@ -4477,7 +4477,7 @@ header.active .header__menu_tabs {
   }
   .order__info {
     width: 100%;
-    padding: 0 0 40px;
+    padding: 0;
     margin: 0;
     border: none;
   }
@@ -4546,9 +4546,6 @@ header.active .header__menu_tabs {
   .personal__approval {
     flex-direction: column;
   }
-  .section__order {
-    padding: 20px 0;
-  }
   .personal__subscription_info_block {
     gap: 3px;
   }
@@ -4571,6 +4568,71 @@ header.active .header__menu_tabs {
   .links-header a svg {
     width: 14px;
     height: 14px;
+  }
+  .section__order h1 {
+    width: min-content;
+    margin: 0 auto;
+    padding: 24px 0 28px;
+    font-size: 32px;
+    line-height: 31px;
+  }
+  .personal__logined_addresses_heads {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .personal__logined_head {
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .personal__logined_bottoms {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--arimo);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #adadad;
+  }
+  .personal__map_newblock {
+    margin: -28px 0 0;
+    padding: 20px !important;
+    background-color: #f6f6f6 !important;
+    border-radius: 4px;
+  }
+  .personal__logined_addresses_button {
+    margin: 0 0 24px;
+  }
+  .personal__logined_profile {
+    gap: 0;
+  }
+  .order__info_title {
+    margin: 24px 0 20px;
+  }
+  .order__info_title .personal__form_head {
+    margin: 0;
+  }
+  .personal__form_buttons {
+    margin: -8px 0 0;
+  }
+  .add-order {
+    font-size: 15px;
+    line-height: 17px;
+    color: #fff;
+    background-color: #000;
+  }
+  .personal__logined_block {
+    padding: 20px 0;
+    border-top: 1px solid #f0f0f0;
+  }
+  .personal__logined_block:last-child {
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .personal__datetime {
+    padding: 0;
+  }
+  .personal__datetime .personal__form_head {
+    margin: 0 0 4px;
   }
 }
 /* end media 767px */

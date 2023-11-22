@@ -523,7 +523,8 @@
         <a href="" class="order__return">
           <img src="img/icon/arrow-left.svg" alt="">
         </a>
-        <div class="order__count">16 <span>товаров</span></div>
+        <div class="order__count personal__mobile_hidden">16 <span>товаров</span></div>
+        <div class="order__count personal__desktop_hidden">(2)</div>
       </div>
       <h1>оформление заказа</h1>
       <div class="order__row">
@@ -945,11 +946,6 @@
         <div class="order__center">
           <form id="order__form" class="order__form">
             <ul class="personal__form_list">
-              <li class="personal__form_item personal__desktop_hidden">
-                <div class="order__block">
-                  <h3 class="personal__form_head_three">Доставка</h3>
-                </div>
-              </li>
               <li class="personal__form_item personal__mobile_hidden">
                 <div class="order__block">
                   <h3 class="order__head">Доставка</h3>
@@ -978,6 +974,12 @@
                         </div>
                       </div>
                       <p class="personal__logined_addresses_desc">№ 233434 по адресу г.Москва,  ул. Безымянная 47/1, кв. 6, п3, этаж 5, индекс 323434</p>
+                      <p class="personal__logined_bottoms personal__desktop_hidden">
+                        подробнее
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 5L8 12L15 5" stroke="#ADADAD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </p>
                     </div>
                   </div>
                   <p class="personal__logined_comments personal__mobile_hidden">
@@ -1018,6 +1020,9 @@
                   <a class="personal__logined_addresses_button">Изменить <span class="personal__desktop_hidden">&nbsp;адрес</span></a>
                   <div class="personal__logined_profile personal__desktop_hidden">
                     <div class="personal__map_block">
+                      <p class="personal__map_desc"><img src="img/icon/warning.svg" alt="">Доставим в течение 7–14 дней</p>
+                    </div>
+                    <div class="personal__map_block personal__map_newblock">
                       <p class="personal__map_desc"><img src="img/icon/warning.svg" alt="">Отгрузка происходит в течение 1–2 рабочих дней. Вам придёт СМС-уведомление.</p>
                     </div>
                     <div class="personal__logined_block order__profile_two">
