@@ -3646,6 +3646,7 @@ header.active .header__menu_tabs {
   }
   .personal__date .payment-method-block {
     width: 112px;
+    flex: 0 0 auto;
   }
   .personal__date .personal__radio label i {
     margin: 0 0 25px;
@@ -4637,6 +4638,17 @@ header.active .header__menu_tabs {
   }
   .personal__datetime .personal__form_head {
     margin: 0 0 4px;
+  }
+  .personal__date .label-wrapper span:nth-child(2) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .personal__date .label-wrapper span:nth-child(3) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .personal__date .label-wrapper {
+    gap: 2px;
   }
 }
 /* end media 767px */
