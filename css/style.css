@@ -3475,6 +3475,7 @@ header.active .header__menu_tabs {
   }
   .add-order {
     height: 50px;
+    padding: 0 20px;
     margin-bottom: 20px;
     font-size: 15px;
     line-height: 17px;
