@@ -3273,6 +3273,10 @@ p.price-economy {
     font-size: 17px;
 }
 
+.add-neworder {
+    margin-bottom: 20px;
+}
+
 .order-info {
     border-radius: 10px;
     border: 1px dashed #D4D4D4;

@@ -802,6 +802,10 @@ header.active .header__menu_tabs {
   position: relative;
 }
 
+.personal__check_newlabel {
+  padding: 0 0 16px;
+}
+
 .personal__check_label,
 .personal__subscription_head {
   font-family: var(--arimo);
@@ -1577,6 +1581,12 @@ header.active .header__menu_tabs {
   text-transform: uppercase;
 }
 
+.personal__form_buttons {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
 .personal__necessarily {
   max-width: 388px;
   margin: 0 0 0 auto;
@@ -1847,7 +1857,7 @@ header.active .header__menu_tabs {
   display: flex;
   height: 70px;
   padding: 0 28px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: space-between;
   font-family: var(--arimo);
@@ -2102,7 +2112,6 @@ header.active .header__menu_tabs {
 }
 
 .personal__bottom p {
-  padding: 16px 0 0;
   font-family: var(--arimo);
   font-size: 14px;
   font-weight: 400;
@@ -2781,7 +2790,6 @@ header.active .header__menu_tabs {
 
 .personal__form_order {
   width: 100%;
-  margin-bottom: 64px;
 }
 
 .personal__logined_comments {
@@ -2805,7 +2813,7 @@ header.active .header__menu_tabs {
 .personal__logined_profile {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 28px;
 }
 
 .personal__form_controls {
@@ -2821,7 +2829,7 @@ header.active .header__menu_tabs {
 
 .personal__logined_block {
   display: flex;
-  width: calc(50% - 10px);
+  width: calc(50% - 14px);
   flex-direction: column;
   gap: 8px;
 }
@@ -3459,9 +3467,11 @@ header.active .header__menu_tabs {
     line-height: 18px;
   }
   .personal__bottom p {
-    padding: 12px 0 0;
     font-size: 12px;
     line-height: 18px;
+  }
+  .personal__check_newlabel {
+    padding: 0 0 12px;
   }
   .add-order {
     height: 50px;
@@ -4466,6 +4476,7 @@ header.active .header__menu_tabs {
     padding: 28px 0 16px;
   }
   .order__info {
+    width: 100%;
     padding: 0 0 40px;
     margin: 0;
     border: none;
