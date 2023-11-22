@@ -24,30 +24,30 @@ $(window).scroll(function () {
   }
 });
 
-$(document).ready(() => {
-  const onScrollHeader = () => {;
-    const header = $('header');
-    let prevScroll = $(window).scrollTop();
-    let currentScroll;
+// $(document).ready(() => {
+//   const onScrollHeader = () => {;
+//     const header = $('header');
+//     let prevScroll = $(window).scrollTop();
+//     let currentScroll;
 
-    $(window).scroll(() => {
-      currentScroll = $(window).scrollTop();
-      const headerHidden = () => header.hasClass('header_hidden');
-      if (currentScroll > prevScroll && !headerHidden() && currentScroll > 10 ) {
-        header.addClass('header_hidden')
-        // header.removeClass("active");
-        // burger.classList.remove("active");
-      }
-      if (currentScroll < prevScroll && headerHidden()) {
-        header.removeClass('header_hidden')
-        // header.removeClass("active");
-        // burger.classList.remove("active");
-      }
-      prevScroll = currentScroll
-    })
-  }
-  onScrollHeader()
-})
+//     $(window).scroll(() => {
+//       currentScroll = $(window).scrollTop();
+//       const headerHidden = () => header.hasClass('header_hidden');
+//       if (currentScroll > prevScroll && !headerHidden() && currentScroll > 10 ) {
+//         header.addClass('header_hidden')
+//         // header.removeClass("active");
+//         // burger.classList.remove("active");
+//       }
+//       if (currentScroll < prevScroll && headerHidden()) {
+//         header.removeClass('header_hidden')
+//         // header.removeClass("active");
+//         // burger.classList.remove("active");
+//       }
+//       prevScroll = currentScroll
+//     })
+//   }
+//   onScrollHeader()
+// })
 // end header
 
 // start header tabs
@@ -81,7 +81,7 @@ const headermls = document.querySelector('.header__menu_lists');
 if (burger) {
   burger.addEventListener('click', function() {
     if (burger.classList.contains("active")) {
-      document.documentElement.classList.remove("open");
+      document.documentElement.classList.remove("noscroll");
       burger.classList.remove("active");
       headermenu.classList.remove("active");
       headermenutab.forEach((n) => n.classList.remove("active")); 
@@ -89,7 +89,7 @@ if (burger) {
       headermls.classList.remove("active");
       // headermenulist.forEach((n) => n.style.maxHeight = null);
     } else {
-      document.documentElement.classList.add("open");
+      document.documentElement.classList.add("noscroll");
       burger.classList.add("active");
       headermenu.classList.add("active");
       document.querySelector('.header__menu_tab_button[data-select-item="1"]').classList.add("active");
