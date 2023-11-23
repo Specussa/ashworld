@@ -1794,6 +1794,7 @@ header.active .header__menu_tabs {
 
 .order__center {
   width: calc(50% - 88px);
+  padding: 0 0 60px;
 }
 
 .order__right {
@@ -2428,7 +2429,8 @@ header.active .header__menu_tabs {
 
 .order__map_button,
 .order__profile_button,
-.order__profile_all_button {
+.order__profile_all_button,
+.order__profile_back {
   display: flex;
   width: 40px;
   height: 40px;
@@ -2440,7 +2442,8 @@ header.active .header__menu_tabs {
 
 .order__map_button img,
 .order__profile_button img,
-.order__profile_all_button img {
+.order__profile_all_button img,
+.order__profile_back img {
   width: 12px;
   height: 12px;
   object-fit: contain;
@@ -3519,13 +3522,15 @@ header.active .header__menu_tabs {
   }
   .order__map_button,
   .order__profile_button,
-  .order__profile_all_button {
+  .order__profile_all_button,
+  .order__profile_back {
     width: 34px;
     height: 34px;
   }
   .order__map_button img,
   .order__profile_button img,
-  .order__profile_all_button img {
+  .order__profile_all_button img,
+  .order__profile_back img {
     width: 10px;
     height: 10px;
   }
@@ -4382,6 +4387,7 @@ header.active .header__menu_tabs {
     max-width: 230px;
     font-size: 20px;
     line-height: 18px;
+    text-align: center;
   }
   .order__map_fixed,
   .order__profile_fixed,
@@ -4413,6 +4419,7 @@ header.active .header__menu_tabs {
   }
   .order__map_info {
     height: 160px;
+    padding: 54px 30px 16px;
   }
   .order__map {
     height: calc(var(--height) - 160px);
@@ -4496,6 +4503,7 @@ header.active .header__menu_tabs {
   }
   .order__personal_info {
     padding: 48px 14px;
+    gap: 40px;
   }
   .personal__logined_addresses {
     padding: 0;
@@ -4649,6 +4657,9 @@ header.active .header__menu_tabs {
   }
   .personal__date .label-wrapper {
     gap: 2px;
+  }
+  .order__map_info {
+    padding: 56px 14px 12px;
   }
 }
 /* end media 767px */
