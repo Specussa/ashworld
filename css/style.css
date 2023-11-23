@@ -132,6 +132,10 @@ header {
   height: 22px;
 }
 
+header .links-header a:nth-child(2) svg path {
+  fill:none
+}
+
 .header-с svg {
   width: 100%;
   height: 100%;
@@ -2172,6 +2176,10 @@ header.active .header__menu_tabs {
   color: var(--black);
 }
 
+.personal__map_desc b {
+  font-weight: 500;
+}
+
 .personal__map_desc.hidden {
   display: none;
 }
@@ -3971,20 +3979,20 @@ header.active .header__menu_tabs {
   .header-r {
     justify-content: flex-end;
   }
+  header.active .links-header a:nth-child(2),
   header.active .links-header a:nth-child(3),
-  header.active .links-header a:nth-child(4),
   header .links-header a:nth-child(1),
-  header .links-header a:nth-child(2) {
+  header .links-header a:nth-child(4) {
     display: none;
   }
   header.active .links-header a:nth-child(1),
-  header.active .links-header a:nth-child(2),
-  header .links-header a:nth-child(3),
-  header .links-header a:nth-child(4) {
+  header.active .links-header a:nth-child(4),
+  header .links-header a:nth-child(2),
+  header .links-header a:nth-child(3) {
     display: flex;
   }
   header.active .links-header a:nth-child(1),
-  header.active .links-header a:nth-child(2) {
+  header.active .links-header a:nth-child(4) {
     background-color: var(--back);
   }
   .links-header a {
@@ -4721,6 +4729,9 @@ header.active .header__menu_tabs {
     width: 115px;
     height: 40px;
     padding: 0;
+  }
+  .links-header a + a {
+    margin-left: 0;
   }
 }
 /* end media 767px */
