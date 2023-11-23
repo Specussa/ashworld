@@ -1512,6 +1512,10 @@ header.active .header__menu_tabs {
   gap: 12px;
 }
 
+.personal__form_newlist {
+  gap: 20px;
+}
+
 .personal__form_item {
   display: flex;
   align-items: flex-start;
@@ -1892,6 +1896,20 @@ header.active .header__menu_tabs {
   color: var(--black);
 }
 
+.order__addresses_newhead {
+  display: flex;
+  margin: 12px 0 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.order__addresses_newhead span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
 .order__info {
   padding: 28px;
   margin: 12px 0 0;
@@ -1995,6 +2013,10 @@ header.active .header__menu_tabs {
 
 .personal__approval_label input:checked ~ i {
   background: url("../images/checkbox-active.svg");
+}
+
+.personal__newapproval {
+  margin: 0 0 12px;
 }
 
 .personal__comment {
@@ -2164,7 +2186,7 @@ header.active .header__menu_tabs {
 .personal__map_button {
   display: flex;
   height: 40px;
-  padding: 0 20px;
+  padding: 11px 20px 10px;
   align-items: center;
   justify-content: center;
   font-family: var(--arimo);
@@ -3346,7 +3368,8 @@ header.active .header__menu_tabs {
   .personal__form_item {
     gap: 12px;
   }
-  .personal__form_list {
+  .personal__form_list,
+  .personal__form_newlist {
     gap: 16px;
   }
   .personal__form_check {
@@ -3432,12 +3455,12 @@ header.active .header__menu_tabs {
     line-height: 21px;
   }
   .personal__map_block {
-    padding: 24px;
+    padding: 20px 24px;
     gap: 16px;
   }
   .personal__map_button {
     height: 34px;
-    padding: 0 18px;
+    padding: 9px 18px 8px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -3594,6 +3617,13 @@ header.active .header__menu_tabs {
   }
   .order__map_icons {
     top: 13px;
+  }
+  .order__info {
+    padding: 24px;
+  }
+  .order__addresses_newhead span {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 /* end media 1919px */
@@ -4481,7 +4511,8 @@ header.active .header__menu_tabs {
   .personal__form_head svg {
     display: flex;
   }
-  .personal__form_list {
+  .personal__form_list,
+  .personal__form_newlist {
     gap: 20px;
   }
   .personal__form_button {
@@ -4660,6 +4691,13 @@ header.active .header__menu_tabs {
   }
   .order__map_info {
     padding: 56px 14px 12px;
+  }
+  .personal__map_button {
+    width: 100%;
+    height: 40px;
+    padding: 12px 0;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 /* end media 767px */
