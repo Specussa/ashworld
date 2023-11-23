@@ -1891,7 +1891,7 @@ header.active .header__menu_tabs {
 .order__addresses_head {
   font-family: var(--arimo);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 21px;
   color: var(--black);
 }
@@ -2394,6 +2394,10 @@ header.active .header__menu_tabs {
   justify-content: space-between;
 }
 
+.addresses-maplist {
+  border-radius: 15px;
+}
+
 .order__map_info_desc {
   max-width: 398px;
   font-family: var(--halvar);
@@ -2748,6 +2752,8 @@ header.active .header__menu_tabs {
 
 .personal__time .label-wrapper {
   width: 130px;
+  height: 44px;
+  padding: 0;
   border-radius: 23px;
 }
 
@@ -3625,6 +3631,11 @@ header.active .header__menu_tabs {
     font-size: 14px;
     line-height: 18px;
   }
+  .personal__time .label-wrapper {
+    width: 113px;
+    height: 40px;
+    padding: 0;
+  }
 }
 /* end media 1919px */
 
@@ -4486,6 +4497,10 @@ header.active .header__menu_tabs {
     padding: 0;
     background-color: transparent;
   }
+  .personal__form_item:nth-child(2) .personal__map_newnewblock {
+    padding: 20px;
+    background-color: #f6f6f6;
+  }
   .personal__form_head,
   .personal__form_heading,
   .personal__form_head_two,
@@ -4639,7 +4654,7 @@ header.active .header__menu_tabs {
     color: #adadad;
   }
   .personal__map_newblock {
-    margin: -28px 0 0;
+    margin: 16px 0 20px;
     padding: 20px !important;
     background-color: #f6f6f6 !important;
     border-radius: 4px;
@@ -4698,6 +4713,14 @@ header.active .header__menu_tabs {
     padding: 12px 0;
     font-size: 14px;
     line-height: 16px;
+  }
+  .addresses-list a span {
+    color: #000;
+  }
+  .personal__time .label-wrapper {
+    width: 115px;
+    height: 40px;
+    padding: 0;
   }
 }
 /* end media 767px */
