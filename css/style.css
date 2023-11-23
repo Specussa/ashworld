@@ -1596,7 +1596,7 @@ header.active .header__menu_tabs {
 }
 
 .personal__necessarily {
-  max-width: 388px;
+  max-width: 360px;
   margin: 0 0 0 auto;
   font-family: var(--arimo);
   font-size: 14px;
@@ -2851,6 +2851,7 @@ header.active .header__menu_tabs {
 
 .personal__logined_profile {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: 28px;
 }
@@ -4692,6 +4693,10 @@ header.active .header__menu_tabs {
     padding: 20px 0;
     border-top: 1px solid #f0f0f0;
   }
+  .personal__logined_newtop {
+    padding: 0;
+    margin: 0 0 -4px;
+  }
   .personal__logined_block:last-child {
     border-bottom: 1px solid #f0f0f0;
   }
@@ -4732,6 +4737,9 @@ header.active .header__menu_tabs {
   }
   .links-header a + a {
     margin-left: 0;
+  }
+  .personal__form_newhead {
+    margin: 0;
   }
 }
 /* end media 767px */
