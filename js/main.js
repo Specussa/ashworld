@@ -571,6 +571,7 @@ if (orderpfs) {
 const omblock = document.querySelector('.order__map_block');
 const ompbutton = document.querySelector('.order__map_point_button');
 const pminfo = document.querySelector('.personal__map_info');
+const pminfob = document.querySelector('.personal__map_info_button');
 if (ompbutton) {
   ompbutton.addEventListener('click', function() {
     pminfo.innerHTML = omblock.children[0].innerHTML;
@@ -581,6 +582,22 @@ if (ompbutton) {
     omapfixed.classList.remove("active");
     omapoverlay.classList.remove("active");
     pmapbutton.innerText = 'изменить пункт выдачи';
+    pminfob.classList.remove("personal__mobile_hidden");
+  });
+}
+if (pminfob) {
+  pminfob.addEventListener('click', function() {
+    if (pminfob.classList.contains("active")) {
+      pminfob.previousElementSibling.children[1].classList.remove('personal__mobile_hidden');
+      pminfob.previousElementSibling.children[1].classList.remove('personal__desktop_hidden');
+      pminfob.classList.remove("active");
+      pminfob.children[0].textContent = "свернуть";
+    } else {
+      pminfob.previousElementSibling.children[1].classList.add('personal__mobile_hidden');
+      pminfob.previousElementSibling.children[1].classList.add('personal__desktop_hidden');
+      pminfob.classList.add("active");
+      pminfob.children[0].textContent = "подробнее";
+    }
   });
 }
 // end map html

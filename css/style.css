@@ -1307,7 +1307,11 @@ header.active .header__menu_tabs {
 }
 
 .personal__addresses {
+  display: flex;
+  height: 100%;
+  min-height: calc(var(--height) - 170px);
   padding: 0 0 20px;
+  flex-direction: column;
 }
 
 .personal__addresses.hidden {
@@ -1849,6 +1853,7 @@ header.active .header__menu_tabs {
 }
 
 .order__head {
+  display: block;
   margin: 0 0 24px;
   font-family: var(--halvar);
   font-size: 27px;
@@ -1858,12 +1863,17 @@ header.active .header__menu_tabs {
   text-transform: uppercase;
 }
 
+.order__head.personal__mobile_hidden {
+  display: block;
+}
+
 .order__form_control {
   width: 100%;
 }
 
 .order__cost {
   display: flex;
+  width: 100%;
   height: 70px;
   padding: 0 28px;
   margin-bottom: 20px;
@@ -2641,14 +2651,17 @@ header.active .header__menu_tabs {
   display: block;
 }
 
-.personal__map_info .map__point_top {
+.personal__map_info .map__point_top,
+.personal__map_info .map__point_bottom {
   flex-direction: row;
   gap: 130px;
 }
 
-.personal__map_info .map__point_bottom {
-  flex-direction: row;
-  gap: 130px;
+.personal__map_info .map__point_top .map__point_head,
+.personal__map_info .map__point_top .map__point_desc,
+.personal__map_info .map__point_bottom .map__point_heading,
+.personal__map_info .map__point_bottom .map__point_times {
+  width: calc(50% - 65px);
 }
 
 .personal__map_info .map__point_head,
@@ -3021,6 +3034,7 @@ header.active .header__menu_tabs {
   background-color: var(--black);
   color: var(--white);
   border-radius: 6px;
+  text-transform: uppercase;
 }
 
 .personal__form_buyer {
@@ -3056,6 +3070,10 @@ header.active .header__menu_tabs {
 
 .personal__mobile_hidden {
   display: inline-flex;
+}
+
+.personal__desktop_hidden.personal__mobile_hidden {
+  display: none;
 }
 
 /* start media 1919px */
@@ -3644,6 +3662,17 @@ header.active .header__menu_tabs {
     width: 113px;
     height: 40px;
     padding: 0;
+  }
+  .personal__map_info .map__point_top,
+  .personal__map_info .map__point_bottom {
+    flex-direction: row;
+    gap: 86px;
+  }
+  .personal__map_info .map__point_top .map__point_head,
+  .personal__map_info .map__point_top .map__point_desc,
+  .personal__map_info .map__point_bottom .map__point_heading,
+  .personal__map_info .map__point_bottom .map__point_times {
+    width: calc(50% - 43px);
   }
 }
 /* end media 1919px */
@@ -4482,6 +4511,12 @@ header.active .header__menu_tabs {
     flex-direction: column;
     gap: 12px;
   }
+  .personal__map_info .map__point_top .map__point_head,
+  .personal__map_info .map__point_top .map__point_desc,
+  .personal__map_info .map__point_bottom .map__point_heading,
+  .personal__map_info .map__point_bottom .map__point_times {
+    width: 100%;
+  }
   .map__point_top {
     padding: 0 0 12px;
   }
@@ -4627,12 +4662,6 @@ header.active .header__menu_tabs {
     width: 36px;
     height: 53px;
   }
-  .personal__desktop_hidden {
-    display: inline-flex;
-  }
-  .personal__mobile_hidden {
-    display: none;
-  }
   .links-header a svg {
     width: 14px;
     height: 14px;
@@ -4740,6 +4769,31 @@ header.active .header__menu_tabs {
   }
   .personal__form_newhead {
     margin: 0;
+  }
+  .personal__map_info_button svg {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+  .personal__map_info_button.active svg {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .order__profile_form_button {
+    margin: auto 0 20px;
+  }
+  .order__head.personal__mobile_hidden {
+    display: none;
+  }
+
+  
+  .personal__desktop_hidden {
+    display: inline-flex;
+  }
+  .personal__mobile_hidden {
+    display: none;
+  }
+  .personal__desktop_hidden.personal__mobile_hidden {
+    display: none;
   }
 }
 /* end media 767px */
