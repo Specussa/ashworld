@@ -2659,6 +2659,11 @@ header.active .header__menu_tabs {
   gap: 8px;
 }
 
+.personal__map_info.personal__mobile_hidden {
+  display: none;
+}
+
+.personal__map_info.personal__mobile_hidden.active
 .personal__map_info.active {
   display: block;
 }
