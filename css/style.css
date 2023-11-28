@@ -1485,7 +1485,15 @@ header.active .header__menu_tabs {
   top: -9px;
   font-size: 14px;
   line-height: 16px;
- }
+}
+
+.personal__form_control input:hover {
+  border: 1px solid #d6d6d6;
+}
+
+.personal__radio label input ~ .label-wrapper:hover, .personal__radio label input ~ .label-wrapper i:hover {
+  border: 1px solid #f0f0f0;
+}
 
  .personal__form_control input:focus + label {
   color: var(--black);
@@ -3451,13 +3459,13 @@ header.active .header__menu_tabs {
     gap: 42px;
   }
   .order__left {
-    width: calc(25% - 14px);
+    width: calc(25% - 28px);
   }
   .order__center {
-    width: calc(50% - 14px);
+    width: calc(50% - 28px);
   }
   .order__right {
-    width: calc(25% - 14px);
+    width: calc(25% - 28px);
   }
   .order__head {
     margin: 0 0 20px;
