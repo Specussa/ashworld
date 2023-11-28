@@ -2061,6 +2061,10 @@ header.active .header__menu_tabs {
   border-radius: 4px;
 }
 
+.personal__comment textarea:hover {
+  border: 1px solid #d6d6d6;
+}
+
 .personal__comment textarea::placeholder {
   color: #bbb;
 }
@@ -3742,6 +3746,21 @@ header.active .header__menu_tabs {
   }
   .personal__date .personal__radio label i {
     margin: 0 0 25px;
+  }
+  .order__map_icons {
+    width: 14px;
+    height: 14px;
+  }
+  .order__map_icons img {
+    width: 14px;
+    height: 14px;
+  }
+  .order__map_icons a:last-child {
+    top: 14px;
+  }
+  .order__map_icons.focus a:first-child,
+  .order__map_control input:focus ~ .order__map_icons a:first-child {
+    top: -14px;
   }
 }
 /* end media 1439px */
