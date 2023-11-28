@@ -3686,6 +3686,27 @@ header.active .header__menu_tabs {
   .personal__map_info .map__point_bottom .map__point_times {
     width: calc(50% - 43px);
   }
+  .order__map_icons {
+    width: 14px;
+    height: 14px;
+  }
+  .order__map_icons img {
+    width: 14px;
+    height: 14px;
+  }
+  .order__map_icons a:last-child {
+    top: 14px;
+  }
+  .order__map_icons.focus a:first-child,
+  .order__map_control input:focus ~ .order__map_icons a:first-child {
+    top: -14px;
+  }
+  .order__map_info {
+    padding: 54px 30px 16px;
+  }
+  .order__map_fixed {
+    width: 492px;
+  }
 }
 /* end media 1919px */
 
@@ -3746,24 +3767,6 @@ header.active .header__menu_tabs {
   }
   .personal__date .personal__radio label i {
     margin: 0 0 25px;
-  }
-  .order__map_icons {
-    width: 14px;
-    height: 14px;
-  }
-  .order__map_icons img {
-    width: 14px;
-    height: 14px;
-  }
-  .order__map_icons a:last-child {
-    top: 14px;
-  }
-  .order__map_icons.focus a:first-child,
-  .order__map_control input:focus ~ .order__map_icons a:first-child {
-    top: -14px;
-  }
-  .order__map_info {
-    padding: 54px 30px 16px;
   }
 }
 /* end media 1439px */
