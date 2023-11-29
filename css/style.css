@@ -1495,17 +1495,21 @@ header.active .header__menu_tabs {
   border: 1px solid #f0f0f0;
 }
 
- .personal__form_control input:focus + label {
+.personal__form_control input:focus + label {
   color: var(--black);
- }
+}
 
- .personal__form_control input:focus {
+.personal__form_control input:focus {
   border: 1px solid var(--black);
- }
+}
 
- [data-phone-pattern] {
+[data-phone-pattern] {
   border: 1px solid var(--border) !important;
- }
+}
+
+[data-phone-pattern]::placeholder {
+  color: #bbbbbb;
+}
 
 .personal__form_control input {
   display: flex;
@@ -1621,6 +1625,15 @@ header.active .header__menu_tabs {
 .personal__necessarily a {
   text-decoration: underline;
   color: #bbb;
+}
+
+.personal__form_mail {
+  margin: -14px 0 0;
+  font-family: var(--arimo);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #b0b0b0;
 }
 
 .personal__select_box {
@@ -3034,6 +3047,14 @@ header.active .header__menu_tabs {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.order__profile_two_fixed .personal__form_control_flex {
+  flex-direction: column;
+}
+
+.order__profile_two_fixed .personal__form_control_flex .personal__form_control {
+  width: 100%;
 }
 
 .order__profile_form_button {
