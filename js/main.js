@@ -442,6 +442,9 @@ const opfixed = document.querySelector('.order__profile_fixed');
 const orderpof = document.querySelector('.order__profile_one_fixed');
 const orderptf = document.querySelector('.order__profile_two_fixed');
 const orderpttf = document.querySelector('.order__profile_three_fixed');
+const pfourbutton = document.querySelector('.personal__four_button');
+const orderpftf = document.querySelector('.order__profile_four_fixed');
+const pfourbbutton = document.querySelector('.order__four_back');
 if (pmapbutton) {
   pmapbutton.addEventListener('click', function() {
     if (pmapbutton.classList.contains("active")) {
@@ -462,6 +465,26 @@ if (pmapbutton) {
     }
   });
 }
+if (pfourbutton) {
+  pfourbutton.addEventListener('click', function() {
+    if (orderpftf.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      orderpftf.classList.remove("active");
+      omapoverlay.classList.remove("active");
+    } else {
+      document.documentElement.classList.add("noscroll");
+      orderpftf.classList.add("active");
+      omapoverlay.classList.add("active");
+    }
+  });
+  pfourbbutton.addEventListener('click', function() {
+    if (omapoverlay.classList.contains("active")) {
+      document.documentElement.classList.remove("noscroll");
+      orderpftf.classList.remove("active");
+      omapoverlay.classList.remove("active");
+    }
+  });
+}
 if (omapoverlay) {
   omapoverlay.addEventListener('click', function() {
     if (omapoverlay.classList.contains("active")) {
@@ -472,6 +495,7 @@ if (omapoverlay) {
       if(orderpof){orderpof.classList.remove("active")};
       if(orderptf){orderptf.classList.remove("active")};
       if(orderpttf){orderpttf.classList.remove("active")};
+      if(orderpftf){orderpftf.classList.remove("active")};
     }
   });
 }
