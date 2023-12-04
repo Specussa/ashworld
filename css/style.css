@@ -1818,6 +1818,7 @@ header.active .header__menu_tabs {
 }
 
 .order__center {
+  display: flex;
   width: calc(50% - 88px);
   padding: 0 0 60px;
 }
@@ -2722,7 +2723,7 @@ header.active .header__menu_tabs {
   display: none;
 }
 
-.personal__map_info.personal__mobile_hidden.active
+.personal__map_info.personal__mobile_hidden.active,
 .personal__map_info.active {
   display: block;
 }
@@ -3151,6 +3152,10 @@ header.active .header__menu_tabs {
 /* end section logo */
 
 /* start pixel perfect */
+
+.neworder__form {
+  margin: 0 auto;
+}
 
 .neworder__form .order__head {
   margin: 0 0 20px;
