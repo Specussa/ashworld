@@ -551,14 +551,6 @@ header.active .header__menu_tabs {
   top: 0;
 }
 
-.personal__tab {
-  display: none;
-}
-
-.personal__tab.active {
-  display: block;
-}
-
 .personal__profile_button {
   display: flex;
   width: 100%;
@@ -1956,7 +1948,8 @@ header.active .header__menu_tabs {
 
 .personal__form_head,
 .personal__form_head_two,
-.personal__form_head_three {
+.personal__form_head_three,
+.personal__form_head_four {
   margin: 44px 0 4px;
   font-family: var(--halvar);
   font-size: 27px;
@@ -1984,6 +1977,10 @@ header.active .header__menu_tabs {
 
 .personal__form_head_three {
   margin: 0;
+}
+
+.personal__form_head_four {
+  margin: 44px 0 0;
 }
 
 .personal__form_heading {
@@ -2100,14 +2097,18 @@ header.active .header__menu_tabs {
 }
 
 .personal__radio .label-wrapper {
-  border-radius: 4px;
-  background: #F6F6F6;
-  padding: 13px 20px 13px 16px;
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 13px 20px 13px 16px;
+  background: #F6F6F6;
+  border-radius: 4px;
   border: 1px solid #F6F6F6;
+}
+
+.personal__wrapper img {
+  width: 46px;
+  height: 24px;
 }
 
 .personal__radio {
@@ -2139,11 +2140,36 @@ header.active .header__menu_tabs {
   position: relative;
 }
 
-.personal__radio label span {
+.personal__wrapper span {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
   color: #000;
   font-size: 15px;
   font-weight: 400;
   line-height: 130%;
+}
+
+.personal__radio_button {
+  display: none;
+  margin: 2px 0 0;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 7px;
+}
+
+.personal__radio_text {
+  display: none;
+}
+
+.personal__radio_button svg {
+  width: 7px;
+  height: 14px;
+}
+
+.personal__radio label input:checked ~ .label-wrapper .personal__radio_button,
+.personal__radio label input:checked ~ .label-wrapper .personal__radio_text  {
+  display: flex;
 }
 
 .personal__radio label input:checked ~ .label-wrapper,
@@ -3124,6 +3150,47 @@ header.active .header__menu_tabs {
 
 /* end section logo */
 
+/* start pixel perfect */
+
+.neworder__form .order__head {
+  margin: 0 0 20px;
+}
+
+.neworder__form .order__addresses_block {
+  gap: 16px;
+}
+
+.neworder__form .personal__form_heading {
+  margin: 12px 0 -4px;
+}
+
+.neworder__form .personal__select_box,
+.neworder__form .payment-methods,
+.neworder__form .promo-code {
+  margin: 0;
+}
+
+.neworder__form .personal__form_head {
+  margin: 44px 0 0;
+}
+
+.order__total .total-l,
+.order__total .total-r {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* end pixel perfect */
+
+.personal__tab {
+  display: none;
+}
+
+.personal__tab.active {
+  display: block;
+}
+
 .personal__desktop_hidden {
   display: none;
 }
@@ -3628,9 +3695,9 @@ header.active .header__menu_tabs {
     line-height: 17px;
   }
   .section__order h1 {
-    padding: 32px 0 44px;
-    font-size: 38px;
-    line-height: 34px;
+    padding: 32px 0 42px;
+    font-size: 40px;
+    line-height: 36px;
   }
   .order__map_info_desc {
     max-width: 289px;
@@ -3714,9 +3781,6 @@ header.active .header__menu_tabs {
   .order__map_icons {
     top: 13px;
   }
-  .order__info {
-    padding: 24px;
-  }
   .order__addresses_newhead span {
     font-size: 14px;
     line-height: 18px;
@@ -3757,6 +3821,41 @@ header.active .header__menu_tabs {
   }
   .order__map_fixed {
     width: 492px;
+  }
+  .neworder__form .order__head {
+    margin: 0 0 16px;
+  }
+  .neworder__form .order__addresses_head {
+    margin: 0;
+  }
+  .neworder__form .order__addresses_block {
+    gap: 12px;
+  }
+  .neworder__form .personal__form_head,
+  .personal__form_head_four {
+    margin: 36px 0 0;
+  }
+  .personal__purpose {
+    padding: 6px 0 0;
+  }
+  .order__info {
+    padding: 24px;
+    margin: 39px 0 0;
+  }
+  .order__total .total-l,
+  .order__total .total-r {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .personal__wrapper span {
+    gap: 10px;
+  }
+  .personal__radio_button {
+    margin: 0;
+  }
+  .personal__radio_text {
+    margin: 4px 0 0;
   }
 }
 /* end media 1919px */
