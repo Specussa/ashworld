@@ -1974,7 +1974,7 @@ p.approval a {
 }
 
 .info-modal {
-    width: 456px;
+    width: 452px;
     font-family: 'Arimo', sans-serif;
     position: absolute;
     color: #000;
@@ -2926,10 +2926,10 @@ p.price-economy {
 }
 
 .cost-list p {
-    color: #000;
-    font-size: 16px;
+    color: #bebebe;
+    font-size: 17px;
     font-weight: 400;
-    line-height: 120%;
+    line-height: 22px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
@@ -2937,6 +2937,10 @@ p.price-economy {
 
 .cost-list p span {
     font-weight: 500;
+}
+
+.black-color {
+    color: #000 !important;
 }
 
 .red-color {
@@ -4253,11 +4257,6 @@ p.price-economy {
     
     .payment-shares {
         width: 94px;
-    }
-    
-    span.info-modal {
-        width: 383px;
-        padding: 20px 18px;
     }
     
     .info-modal-block {

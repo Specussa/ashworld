@@ -3188,6 +3188,10 @@ header.active .header__menu_tabs {
 
 /* end pixel perfect */
 
+.cost-list p {
+  font-family: var(--arimo);
+}
+
 .personal__tab {
   display: none;
 }
@@ -3861,6 +3865,16 @@ header.active .header__menu_tabs {
   }
   .personal__radio_text {
     margin: 4px 0 0;
+  }
+  .info-modal {
+    width: 383px;
+    padding: 20px 18px;
+  }
+  .total .info-modal {
+    left: -200px;
+  }
+  .total .info-modal:after {
+    left: 202px;
   }
 }
 /* end media 1919px */
