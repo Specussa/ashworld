@@ -2093,10 +2093,6 @@ header.active .header__menu_tabs {
   height: 40px;
 }
 
-.personal__wrapper span {
-  margin-right: auto;
-}
-
 .personal__radio .label-wrapper {
   display: flex;
   width: 100%;
@@ -2143,7 +2139,9 @@ header.active .header__menu_tabs {
 
 .personal__wrapper span {
   display: flex;
+  margin-right: auto;
   flex-direction: column;
+  justify-content: center;
   gap: 18px;
   color: #000;
   font-size: 15px;
@@ -2153,7 +2151,7 @@ header.active .header__menu_tabs {
 
 .personal__radio_button {
   display: none;
-  margin: 2px 0 0;
+  margin: 2px 0 11px;
   align-items: center;
   flex: 0 0 auto;
   gap: 7px;
@@ -2221,6 +2219,7 @@ header.active .header__menu_tabs {
   display: flex;
   width: 100%;
   padding: 24px 28px;
+  margin: 0 0 12px;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
@@ -2653,9 +2652,9 @@ header.active .header__menu_tabs {
 .map__point_heading {
   padding: 0 0 4px;
   font-family: var(--arimo);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 21px;
   color: var(--black);
 }
 
@@ -2678,11 +2677,11 @@ header.active .header__menu_tabs {
 .map__point_bottom {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .map__point_top {
-  padding: 0 0 20px;
+  padding: 0 0 24px;
 }
 
 .order__map_point_button {
@@ -2741,8 +2740,8 @@ header.active .header__menu_tabs {
   width: calc(50% - 65px);
 }
 
-.personal__map_info .map__point_head,
-.personal__map_info .map__point_heading {
+.personal__map_info .map__point_top .map__point_head,
+.personal__map_info .map__point_bottom .map__point_heading {
   width: 235px;
   font-size: 18px;
   line-height: 21px;
@@ -2752,6 +2751,10 @@ header.active .header__menu_tabs {
 .personal__map_info .map__point_time {
   font-size: 17px;
   line-height: 22px;
+}
+
+.personal__map_info .map__point_desc {
+  max-width: 304px;
 }
 
 .order__map_geo {
@@ -3210,6 +3213,11 @@ header.active .header__menu_tabs {
 
 .personal__desktop_hidden.personal__mobile_hidden {
   display: none;
+}
+
+.promo-code input,
+.promo-code button {
+  font-family: var(--arimo);
 }
 
 /* start media 1919px */
@@ -3810,6 +3818,13 @@ header.active .header__menu_tabs {
   .personal__map_info .map__point_bottom .map__point_times {
     width: calc(50% - 43px);
   }
+  .personal__map_info .map__point_top .map__point_head,
+  .personal__map_info .map__point_bottom .map__point_heading {
+    width: 200px;
+  }
+  .map__point_top {
+    padding: 0 0 16px;
+  }
   .order__map_icons {
     width: 14px;
     height: 14px;
@@ -3827,6 +3842,7 @@ header.active .header__menu_tabs {
   }
   .order__map_info {
     padding: 54px 30px 16px;
+    gap: 16px;
   }
   .order__map_fixed {
     width: 492px;
@@ -3861,7 +3877,7 @@ header.active .header__menu_tabs {
     gap: 10px;
   }
   .personal__radio_button {
-    margin: 0;
+    margin: 0 0 7px;
   }
   .personal__radio_text {
     margin: 4px 0 0;
@@ -3875,6 +3891,65 @@ header.active .header__menu_tabs {
   }
   .total .info-modal:after {
     left: 202px;
+  }
+  .map__point_top {
+    padding: 0 0 20px;
+  }
+  .map__point_top,
+  .map__point_bottom {
+    gap: 8px;
+  }
+  .map__point_head {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .map__point_time {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .order__map_geo {
+    bottom: 30px;
+    right: 30px;
+  }
+  .personal__radio .label-wrapper {
+    padding: 11px 16px 11px 12px;
+  }
+  .personal__form_head,
+  .personal__form_head_two,
+  .personal__form_head_three,
+  .personal__form_head_four {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .personal__form_heading {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .promo-code input {
+    height: 40px;
+    padding: 0 90px 1px 15px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .promo-code button {
+    font-size: 14px;
+    line-height: 17px;
+    right: 13px;
+  }
+  .personal__approval_label i {
+    width: 18px;
+    height: 18px;
+  }
+  .personal__check_label span {
+    width: 32px;
+    height: 18px;
+  }
+  .personal__check_label span:before {
+    height: 16px;
+    width: 16px;
+  }
+  .personal__check_label input:checked ~ span:before {
+    left: calc(100% - 17px);
   }
 }
 /* end media 1919px */

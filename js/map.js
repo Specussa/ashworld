@@ -83,6 +83,17 @@ if(maps) {
       } else {
         ordermapblock.classList.remove('active');
       };
+      window.addEventListener("click", (e) => {
+        const target = e.target;
+        if (
+          !target.closest(".order__map_block") &&
+          !target.closest(".order__map")
+        ) {
+          if (ordermapblock.classList.contains("active")) {
+            ordermapblock.classList.remove('active');
+          }
+        }
+      });
     });
   }
   if (ymaps != undefined) ymaps.ready(init);

@@ -2624,15 +2624,17 @@ p.product-name {
 .promo-code button {
     color: #D6D6D6;
     text-align: right;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
+    line-height: 19px;
     line-height: normal;
     padding: 0;
     border: 0;
     background: transparent;
     position: absolute;
-    top: 22px;
-    right: 16px;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
 }
 
 .promo-code button.active {
@@ -2642,15 +2644,15 @@ p.product-name {
 
 
 .promo-code input {
-    font-size: 17px;
+    display: flex;
+    height: 50px;
+    padding: 0 100px 1px 15px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: normal;
+    line-height: 19px;
     flex-grow: 1;
     border-radius: 4px;
     border: 1.3px dashed #DFDFDF;
-    padding: 20px 110px 20px 18px;
-    display: flex;
-    align-items: center;
     width: 100%;
     color: #000;
 }
@@ -3386,15 +3388,6 @@ p.price-economy {
 
 .order-info-products {
     margin-bottom: 20px;
-}
-
-.order-info .promo-code input {
-    padding: 15px 15px 16px 15px;
-    font-size: 16px;
-}
-
-.order-info .promo-code button {
-    font-size: 16px;
 }
 
 .order-info .promo-code {
@@ -4530,16 +4523,6 @@ p.price-economy {
     .cart-block .info-click img {
         width: 14px;
         height: 14px;
-    }
-    
-    .promo-code input {
-        padding: 16px 100px 16px 16px;
-        font-size: 15px;
-    }
-    
-    .promo-code button {
-        font-size: 15px;
-        top: 17px;
     }
     
     .total-p {
