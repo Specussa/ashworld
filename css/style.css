@@ -1520,6 +1520,7 @@ header.active .header__menu_tabs {
 
 .personal__form_list {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 12px;
 }
@@ -1810,7 +1811,7 @@ header.active .header__menu_tabs {
 .order__row {
   display: flex;
   justify-content: space-between;
-  gap: 88px;
+  gap: 82px;
 }
 
 .order__left {
@@ -1819,7 +1820,7 @@ header.active .header__menu_tabs {
 
 .order__center {
   display: flex;
-  width: calc(50% - 88px);
+  width: calc(50% - 164px);
   padding: 0 0 60px;
 }
 
@@ -3157,6 +3158,7 @@ header.active .header__menu_tabs {
 /* start pixel perfect */
 
 .neworder__form {
+  width: 100%;
   margin: 0 auto;
 }
 
