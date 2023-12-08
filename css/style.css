@@ -2608,7 +2608,8 @@ header.active .header__menu_tabs {
 
 .order__map_block {
   display: none;
-  padding: 24px;
+  width: 506px;
+  padding: 32px;
   flex-direction: column;
   position: absolute;
   left: 24px;
@@ -2646,17 +2647,17 @@ header.active .header__menu_tabs {
 .map__point_head {
   padding: 0 0 4px;
   font-family: var(--arimo);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 21px;
   color: var(--black);
 }
 
 .map__point_desc {
   font-family: var(--arimo);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 22.1px;
   color: var(--black);
 }
 
@@ -2688,7 +2689,7 @@ header.active .header__menu_tabs {
 .map__point_bottom {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 
 .map__point_top {
@@ -3923,11 +3924,24 @@ header.active .header__menu_tabs {
   }
   .map__point_top,
   .map__point_bottom {
-    gap: 8px;
+    gap: 12px;
+  }
+  .order__map_point_button {
+    margin: 20px 0 0;
+  }
+  .order__map_block {
+    padding: 24px;
+  }
+  .order__map_block {
+    width: 447px;
   }
   .map__point_head {
     font-size: 16px;
     line-height: 18px;
+  }
+  .map__point_desc {
+    font-size: 15px;
+    line-height: 21px;
   }
   .map__point_time {
     font-size: 15px;
