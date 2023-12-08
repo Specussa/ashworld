@@ -2685,6 +2685,10 @@ header.active .header__menu_tabs {
   padding: 0 0 24px;
 }
 
+.personal__map_info .map__point_top {
+  padding: 0 0 20px;
+}
+
 .order__map_point_button {
   display: flex;
   width: 100%;
@@ -3825,6 +3829,9 @@ header.active .header__menu_tabs {
     width: 200px;
   }
   .map__point_top {
+    padding: 0 0 20px;
+  }
+  .personal__map_info .map__point_top {
     padding: 0 0 16px;
   }
   .order__map_icons {
