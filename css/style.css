@@ -2544,8 +2544,8 @@ header.active .header__menu_tabs {
 .order__profile_all_button img,
 .order__profile_back img,
 .order__four_back img {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
 }
 
@@ -3740,8 +3740,8 @@ header.active .header__menu_tabs {
   .order__profile_all_button img,
   .order__profile_back img,
   .order__four_back img {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
   }
   .addresses-list a {
     padding: 11px 16px;
