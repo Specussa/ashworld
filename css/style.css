@@ -1811,21 +1811,24 @@ header.active .header__menu_tabs {
 .order__row {
   display: flex;
   justify-content: space-between;
-  gap: 82px;
+  gap: 80px;
 }
 
 .order__left {
-  width: 25%;
+  /* width: 25%; */
+  width: 453px;
 }
 
 .order__center {
   display: flex;
-  width: calc(50% - 164px);
+  /* width: calc(50% - 164px); */
+  width: 772px;
   padding: 0 0 60px;
 }
 
 .order__right {
-  width: 25%;
+  /* width: 25%; */
+  width: 453px;
 }
 
 .addresses-list {
@@ -2042,11 +2045,12 @@ header.active .header__menu_tabs {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  background: url("../images/checkbox.svg");
+  background-image: url("../images/checkbox.svg");
+  background-size: 20px 20px;
 }
 
 .personal__approval_label input:checked ~ i {
-  background: url("../images/checkbox-active.svg");
+  background-image: url("../images/checkbox-active.svg");
 }
 
 .personal__newapproval {
@@ -2178,15 +2182,16 @@ header.active .header__menu_tabs {
 }
 
 .personal__radio label input:checked ~ .label-wrapper> i:after {
+  content: "";
+  display: block;
   background: #000;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   position: absolute;
-  top: 4px;
-  left: 4px;
-  content: "";
-  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .personal__bottom .personal__check_label {
@@ -2220,7 +2225,6 @@ header.active .header__menu_tabs {
   display: flex;
   width: 100%;
   padding: 24px 28px;
-  margin: 0 0 12px;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
@@ -3598,16 +3602,19 @@ header.active .header__menu_tabs {
   .order__row {
     display: flex;
     justify-content: space-between;
-    gap: 42px;
+    gap: 40px;
   }
   .order__left {
-    width: calc(25% - 28px);
+    /* width: calc(25% - 28px); */
+    width: 341px;
   }
   .order__center {
-    width: calc(50% - 28px);
+    /* width: calc(50% - 28px); */
+    width: 618px;
   }
   .order__right {
-    width: calc(25% - 28px);
+    /* width: calc(25% - 28px); */
+    width: 341px;
   }
   .order__head {
     margin: 0 0 20px;
@@ -3948,6 +3955,7 @@ header.active .header__menu_tabs {
   .personal__approval_label i {
     width: 18px;
     height: 18px;
+    background-size: 18px 18px;
   }
   .personal__check_label span {
     width: 32px;
