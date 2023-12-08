@@ -2035,6 +2035,7 @@ header.active .header__menu_tabs {
 }
 
 .personal__approval_label input {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -2047,6 +2048,10 @@ header.active .header__menu_tabs {
   flex-shrink: 0;
   background-image: url("../images/checkbox.svg");
   background-size: 20px 20px;
+}
+
+.personal__approval_label:hover i {
+  background-image: url("../images/checkbox-hover.svg");
 }
 
 .personal__approval_label input:checked ~ i {
@@ -2177,7 +2182,8 @@ header.active .header__menu_tabs {
 }
 
 .personal__radio label input:checked ~ .label-wrapper,
-.personal__radio label input:checked ~ .label-wrapper i  {
+.personal__radio label input:checked ~ .label-wrapper i,
+.personal__radio label:hover i  {
   border: 1px solid #000;
 }
 
@@ -2725,6 +2731,10 @@ header.active .header__menu_tabs {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.personal__map_info .map__point_bottom .map__point_times {
+  gap: 10px;
 }
 
 .personal__map_info.personal__mobile_hidden {
