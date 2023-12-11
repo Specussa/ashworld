@@ -182,19 +182,6 @@ header .container {
     background: transparent;
 }
 
-.links-header {
-    display: flex;
-    align-items: center;
-}
-
-.links-header a {
-    text-decoration: none;
-}
-
-.links-header a + a {
-    margin-left: 39px;
-}
-
 .top-slide-wrapper {
     height: 960px;
     display: flex;
@@ -597,6 +584,7 @@ span.price-old {
 
 .journal-section {
     padding-bottom: 182px;
+    overflow: hidden;
 }
 
 .journal-slider .owl-item {
@@ -3686,15 +3674,6 @@ p.price-economy {
         width: 20px;
     }
     
-    .links-header a {
-        width: 20px;
-        display: block;
-    }
-    
-    .links-header a + a {
-        margin-left: 28px;
-    }
-    
     .search {
         margin-right: 84px;
     }
@@ -5043,10 +5022,6 @@ p.price-economy {
     
     .menu-button {
         font-size: 14px;
-    }
-    
-    .links-header a + a {
-        margin-left: 16px;
     }
     
     .menu-button img {

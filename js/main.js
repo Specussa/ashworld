@@ -69,7 +69,7 @@ for (i = 0; i < headermenutab.length; i++) {
       // headermenulist.forEach((n) => n.style.maxHeight = null);
       this.classList.add("active");
       headermenulistCOUNT.classList.add("active");
-      headermenulistCOUNT.style.maxHeight = headermenulistCOUNT.scrollHeight + "px";
+      // headermenulistCOUNT.style.maxHeight = headermenulistCOUNT.scrollHeight + "px";
     }
   };
 }
@@ -94,7 +94,7 @@ if (burger) {
       headermenu.classList.add("active");
       document.querySelector('.header__menu_tab_button[data-select-item="1"]').classList.add("active");
       document.querySelector('.header__menu_list[data-select-item="1"]').classList.add("active");
-      headermls.style.height = headermenulist[0].scrollHeight + 'px';
+      // headermls.style.height = headermenulist[0].scrollHeight + 'px';
       headermls.classList.add("active");
       // document.querySelector('.header__menu_list[data-select-item="1"]').style.maxHeight = document.querySelector('.header__menu_list[data-select-item="1"]').scrollHeight + "px";
     }
