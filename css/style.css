@@ -1951,7 +1951,7 @@ header.active .header__menu_tabs {
 .order__addresses_head {
   font-family: var(--arimo);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 21px;
   color: var(--black);
 }
@@ -3986,6 +3986,7 @@ header.active .header__menu_tabs {
   .map__point_bottom {
     gap: 12px;
   }
+  .personal__map_info .map__point_bottom .map__point_heading,
   .map__point_heading {
     font-size: 16px;
     line-height: 18px;
@@ -4000,10 +4001,13 @@ header.active .header__menu_tabs {
   .order__map_block {
     width: 447px;
   }
+  .personal__map_info .map__point_top .map__point_head,
   .map__point_head {
     font-size: 16px;
     line-height: 18px;
   }
+  .personal__map_info .map__point_desc,
+  .personal__map_info .map__point_time,
   .map__point_desc {
     font-size: 15px;
     line-height: 21px;
