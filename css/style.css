@@ -2648,6 +2648,18 @@ header.active .header__menu_tabs {
   border-radius: 10px;
 }
 
+.order__map_block::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 108.16px;
+  border-left: 13.585px solid transparent;
+  border-right: 13.585px solid transparent;
+  border-top: 20px solid #fff;
+}
+
 .order__map_block.active,
 .order__map_block.active .map__point_block {
   display: flex;
@@ -2732,7 +2744,7 @@ header.active .header__menu_tabs {
 .order__map_point_button {
   display: flex;
   width: 100%;
-  height: 34px;
+  height: 40px;
   margin: 24px 0 0;
   align-items: center;
   justify-content: center;
@@ -3974,7 +3986,12 @@ header.active .header__menu_tabs {
   .map__point_bottom {
     gap: 12px;
   }
+  .map__point_heading {
+    font-size: 16px;
+    line-height: 18px;
+  }
   .order__map_point_button {
+    height: 34px;
     margin: 20px 0 0;
   }
   .order__map_block {
@@ -4039,6 +4056,13 @@ header.active .header__menu_tabs {
   }
   .personal__check_label input:checked ~ span:before {
     left: calc(100% - 17px);
+  }
+  .order__map_block::after {
+    left: 95.51px;
+  }
+  .personal__wrapper img {
+    width: 39px;
+    height: 20px;
   }
 }
 /* end media 1919px */
@@ -4105,10 +4129,6 @@ header.active .header__menu_tabs {
   .personal__radio label i {
     width: 18px;
     height: 18px;
-  }
-  .personal__wrapper img {
-    width: 39px;
-    height: 20px;
   }
 }
 /* end media 1439px */
