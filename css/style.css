@@ -30,6 +30,10 @@
   color: var(--white);
 }
 
+body {
+  position: relative;
+}
+
 html.noscroll,
 html.noscroll body {
   overflow: hidden;
@@ -117,11 +121,15 @@ select:-webkit-autofill:hover {
 
 header {
   width: 100%;
-  position: fixed!important;
+  position: absolute!important;
   top: 0;
   /* transition: 0.6s; */
   background-color: #fff;
   z-index: 100;
+}
+
+header.header-bg {
+  position: fixed!important;
 }
 
 .links-header {
@@ -178,11 +186,14 @@ header {
   overflow: hidden;
 }
 
+.header__black,
 .header__white {
   background-color: transparent;
 }
 
+.header__black.actuve,
 .header__white.active,
+.header__black.header-bg,
 .header__white.header-bg {
   background-color: var(--white);
 }
@@ -304,6 +315,7 @@ header {
   transition: opacity 0.3s linear, padding 0s linear, margin 0s linear, max-height 0.3s linear, visibility 0s linear, transform 0.3s linear;
   -webkit-transition-delay: 0s, 0.3s, 0.3s, 0.3s, 0.3s, 0s;
   transition-delay: 0s, 0.3s, 0.3s, 0.3s, 0.3s, 0s; */
+  overflow: hidden;
 }
 
 header.active .header__menu {
