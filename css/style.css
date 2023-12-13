@@ -2286,8 +2286,8 @@ header.active .header__menu_tabs {
 }
 
 .personal__map_desc img {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   transform: translateY(3px);
   object-fit: contain;
 }
@@ -4067,6 +4067,10 @@ header.active .header__menu_tabs {
   .personal__wrapper img {
     width: 39px;
     height: 20px;
+  }
+  .personal__map_desc img {
+    width: 14px;
+    height: 14px;
   }
 }
 /* end media 1919px */
