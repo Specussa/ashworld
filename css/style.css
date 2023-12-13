@@ -182,6 +182,7 @@ header {
   background-color: transparent;
 }
 
+.header__white.active,
 .header__white.header-bg {
   background-color: var(--white);
 }
@@ -216,6 +217,10 @@ header {
   color: var(--white);
 }
 
+.header__white.active .header__burger,
+.header__white.active  .a-link-header,
+.header__white.active  .logo,
+.header__white.active  .header__icon,
 .header__white.header-bg .header__burger,
 .header__white.header-bg  .a-link-header,
 .header__white.header-bg  .logo,
@@ -250,6 +255,7 @@ header {
   background: var(--white);
 }
 
+.header__white.active .header__burger_button span,
 .header__white.header-bg .header__burger_button span {
   background: var(--black);
 }
@@ -302,7 +308,7 @@ header {
 
 header.active .header__menu {
   max-height: 100%;
-  padding: 28px;
+  padding: 28px 0;
   margin: 14px 0 0;
   opacity: 1;
   visibility: visible;
@@ -3351,7 +3357,7 @@ header.active .header__menu_tabs {
     max-height: calc(var(--height) - 195px);
   }
   header.active .header__menu {
-    padding: 24px;
+    padding: 24px 0;
     margin: 13px 0 0;
   }
   .header__white.header-bg::before {
