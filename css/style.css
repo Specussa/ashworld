@@ -2182,7 +2182,7 @@ header.active .header__menu_tabs {
   position: relative;
 }
 
-.payment-method-block:not(:last-child) .personal__radio {
+.personal__form_order .payment-method-block:not(:last-child) .personal__radio {
   margin-bottom: 8px;
 }
 
@@ -2886,7 +2886,7 @@ header.active .header__menu_tabs {
 .personal__datetime {
   display: flex;
   width: 100%;
-  padding: 12px 0;
+  padding: 12px 0 0;
   flex-direction: column;
   gap: 16px;
 }
@@ -2948,10 +2948,13 @@ header.active .header__menu_tabs {
 }
 
 .personal__time .label-wrapper {
-  width: 130px;
+  display: flex;
   height: 44px;
-  padding: 0;
+  padding: 12px 18px;
+  align-items: center;
+  justify-content: center;
   border-radius: 23px;
+  cursor: pointer;
 }
 
 .personal__logined {
