@@ -1,13 +1,13 @@
 // start height
-let oldWidth = window.innerWidth;
+let oldHeight = window.innerHeight;
 const docheight = document.documentElement
 docheight.style.setProperty('--height', `${window.innerHeight}px`);
 const appHeight = () => {
-  var newWidth = window.innerWidth;
-  if (newWidth != oldWidth) {
+  var newHeight = window.innerHeight;
+  if (newHeight != oldHeight) {
     docheight.style.setProperty('--height', `${window.innerHeight}px`);
   }
-  oldWidth = window.innerWidth;
+  oldHeight = window.innerHeight;
 }
 window.addEventListener('resize', appHeight);
 appHeight();
@@ -16,7 +16,7 @@ appHeight();
 // start header
 const burger = document.querySelector('.header__burger');
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 1) {
+  if ($(this).scrollTop() > 20) {
     $('header').addClass('header-bg');
   }
   else {

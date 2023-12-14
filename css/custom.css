@@ -126,6 +126,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 header .container {
@@ -5301,16 +5302,8 @@ p.price-economy {
         height: auto;
     }
     
-    .header-wrapper {
-        position: relative;
-    }
-    
     .menu-button {
         margin-right: 0;
-    }
-    
-    .header-l, .header-r {
-        width: 92px;
     }
     
     
