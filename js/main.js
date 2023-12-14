@@ -16,7 +16,7 @@ appHeight();
 // start header
 const burger = document.querySelector('.header__burger');
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 20) {
+  if ($(this).scrollTop() > 10) {
     $('header').addClass('header-bg');
   }
   else {
