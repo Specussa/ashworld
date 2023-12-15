@@ -2718,6 +2718,10 @@ header.active .header__menu_tabs {
   border-radius: 10px;
 }
 
+.order__map_block_close {
+  display: none;
+}
+
 .order__map_block::after {
   content: "";
   width: 0;
@@ -5021,7 +5025,7 @@ header.active .header__menu_tabs {
   .order__map_block {
     width: 100%;
     height: max-content;
-    padding: 24px;
+    padding: 40px 14px 14px;
     top: auto;
     left: 0;
     bottom: 0;
@@ -5377,6 +5381,12 @@ header.active .header__menu_tabs {
   }
   .personal__radio_text {
     margin: 6px 0 0;
+  }
+  .order__map_block_close {
+    display: flex;
+    position: absolute;
+    top: 16px;
+    right: 14px;
   }
 }
 /* end media 767px */

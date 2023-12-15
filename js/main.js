@@ -596,6 +596,7 @@ const omblock = document.querySelector('.order__map_block');
 const ompbutton = document.querySelector('.order__map_point_button');
 const pminfo = document.querySelector('.personal__map_info');
 const pminfob = document.querySelector('.personal__map_info_button');
+const ompbclose = document.querySelector('.order__map_block_close');
 if (ompbutton) {
   ompbutton.addEventListener('click', function() {
     pminfo.innerHTML = omblock.children[0].innerHTML;
@@ -607,6 +608,11 @@ if (ompbutton) {
     omapoverlay.classList.remove("active");
     pmapbutton.innerText = 'изменить пункт выдачи';
     pminfob.classList.remove("personal__mobile_hidden");
+  });
+}
+if (ompbclose) {
+  ompbclose.addEventListener('click', function() {
+    omblock.classList.remove("active");
   });
 }
 if (pminfob) {
