@@ -5358,5 +5358,16 @@ header.active .header__menu_tabs {
   .personal__approval_newlabel {
     margin: -8px 0 0;
   }
+  .personal__map_desc img {
+    transform: translateY(1px);
+  }
+  .personal__map_info .map__point_top {
+    padding: 0;
+  }
+  .personal__logined_block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 /* end media 767px */
