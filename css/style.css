@@ -2454,6 +2454,10 @@ header.active .header__menu_tabs {
   border-radius: 41px;
 }
 
+.personal__form_control.order__map_control .order__search {
+  border-radius: 4px;
+}
+
 .order__map_icons {
   display: flex;
   flex-direction: column;
@@ -2566,7 +2570,6 @@ header.active .header__menu_tabs {
 .order__map_info_top {
   display: flex;
   width: 100%;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -5341,6 +5344,9 @@ header.active .header__menu_tabs {
   }
   .personal__desktop_hidden.personal__mobile_hidden {
     display: none;
+  }
+  .addresses-list {
+    top: calc(100% + 4px);
   }
 }
 /* end media 767px */
