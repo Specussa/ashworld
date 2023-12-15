@@ -2579,6 +2579,7 @@ header.active .header__menu_tabs {
 
 .order__map_info_desc {
   max-width: 398px;
+  padding: 8px 0 0;
   font-family: var(--halvar);
   font-size: 38px;
   font-weight: 500;
