@@ -5060,6 +5060,9 @@ header.active .header__menu_tabs {
   .map__point_top {
     padding: 0 0 12px;
   }
+  .order__map_block .map__point_top {
+    padding: 0 0 20px;
+  }
   .personal__map_info .map__point_head,
   .personal__map_info .map__point_heading {
     width: 100%;
@@ -5348,6 +5351,12 @@ header.active .header__menu_tabs {
   }
   .addresses-list {
     top: calc(100% + 4px);
+  }
+  .personal__form_control_flex {
+    gap: 20px;
+  }
+  .personal__approval_newlabel {
+    margin: -8px 0 0;
   }
 }
 /* end media 767px */
