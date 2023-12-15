@@ -2639,6 +2639,7 @@ header.active .header__menu_tabs {
   height: 40px;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
   background-color: var(--back);
   border-radius: 50%;
 }
