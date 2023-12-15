@@ -2291,6 +2291,12 @@ header.active .header__menu_tabs {
   width: 100%;
 }
 
+.order__newblock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .personal__map_block {
   display: flex;
   width: 100%;
@@ -2351,6 +2357,10 @@ header.active .header__menu_tabs {
 .personal__four_button:hover {
   color: var(--white);
   background-color: var(--black);
+}
+
+.personal__map_newbutton {
+  margin: 4px 0 0;
 }
 
 .order__info_title {
@@ -3059,14 +3069,14 @@ header.active .header__menu_tabs {
   width: 100%;
 }
 
-.personal__logined_block {
+.personal__logined_profile .personal__logined_block {
   display: flex;
   width: calc(50% - 14px);
   flex-direction: column;
   gap: 8px;
 }
 
-.personal__logined_block svg {
+.personal__logined_profile .personal__logined_block svg {
   width: 20px;
   height: 20px;
   margin: 0 0 12px;
@@ -5048,6 +5058,18 @@ header.active .header__menu_tabs {
     padding: 20px;
     background-color: #f6f6f6;
   }
+  .neworder__form .personal__form_head {
+    margin: 0;
+  }
+  .personal__form_order {
+    margin: -4px 0 0;
+  }
+  .personal__bottom p a {
+    text-decoration: auto;
+  }
+  .total .info-modal {
+    display: none;
+  }
   .personal__form_head,
   .personal__form_heading,
   .personal__form_head_two,
@@ -5123,10 +5145,10 @@ header.active .header__menu_tabs {
     justify-content: space-between;
     gap: 10px;
   }
-  .personal__logined_block svg {
+  .personal__logined_profile .personal__logined_block svg {
     margin: 0;
   }
-  .personal__logined_block .personal__logined_arrow {
+  .personal__logined_profile .personal__logined_block .personal__logined_arrow {
     width: 14px;
     height: 14px;
   }
@@ -5144,7 +5166,7 @@ header.active .header__menu_tabs {
   .personal__logined_profile {
     flex-direction: column;
   }
-  .personal__logined_block,
+  .personal__logined_profile .personal__logined_block,
   .personal__approval_label,
   .order__check_label {
     width: 100%;
@@ -5203,7 +5225,7 @@ header.active .header__menu_tabs {
     gap: 0;
   }
   .order__info_title {
-    margin: 24px 0 20px;
+    margin: 20px 0 16px;
   }
   .order__info_title .personal__form_head {
     margin: 0;
@@ -5214,18 +5236,20 @@ header.active .header__menu_tabs {
   .add-order {
     font-size: 15px;
     line-height: 17px;
+    margin: 0 0 16px;
+  }
+  .newadd-order {
     color: #fff;
     background-color: #000;
   }
-  .personal__logined_block {
+  .personal__logined_profile .personal__logined_block {
     padding: 20px 0;
     border-top: 1px solid #f0f0f0;
   }
   .personal__logined_newtop {
     padding: 0;
-    margin: 0 0 -4px;
   }
-  .personal__logined_block:last-child {
+  .personal__logined_profile .personal__logined_block:last-child {
     border-bottom: 1px solid #f0f0f0;
   }
   .personal__datetime {
