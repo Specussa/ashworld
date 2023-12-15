@@ -5085,6 +5085,8 @@ header.active .header__menu_tabs {
   }
   .personal__form_order {
     margin: -4px 0 0;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #f0f0f0;
   }
   .personal__bottom p a {
     text-decoration: auto;
@@ -5250,7 +5252,7 @@ header.active .header__menu_tabs {
     gap: 0;
   }
   .order__info_title {
-    margin: 20px 0 16px;
+    margin: 0 0 16px;
   }
   .order__info_title .personal__form_head {
     margin: 0;
