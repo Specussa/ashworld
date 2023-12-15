@@ -5047,7 +5047,7 @@ header.active .header__menu_tabs {
     gap: 16px;
   }
   .personal__map_info .map__point_bottom {
-    padding: 0 0 16px;
+    padding: 16px 0 0;
     flex-direction: column;
     gap: 12px;
   }
