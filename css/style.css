@@ -1980,6 +1980,26 @@ header.active .header__menu_tabs {
   gap: 20px;
 }
 
+.order__addressess_block {
+  display: flex;
+  width: 100%;
+  padding: 20px 0 0;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.personal__map_desc.personal__map_newdesc img {
+  width: 20px;
+  height: 20px;
+}
+
+.personal__newmap_block {
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-radius: 4px;
+}
+
 .order__addresses_head {
   font-family: var(--arimo);
   font-size: 18px;
@@ -5022,6 +5042,7 @@ header.active .header__menu_tabs {
     gap: 16px;
   }
   .personal__map_info .map__point_bottom {
+    padding: 0 0 16px;
     flex-direction: column;
     gap: 12px;
   }
