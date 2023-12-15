@@ -5117,8 +5117,11 @@ header.active .header__menu_tabs {
     gap: 20px;
   }
   .order__personal_info {
-    padding: 48px 14px;
-    gap: 40px;
+    padding: 48px 14px 0;
+    gap: 32px;
+  }
+  .order__addresses_block {
+    gap: 14px;
   }
   .personal__logined_addresses {
     padding: 0;
