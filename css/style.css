@@ -2988,8 +2988,9 @@ header.active .header__menu_tabs {
 
 .personal__time .label-wrapper {
   display: flex;
+  width: 130px;
   height: 44px;
-  padding: 12px 18px;
+  padding: 0 !important;
   align-items: center;
   justify-content: center;
   border-radius: 23px;
@@ -3715,6 +3716,9 @@ header.active .header__menu_tabs {
   .personal__form_control {
     width: calc(50% - 6px);
   }
+  .personal__form_control_one {
+    width: 100%;
+  }
   .personal__select_box {
     width: calc(50% - 6px);
     height: 40px;
@@ -3966,7 +3970,7 @@ header.active .header__menu_tabs {
   .personal__time .label-wrapper {
     width: 113px;
     height: 40px;
-    padding: 0;
+    padding: 0 !important;
   }
   .personal__map_info .map__point_top,
   .personal__map_info .map__point_bottom {
@@ -5325,7 +5329,7 @@ header.active .header__menu_tabs {
   .personal__time .label-wrapper {
     width: 115px;
     height: 40px;
-    padding: 0;
+    padding: 0 !important;
   }
   .personal__form_newhead {
     margin: 0;
