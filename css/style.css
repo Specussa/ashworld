@@ -2997,6 +2997,15 @@ header.active .header__menu_tabs {
   cursor: pointer;
 }
 
+.personal__radio label span {
+  flex: 0 0 auto;
+  font-family: var(--arimo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--black);
+}
+
 .personal__logined {
   display: flex;
   width: 100%;
